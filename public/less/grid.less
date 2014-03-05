@@ -44,12 +44,12 @@
 			width: 100% - (100% / @property);
 		}
 
-		.generate-inverse(@property - 2);
-		.generate-inverse(@n, @i: 2) when (@i =< @n) {
-			&.inverse@{i} {
-				width: 100% - (100% / @property) * @i;
+		.generate-colspan(@property - 2);
+		.generate-colspan(@n, @i: 2) when (@i =< @n) {
+			&.colspan@{i} {
+				width: (100% / @property) * @i;
 			}
-		  .generate-inverse(@n, (@i + 1));
+		  .generate-colspan(@n, (@i + 1));
 		}
 	}
 }
