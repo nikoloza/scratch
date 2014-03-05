@@ -1,10 +1,9 @@
 @import 'func';
 
-.row {
+[class^="row"] >,
+[class*=" row"] > {
 	display: block;
 	width: 100%;
-	padding: 0 20px;
-	margin: 0 -20px;
 
 	&:after {
 		content: "";
@@ -14,145 +13,318 @@
 		float: none;
 	}
 
-	& > [class^="col"], 
-	& > [class*=" col"] {
+	& > div {
+		float: left;
+		padding: 0 @default-padding;
+		.sizing;
+	}
+
+	&.nopadding > div {
+		padding: 0;
+	}
+
+	&.sidepadding > div {
 		&:first-child {
 			padding-left: 0;
 		}
 		&:last-child {
 			padding-right: 0;
 		}
-
-		&.nofloat {
-			&:first-child {
-				margin-left: 0;
-			}
-		}
 	}
 }
 
-[class^="col"], [class*=" col"] {
-	float: left;
-	padding: 0 20px;
-	.sizing;
-
-	&.nofloat {
-		float: none;
-		display: inline-block;
-		vertical-align: top;
-
-		&.middle {
-			vertical-align: middle;
-		}
-	}
-}
-
-.col1 {
+.row1 > div {
+	float: none;
 	width: 100%;
 }
 
-.col2 {
-	width: 50%;
+.row2 > div {
+	width: 100% / 2;
 }
 
-.col3 {
-	width: 33.33%
+.row3 > div {
+	width: 100% / 3;
+	
+	&.inverse {
+		width: 100% - (100% / 3);
+	}
 }
 
-.col3-inverse {
-	width: 66.66%
+.row4 > div {
+	width: 100% / 4;
+	
+	&.inverse {
+		width: 100% - (100% / 4);
+	}
 }
 
-.col4 {
-	width: 25%;
+.row5 > div {
+	width: 100% / 5;
+	
+	&.inverse {
+		width: 100% - (100% / 5);
+	}
 }
 
-.col4-inverse {
-	width: 75%;
+.row6 > div {
+	width: 100% / 6;
+	
+	&.inverse {
+		width: 100% - (100% / 6);
+	}
 }
 
-.col5 {
-	width: 20%;
+.row7 > div {
+	width: 100% / 7;
+	
+	&.inverse {
+		width: 100% - (100% / 7);
+	}
 }
 
-.col5-inverse {
-	width: 80%;
+.row8 > div {
+	width: 100% / 8;
+	
+	&.inverse {
+		width: 100% - (100% / 8);
+	}
 }
 
-.col6 {
-	width: 16.66%;
+.row9 > div {
+	width: 100% / 9;
+	
+	&.inverse {
+		width: 100% - (100% / 9);
+	}
 }
 
-.col7 {
-	width: 14.29%;
+.row10 > div {
+	width: 100% / 10;
+	
+	&.inverse {
+		width: 100% - (100% / 10);
+	}
 }
 
-.col8 {
-	width: 12.5%;
+.row11 > div {
+	width: 100% / 11;
+	
+	&.inverse {
+		width: 100% - (100% / 11);
+	}
 }
 
-.col8-inverse {
-	width: 100% - 12.5%;
+.row12 > div {
+	width: 100% / 12;
+	
+	&.inverse {
+		width: 100% - (100% / 12);
+	}
 }
 
-.col9 {
-	width: 11.11%;
+.row13 > div {
+	width: 100% / 13;
+	
+	&.inverse {
+		width: 100% - (100% / 13);
+	}
 }
 
-.col9-inverse {
-	width: 88.89%;
+.row14 > div {
+	width: 100% / 14;
+	
+	&.inverse {
+		width: 100% - (100% / 14);
+	}
 }
 
-.col10 {
-	width: 10%;
+.row15 > div {
+	width: 100% / 15;
+	
+	&.inverse {
+		width: 100% - (100% / 15);
+	}
 }
 
-.col10-inverse {
-	width: 90%;
+.row16 > div {
+	width: 100% / 16;
+	
+	&.inverse {
+		width: 100% - (100% / 16);
+	}
 }
 
-.col11 {
-	width: 9.09%;
+
+
+// plural grid system
+
+.plural {
+	& > div,
+	& > li {
+		width: 100% / 5;
+		float: left;
+		padding: 0 @default-padding;
+		.sizing;
+	}
 }
 
-.col12 {
-	width: 8.33%;
+
+@media all and (min-width: 1440px) {
+
+	.plural {
+		& > div,
+		& > li {
+			width: 100% / 4;
+		}
+	}
+
 }
 
-.col13 {
-	width: 7.69%;
+
+@media all and (max-width: 1280px) {
+
+	.plural {
+		& > div,
+		& > li {
+			width: 100% / 4;
+		}
+	}
+
 }
 
-.col14 {
-	width: 7.14%;
-}
 
-.col15 {
-	width: 6.66%;
-}
+@media all and (max-width: 1000px) {
 
-.col16 {
-	width: 6.25%;
+	.plural {
+		& > div,
+		& > li {
+			width: 100% / 3;
+		}
+	}
+
 }
 
 
 @media all and (max-width: 728px) {
 	
-	.row {
-		padding: 0;
-		margin: 0;
+	[class^="row"], [class*=" row"] {
+		& > div {
+			float: none;
+			width: 100%;
+
+			&.inverse {
+				width: 100%;
+			}
+		}
+
+		&[class^="small"] > div,
+		&[class*=" small"] > div {
+			float: left;
+		}
+
+		&.small1 > div {
+			float: none;
+			width: 100%;
+		}
+
+		&.small2 > div {
+			width: 100% / 2;
+		}
+
+		&.small3 > div {
+			width: 100% / 3;
+			
+			&.inverse {
+				width: 100% - (100% / 3);
+			}
+		}
+
+		&.small4 > div {
+			width: 100% / 4;
+			
+			&.inverse {
+				width: 100% - (100% / 4);
+			}
+		}
+
+		&.small5 > div {
+			width: 100% / 5;
+			
+			&.inverse {
+				width: 100% - (100% / 5);
+			}
+		}
+
+		&.small6 > div {
+			width: 100% / 6;
+			
+			&.inverse {
+				width: 100% - (100% / 6);
+			}
+		}
 	}
 
-	[class^="col"], [class*=" col"] {
-		float: none;
-		width: 100%;
-		padding: 0 !important;
-		margin: 20px 0;
+	.plural {
+		& > div,
+		& > li {
+			width: 100% / 2;
+		}
 	}
 
 }
 
 
+@media all and (max-width: 480px) {
+	
+	[class^="row"], [class*=" row"] {
+		& > div {
+			float: none;
+			width: 100%;
+
+			&.inverse {
+				width: 100%;
+			}
+		}
+
+		&[class^="tiny"] > div,
+		&[class*=" tiny"] > div {
+			float: left;
+		}
+
+		&.tiny > div {
+			float: none;
+			width: 100%;
+		}
+
+		&.tiny2 > div {
+			width: 100% / 2;
+		}
+
+		&.tiny3 > div {
+			width: 100% / 3;
+			
+			&.inverse {
+				width: 100% - (100% / 3);
+			}
+		}
+
+		&.tiny4 > div {
+			width: 100% / 4;
+			
+			&.inverse {
+				width: 100% - (100% / 4);
+			}
+		}
+	}
+	
+	.plural {
+		& > div,
+		& > li {
+			width: 100%;
+		}
+	}
+
+}
 
 
 
