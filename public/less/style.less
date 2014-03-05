@@ -14,22 +14,43 @@
 
 
 body {
-	padding: 2%;
+	padding: 0 2% 4%;
 }
 
 
 .grid {
+
+	h2 {
+		margin: 40px 0 20px;
+	}
+
 	section {
 		margin: 20px 0;
 		.text-center;
 
 		div {
 			background: #ddd;
+			padding: 5px 0;
+			font-size: 11px;
+			text-transform: uppercase;
+			.sizing;
+
+			div {
+				margin-top: 5px;
+				div {
+					background: #ccc;
+				}
+			}
 		}
 
 		div:nth-child(2n) {
 			background: #eee;
 		}
+
+	}
+
+	strong {
+		white-space: nowrap;
 	}
 }
 
