@@ -1,0 +1,116 @@
+.inline {
+	.clearfix;
+
+	& > li,
+	& > div {
+		float: left;
+	}
+}
+
+.clear {
+	clear: both;
+}
+
+.clearfix {
+	&:after {
+		content: "";
+		clear: both;
+		display: block;
+		height: 1px;
+		float: none;
+	}
+}
+
+.center {
+	max-width: 990px;
+	min-width: 320px;
+	padding: 0 20px;
+	.sizing;
+	margin: 0 auto;
+	position: relative;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right !important;
+}
+
+.normal {
+	font-weight: normal;
+}
+
+.hide {
+	display: none;
+}
+
+.none {
+	display: none !important;
+}
+
+.table {
+	display: table;
+	width: 100%;
+	table-layout: fixed;
+
+	.row {
+		display: table-row;
+
+		.cell {
+			display: table-cell;
+		}
+	}
+}
+
+.text-right {
+	text-align: right;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-center {
+	text-align: center;
+}
+
+
+@media all and (max-width: 728px) {
+	
+	.left,
+	.right {
+		float: none !important;
+	}
+
+	.text-right-mobile {
+		text-align: right;
+	}
+
+	.text-left-mobile {
+		text-align: left;
+	}
+
+	.text-center-mobile {
+		text-align: center;
+	}
+
+	.inline {
+		& > li,
+		& > div {
+			float: none;
+		}
+	}
+
+}
+
+
+
+
+
+
+
+
+
+

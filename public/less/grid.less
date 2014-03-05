@@ -1,0 +1,169 @@
+@import 'func';
+
+.row {
+	display: block;
+	width: 100%;
+	padding: 0 20px;
+	margin: 0 -20px;
+
+	&:after {
+		content: "";
+		clear: both;
+		display: block;
+		height: 1px;
+		float: none;
+	}
+
+	& > [class^="col"], 
+	& > [class*=" col"] {
+		&:first-child {
+			padding-left: 0;
+		}
+		&:last-child {
+			padding-right: 0;
+		}
+
+		&.nofloat {
+			&:first-child {
+				margin-left: 0;
+			}
+		}
+	}
+}
+
+[class^="col"], [class*=" col"] {
+	float: left;
+	padding: 0 20px;
+	.sizing;
+
+	&.nofloat {
+		float: none;
+		display: inline-block;
+		vertical-align: top;
+
+		&.middle {
+			vertical-align: middle;
+		}
+	}
+}
+
+.col1 {
+	width: 100%;
+}
+
+.col2 {
+	width: 50%;
+}
+
+.col3 {
+	width: 33.33%
+}
+
+.col3-inverse {
+	width: 66.66%
+}
+
+.col4 {
+	width: 25%;
+}
+
+.col4-inverse {
+	width: 75%;
+}
+
+.col5 {
+	width: 20%;
+}
+
+.col5-inverse {
+	width: 80%;
+}
+
+.col6 {
+	width: 16.66%;
+}
+
+.col7 {
+	width: 14.29%;
+}
+
+.col8 {
+	width: 12.5%;
+}
+
+.col8-inverse {
+	width: 100% - 12.5%;
+}
+
+.col9 {
+	width: 11.11%;
+}
+
+.col9-inverse {
+	width: 88.89%;
+}
+
+.col10 {
+	width: 10%;
+}
+
+.col10-inverse {
+	width: 90%;
+}
+
+.col11 {
+	width: 9.09%;
+}
+
+.col12 {
+	width: 8.33%;
+}
+
+.col13 {
+	width: 7.69%;
+}
+
+.col14 {
+	width: 7.14%;
+}
+
+.col15 {
+	width: 6.66%;
+}
+
+.col16 {
+	width: 6.25%;
+}
+
+
+@media all and (max-width: 728px) {
+	
+	.row {
+		padding: 0;
+		margin: 0;
+	}
+
+	[class^="col"], [class*=" col"] {
+		float: none;
+		width: 100%;
+		padding: 0 !important;
+		margin: 20px 0;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
