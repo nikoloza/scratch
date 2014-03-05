@@ -28,6 +28,13 @@
 	        border-bottom-left-radius: @bottomleft;
 }
 
+.selection(@background: #000, @color: #ccc){
+	&::selection {
+		background-color: @background;
+		color: @color;
+	}
+}
+
 .transition (@property) {
 	-webkit-transition: @property;
 	   -moz-transition: @property;
