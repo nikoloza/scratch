@@ -3712,9 +3712,13 @@ body {
 }
 .grid section div div {
   margin-bottom: -5px;
+  margin-top: 5px;
+  padding: 0;
 }
 .grid section div div div {
+  padding: 5px;
   background: #ccc;
+  margin: 0;
 }
 .grid section div:nth-child(2n) {
   background: #eee;
