@@ -3839,7 +3839,10 @@ input::-moz-focus-inner {
 body {
   padding: 0 2% 4%;
 }
-.grid .fb-share-button {
+.grid .twitter-follow-button {
+  margin-right: 5px;
+}
+.grid .fb-like {
   margin-right: 15px;
 }
 .grid h2 {
