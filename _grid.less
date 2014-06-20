@@ -1,0 +1,253 @@
+[class^="row"] >,
+[class*=" row"] > {
+	display: block;
+	width: 100%;
+
+	&:after {
+		content: "";
+		clear: both;
+		display: block;
+		height: 1px;
+		float: none;
+	}
+
+	& > li,
+	& > td,
+	& > div:not(.clear),
+	& > fieldset {
+		float: left;
+		padding: 0 @grid-padding;
+		.sizing;
+	}
+
+	&.nopadding > div {
+		padding: 0;
+	}
+
+	&.sidepadding > div {
+		&:first-child {
+			padding-left: 0;
+		}
+		&:last-child {
+			padding-right: 0;
+		}
+	}
+
+	&.nofloat {
+		& > li,
+		& > td,
+		& > div:not(.clear),
+		& > fieldset {
+			float: none !important;
+			display: inline-block;
+			vertical-align: top;
+			margin-left: -4px;
+		}
+	}
+}
+
+.columns (@property: 1){
+	& > li,
+	& > td,
+	& > div:not(.clear),
+	& > .cell {
+		width: 100% / @property;
+
+		&.inverse {
+			width: 100% - (100% / @property);
+		}
+
+		&.break {
+			.clearfix;
+		}
+
+		.generate-colspan(@property);
+		.generate-colspan(@n, @i: 2) when (@i =< @n) {
+			&.colspan@{i} {
+				width: (100% / @property) * @i;
+			}
+			
+			.generate-colspan(@n, (@i + 1));
+		}
+	}
+}
+
+
+.generate-row(@n, @i: 1) when (@i =< @n) {
+	&.row@{i} {
+		.columns(@i)
+	}
+  .generate-row(@n, (@i + 1));
+}
+
+.generate-row(20);
+
+
+// plural grid system
+
+.plural {
+	.clearfix;
+
+	& > div,
+	& > li {
+		width: 100% / 4;
+		float: left;
+		padding: 0 @grid-padding;
+		.sizing;
+
+		&:nth-child(4n) {
+			.clearfix;
+		}
+	}
+}
+
+
+@media all and (min-width: 1440px) {
+
+
+	.generate-row(@n, @i: 1) when (@i =< @n) {
+		&.big@{i} {
+			.columns(@i)
+		}
+	  .generate-row(@n, (@i + 1));
+	}
+
+	.generate-row(20);
+
+	.plural {
+		& > div,
+		& > li {
+			width: 100% / 5;
+
+			&:nth-child(5n) {
+				.clearfix;
+			}
+		}
+	}
+
+}
+
+
+@media all and (min-width: 1680px) {
+
+
+	.generate-row(@n, @i: 1) when (@i =< @n) {
+		&.large@{i} {
+			.columns(@i)
+		}
+		
+		.generate-row(@n, (@i + 1));
+	}
+
+	.generate-row(20);
+
+	.plural {
+		& > div,
+		& > li {
+			width: 100% / 6;
+
+			&:nth-child(6n) {
+				.clearfix;
+			}
+		}
+	}
+
+}
+
+
+@media all and (max-width: 1000px) {
+
+	.plural {
+		& > div,
+		& > li {
+			width: 100% / 3;
+
+			&:nth-child(3n) {
+				.clearfix;
+			}
+		}
+	}
+
+}
+
+
+@media all and (max-width: 728px) {
+	
+	[class^="row"], [class*=" row"] {
+		& > div {
+			float: none;
+			width: 100%;
+
+			&.inverse,
+			&[class^="colspan"] {
+				width: 100%;
+			}
+		}
+
+		&[class^="small"] > div,
+		&[class*=" small"] > div {
+			float: left;
+		}
+
+		.generate-row(@n, @i: 1) when (@i =< @n) {
+			&.small@{i} {
+				.columns(@i);
+			}
+			
+			.generate-row(@n, (@i + 1));
+		}
+
+		.generate-row(8);
+	}
+
+	.plural {
+		& > div,
+		& > li {
+			width: 100% / 2;
+		}
+	}
+
+}
+
+
+@media all and (max-width: 480px) {
+	
+	[class^="row"], [class*=" row"] {
+		&[class^="tiny"] > div,
+		&[class*=" tiny"] > div {
+			float: left;
+		}
+
+		.generate-row(@n, @i: 1) when (@i =< @n) {
+			&.tiny@{i} {
+				.columns(@i);
+			}
+			
+			.generate-row(@n, (@i + 1));
+		}
+
+		.generate-row(8);
+	}
+	
+	.plural {
+		& > div,
+		& > li {
+			width: 100%;
+		}
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,123 @@
+.inline {
+	.clearfix;
+
+	& > li,
+	& > div {
+		float: left;
+	}
+}
+
+.clear {
+	clear: both !important;
+	width: 100% !important;
+	float: none !important;
+}
+
+.clearfix {
+	&:after {
+		content: "";
+		clear: both;
+		display: block;
+		height: 0;
+		float: none;
+	}
+}
+
+.center {
+	max-width: 990px;
+	min-width: 320px;
+	padding: 0 20px;
+	.sizing;
+	margin: 0 auto;
+	position: relative;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right !important;
+}
+
+.normal {
+	font-weight: normal;
+}
+
+.hide {
+	display: none;
+}
+
+.none {
+	display: none !important;
+}
+
+.table {
+	display: table;
+	width: 100%;
+	table-layout: fixed;
+
+	& > div {
+		display: table-row;
+
+		& > div {
+			display: table-cell;
+		}
+	}
+}
+
+.text-right {
+	text-align: right;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.list {
+	list-style: inherit;
+	line-height: 1.5;
+	margin-left: 20px;
+}
+
+
+@media all and (max-width: 728px) {
+	
+	.left {
+		float: none !important;
+	}
+
+	.text-right-mobile {
+		text-align: right;
+	}
+
+	.text-left-mobile {
+		text-align: left;
+	}
+
+	.text-center-mobile {
+		text-align: center;
+	}
+
+	.inline {
+		& > li,
+		& > div {
+			float: none;
+		}
+	}
+
+}
+
+
+
+
+
+
+
+
+
+

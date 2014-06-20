@@ -1,0 +1,44 @@
+@font-family: Arial, sans-serif;
+
+@fonts-path: 'fonts';
+@icons-path: 'icons';
+@img-path: 'img';
+
+@grid-padding: 10px;
+
+@container-width: 980px;
+@import '_colors';
+
+@body-background: transparent;
+
+@text-color: #333;
+@a-color: #333;
+@a-weight: 400;
+@a-decoration: underline;
+
+@line-height: 1.3;
+
+@loading: '@{img-path}/loader.gif';
+@lightloading: '@{img-path}/loader-light.gif';
+
+
+@import '_func';
+@import '_fonts';
+@import '_icons';
+@import '_reset';
+@import '_sprite';
+
+@import '_classes';
+@import '_grid';
+@import '_form';
+
+
+.browsers() {
+	@import '_browsers';
+	@import '_print';
+}
+
+.responsive() {
+	@import '_tablet';
+	@import '_mobile';
+}
