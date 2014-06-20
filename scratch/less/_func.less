@@ -1,7 +1,7 @@
-.shadow (@shadow) {
-	-webkit-box-shadow: @shadow;
-	   -moz-box-shadow: @shadow;
-	        box-shadow: @shadow;
+.shadow (@shadow, @second: inset 0 0 0) {
+	-webkit-box-shadow: @shadow, @second;
+	   -moz-box-shadow: @shadow, @second;
+	        box-shadow: @shadow, @second;
 }
 
 .radius (@radius) {
@@ -26,6 +26,11 @@
 	-webkit-border-bottom-left-radius: @bottomleft;
 	    -moz-border-radius-bottomleft: @bottomleft;
 	        border-bottom-left-radius: @bottomleft;
+}
+
+.word-wrap (@property: break-word) {
+    -ms-word-wrap: @property;
+        word-wrap: @property;
 }
 
 .selection(@background: #000, @color: #ccc){
@@ -78,6 +83,11 @@
 	white-space: nowrap;
 }
 
+.text-shadow (@property) {
+    -webkit-text-shadow: @property;
+            text-shadow: @property;
+}
+
 .text-overflow(@property: ellipsis) {
 	.ellipsis(@property);
     -ms-text-overflow: @property;
@@ -107,6 +117,13 @@
     -webkit-appearance: @property;
        -moz-appearance: @property;
             appearance: @property;
+}
+
+.bgsize (@property) {
+    -webkit-background-size: @property;
+       -moz-background-size: @property;
+         -o-background-size: @property;
+            background-size: @property;
 }
 
 .placeholder(@color: #333) {

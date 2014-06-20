@@ -1,0 +1,143 @@
+/* 
+	Scratch Framework (https://github.com/nikoloza/Scratch)
+	Nika Tomadze (@nnikoloza)
+	nika.tomadze@gmail.com
+*/
+
+@import 'var';
+
+.selection(#000, #fff);
+
+body {
+	background: #123;
+	padding: 10px 10px 10px 0;
+}
+
+.container {
+	background: url('../img/bg.png');
+	padding-right: 20px;
+	.cradius(0, 10px, 10px);
+	.shadow(#000 0 0 10px);
+	.sizing;
+}
+
+
+.logo {
+	margin: 30px 15px 0;
+	display: inline-block;
+	background: rgba(0, 0, 0, 0.9);
+	padding: 0 4px;
+	color: #fff;
+	line-height: 1.2;
+
+	& + p {
+		margin: 0;
+		padding: 0 15px 30px;
+		font-size: 14px;
+
+		span {
+			background: rgba(255, 255, 255, 0.8);
+			display: inline-block;
+			padding: 3px;
+		}
+	}
+}
+
+
+.content {
+	background: #fff;
+	padding: 2%;
+	.cradius(0, 10px, 10px);
+	.shadow(#444 0 0 10px);
+}
+
+.content {
+	h2 {
+		display: inline-block;
+		background: #eee;
+		line-height: 1.2;
+		margin: 20px 0 0;
+		padding: 0 4px 4px;
+	}
+
+	.block {
+		opacity: .5;
+		min-height: 100px;
+		margin-bottom: 40px;
+		.transition(linear all 0.1s);
+
+		&:hover {
+			opacity: 1;
+		}
+
+		h3 {
+			margin: 40px 0 20px;
+		}
+
+		section {
+			margin: 20px 0;
+
+			div {
+				background: #ddd;
+				padding: 5px 0;
+				font-size: 11px;
+				text-transform: uppercase;
+				.sizing;
+
+				div {
+					margin-bottom: -5px;
+					margin-top: 5px;
+					padding: 0;
+
+					div {
+						padding: 5px;
+						background: #ccc;
+						margin: 0;
+					}
+				}
+			}
+
+			div:nth-child(2n) {
+				background: #eee;
+			}
+		}
+
+		strong {
+			white-space: nowrap;
+		}
+	}
+
+	hr {
+		border-bottom: 1px solid #123;
+		border-top: 0;
+	}
+}
+
+
+.responsive();
+.browsers();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

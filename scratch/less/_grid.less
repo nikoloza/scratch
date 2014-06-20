@@ -11,9 +11,12 @@
 		float: none;
 	}
 
-	& > div {
+	& > li,
+	& > td,
+	& > div:not(.clear),
+	& > fieldset {
 		float: left;
-		padding: 0 @default-padding;
+		padding: 0 @grid-padding;
 		.sizing;
 	}
 
@@ -29,19 +32,36 @@
 			padding-right: 0;
 		}
 	}
+
+	&.nofloat {
+		& > li,
+		& > td,
+		& > div:not(.clear),
+		& > fieldset {
+			float: none !important;
+			display: inline-block;
+			vertical-align: top;
+			margin-left: -4px;
+		}
+	}
 }
 
 .columns (@property: 1){
 	& > li,
 	& > td,
-	& > div {
+	& > div:not(.clear),
+	& > .cell {
 		width: 100% / @property;
-		
+
 		&.inverse {
 			width: 100% - (100% / @property);
 		}
 
-		.generate-colspan(@property - 2);
+		&.break {
+			.clearfix;
+		}
+
+		.generate-colspan(@property);
 		.generate-colspan(@n, @i: 2) when (@i =< @n) {
 			&.colspan@{i} {
 				width: (100% / @property) * @i;
@@ -72,7 +92,7 @@
 	& > li {
 		width: 100% / 4;
 		float: left;
-		padding: 0 @default-padding;
+		padding: 0 @grid-padding;
 		.sizing;
 
 		&:nth-child(4n) {
@@ -171,7 +191,7 @@
 
 		.generate-row(@n, @i: 1) when (@i =< @n) {
 			&.small@{i} {
-				.columns(@i)
+				.columns(@i);
 			}
 			
 			.generate-row(@n, (@i + 1));
@@ -184,10 +204,6 @@
 		& > div,
 		& > li {
 			width: 100% / 2;
-
-			&:nth-child(2n) {
-				.clearfix;
-			}
 		}
 	}
 
@@ -204,7 +220,7 @@
 
 		.generate-row(@n, @i: 1) when (@i =< @n) {
 			&.tiny@{i} {
-				.columns(@i)
+				.columns(@i);
 			}
 			
 			.generate-row(@n, (@i + 1));
