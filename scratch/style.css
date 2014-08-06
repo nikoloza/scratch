@@ -12,26 +12,41 @@
 	Use grunt to minify css file.
 	You need to install npm: grunt-contrib-cssmin
 */
-.text-white {
-  color: #ffffff;
-}
-.white {
-  background: #ffffff;
-}
 .text-blue {
   color: #112233;
 }
 .blue {
   background: #112233;
 }
+.text-black {
+  color: #191919;
+}
+.black {
+  background: #191919;
+}
+.text-gray1 {
+  color: #7c7470;
+}
 .gray1 {
   background: #7c7470;
+}
+.text-gray2 {
+  color: #d1d4d5;
 }
 .gray2 {
   background: #d1d4d5;
 }
+.text-gray3 {
+  color: #e4e2e2;
+}
 .gray3 {
   background: #e4e2e2;
+}
+.text-white {
+  color: #f9f9f9;
+}
+.white {
+  background: #f9f9f9;
 }
 html {
   font-size: 10px;
@@ -888,6 +903,501 @@ address {
 .row10 > li.colspan10,
 .row10 > div:not(.clear).colspan10,
 .row10 > .cell.colspan10 {
+  width: 100%;
+}
+.row11 > li,
+.row11 > div:not(.clear),
+.row11 > .cell {
+  width: 9.09090909%;
+  min-height: 1px;
+}
+.row11 > li.inverse,
+.row11 > div:not(.clear).inverse,
+.row11 > .cell.inverse {
+  width: 90.90909091%;
+}
+.row11 > li.break:after,
+.row11 > div:not(.clear).break:after,
+.row11 > .cell.break:after {
+  content: "";
+  clear: both;
+  display: block;
+  height: 0;
+  float: none;
+}
+.row11 > li.colspan2,
+.row11 > div:not(.clear).colspan2,
+.row11 > .cell.colspan2 {
+  width: 18.18181818%;
+}
+.row11 > li.colspan3,
+.row11 > div:not(.clear).colspan3,
+.row11 > .cell.colspan3 {
+  width: 27.27272727%;
+}
+.row11 > li.colspan4,
+.row11 > div:not(.clear).colspan4,
+.row11 > .cell.colspan4 {
+  width: 36.36363636%;
+}
+.row11 > li.colspan5,
+.row11 > div:not(.clear).colspan5,
+.row11 > .cell.colspan5 {
+  width: 45.45454545%;
+}
+.row11 > li.colspan6,
+.row11 > div:not(.clear).colspan6,
+.row11 > .cell.colspan6 {
+  width: 54.54545455%;
+}
+.row11 > li.colspan7,
+.row11 > div:not(.clear).colspan7,
+.row11 > .cell.colspan7 {
+  width: 63.63636364%;
+}
+.row11 > li.colspan8,
+.row11 > div:not(.clear).colspan8,
+.row11 > .cell.colspan8 {
+  width: 72.72727273%;
+}
+.row11 > li.colspan9,
+.row11 > div:not(.clear).colspan9,
+.row11 > .cell.colspan9 {
+  width: 81.81818182%;
+}
+.row11 > li.colspan10,
+.row11 > div:not(.clear).colspan10,
+.row11 > .cell.colspan10 {
+  width: 90.90909091%;
+}
+.row11 > li.colspan11,
+.row11 > div:not(.clear).colspan11,
+.row11 > .cell.colspan11 {
+  width: 100%;
+}
+.row12 > li,
+.row12 > div:not(.clear),
+.row12 > .cell {
+  width: 8.33333333%;
+  min-height: 1px;
+}
+.row12 > li.inverse,
+.row12 > div:not(.clear).inverse,
+.row12 > .cell.inverse {
+  width: 91.66666667%;
+}
+.row12 > li.break:after,
+.row12 > div:not(.clear).break:after,
+.row12 > .cell.break:after {
+  content: "";
+  clear: both;
+  display: block;
+  height: 0;
+  float: none;
+}
+.row12 > li.colspan2,
+.row12 > div:not(.clear).colspan2,
+.row12 > .cell.colspan2 {
+  width: 16.66666667%;
+}
+.row12 > li.colspan3,
+.row12 > div:not(.clear).colspan3,
+.row12 > .cell.colspan3 {
+  width: 25%;
+}
+.row12 > li.colspan4,
+.row12 > div:not(.clear).colspan4,
+.row12 > .cell.colspan4 {
+  width: 33.33333333%;
+}
+.row12 > li.colspan5,
+.row12 > div:not(.clear).colspan5,
+.row12 > .cell.colspan5 {
+  width: 41.66666667%;
+}
+.row12 > li.colspan6,
+.row12 > div:not(.clear).colspan6,
+.row12 > .cell.colspan6 {
+  width: 50%;
+}
+.row12 > li.colspan7,
+.row12 > div:not(.clear).colspan7,
+.row12 > .cell.colspan7 {
+  width: 58.33333333%;
+}
+.row12 > li.colspan8,
+.row12 > div:not(.clear).colspan8,
+.row12 > .cell.colspan8 {
+  width: 66.66666667%;
+}
+.row12 > li.colspan9,
+.row12 > div:not(.clear).colspan9,
+.row12 > .cell.colspan9 {
+  width: 75%;
+}
+.row12 > li.colspan10,
+.row12 > div:not(.clear).colspan10,
+.row12 > .cell.colspan10 {
+  width: 83.33333333%;
+}
+.row12 > li.colspan11,
+.row12 > div:not(.clear).colspan11,
+.row12 > .cell.colspan11 {
+  width: 91.66666667%;
+}
+.row12 > li.colspan12,
+.row12 > div:not(.clear).colspan12,
+.row12 > .cell.colspan12 {
+  width: 100%;
+}
+.row13 > li,
+.row13 > div:not(.clear),
+.row13 > .cell {
+  width: 7.69230769%;
+  min-height: 1px;
+}
+.row13 > li.inverse,
+.row13 > div:not(.clear).inverse,
+.row13 > .cell.inverse {
+  width: 92.30769231%;
+}
+.row13 > li.break:after,
+.row13 > div:not(.clear).break:after,
+.row13 > .cell.break:after {
+  content: "";
+  clear: both;
+  display: block;
+  height: 0;
+  float: none;
+}
+.row13 > li.colspan2,
+.row13 > div:not(.clear).colspan2,
+.row13 > .cell.colspan2 {
+  width: 15.38461538%;
+}
+.row13 > li.colspan3,
+.row13 > div:not(.clear).colspan3,
+.row13 > .cell.colspan3 {
+  width: 23.07692308%;
+}
+.row13 > li.colspan4,
+.row13 > div:not(.clear).colspan4,
+.row13 > .cell.colspan4 {
+  width: 30.76923077%;
+}
+.row13 > li.colspan5,
+.row13 > div:not(.clear).colspan5,
+.row13 > .cell.colspan5 {
+  width: 38.46153846%;
+}
+.row13 > li.colspan6,
+.row13 > div:not(.clear).colspan6,
+.row13 > .cell.colspan6 {
+  width: 46.15384615%;
+}
+.row13 > li.colspan7,
+.row13 > div:not(.clear).colspan7,
+.row13 > .cell.colspan7 {
+  width: 53.84615385%;
+}
+.row13 > li.colspan8,
+.row13 > div:not(.clear).colspan8,
+.row13 > .cell.colspan8 {
+  width: 61.53846154%;
+}
+.row13 > li.colspan9,
+.row13 > div:not(.clear).colspan9,
+.row13 > .cell.colspan9 {
+  width: 69.23076923%;
+}
+.row13 > li.colspan10,
+.row13 > div:not(.clear).colspan10,
+.row13 > .cell.colspan10 {
+  width: 76.92307692%;
+}
+.row13 > li.colspan11,
+.row13 > div:not(.clear).colspan11,
+.row13 > .cell.colspan11 {
+  width: 84.61538462%;
+}
+.row13 > li.colspan12,
+.row13 > div:not(.clear).colspan12,
+.row13 > .cell.colspan12 {
+  width: 92.30769231%;
+}
+.row13 > li.colspan13,
+.row13 > div:not(.clear).colspan13,
+.row13 > .cell.colspan13 {
+  width: 100%;
+}
+.row14 > li,
+.row14 > div:not(.clear),
+.row14 > .cell {
+  width: 7.14285714%;
+  min-height: 1px;
+}
+.row14 > li.inverse,
+.row14 > div:not(.clear).inverse,
+.row14 > .cell.inverse {
+  width: 92.85714286%;
+}
+.row14 > li.break:after,
+.row14 > div:not(.clear).break:after,
+.row14 > .cell.break:after {
+  content: "";
+  clear: both;
+  display: block;
+  height: 0;
+  float: none;
+}
+.row14 > li.colspan2,
+.row14 > div:not(.clear).colspan2,
+.row14 > .cell.colspan2 {
+  width: 14.28571429%;
+}
+.row14 > li.colspan3,
+.row14 > div:not(.clear).colspan3,
+.row14 > .cell.colspan3 {
+  width: 21.42857143%;
+}
+.row14 > li.colspan4,
+.row14 > div:not(.clear).colspan4,
+.row14 > .cell.colspan4 {
+  width: 28.57142857%;
+}
+.row14 > li.colspan5,
+.row14 > div:not(.clear).colspan5,
+.row14 > .cell.colspan5 {
+  width: 35.71428571%;
+}
+.row14 > li.colspan6,
+.row14 > div:not(.clear).colspan6,
+.row14 > .cell.colspan6 {
+  width: 42.85714286%;
+}
+.row14 > li.colspan7,
+.row14 > div:not(.clear).colspan7,
+.row14 > .cell.colspan7 {
+  width: 50%;
+}
+.row14 > li.colspan8,
+.row14 > div:not(.clear).colspan8,
+.row14 > .cell.colspan8 {
+  width: 57.14285714%;
+}
+.row14 > li.colspan9,
+.row14 > div:not(.clear).colspan9,
+.row14 > .cell.colspan9 {
+  width: 64.28571429%;
+}
+.row14 > li.colspan10,
+.row14 > div:not(.clear).colspan10,
+.row14 > .cell.colspan10 {
+  width: 71.42857143%;
+}
+.row14 > li.colspan11,
+.row14 > div:not(.clear).colspan11,
+.row14 > .cell.colspan11 {
+  width: 78.57142857%;
+}
+.row14 > li.colspan12,
+.row14 > div:not(.clear).colspan12,
+.row14 > .cell.colspan12 {
+  width: 85.71428571%;
+}
+.row14 > li.colspan13,
+.row14 > div:not(.clear).colspan13,
+.row14 > .cell.colspan13 {
+  width: 92.85714286%;
+}
+.row14 > li.colspan14,
+.row14 > div:not(.clear).colspan14,
+.row14 > .cell.colspan14 {
+  width: 100%;
+}
+.row15 > li,
+.row15 > div:not(.clear),
+.row15 > .cell {
+  width: 6.66666667%;
+  min-height: 1px;
+}
+.row15 > li.inverse,
+.row15 > div:not(.clear).inverse,
+.row15 > .cell.inverse {
+  width: 93.33333333%;
+}
+.row15 > li.break:after,
+.row15 > div:not(.clear).break:after,
+.row15 > .cell.break:after {
+  content: "";
+  clear: both;
+  display: block;
+  height: 0;
+  float: none;
+}
+.row15 > li.colspan2,
+.row15 > div:not(.clear).colspan2,
+.row15 > .cell.colspan2 {
+  width: 13.33333333%;
+}
+.row15 > li.colspan3,
+.row15 > div:not(.clear).colspan3,
+.row15 > .cell.colspan3 {
+  width: 20%;
+}
+.row15 > li.colspan4,
+.row15 > div:not(.clear).colspan4,
+.row15 > .cell.colspan4 {
+  width: 26.66666667%;
+}
+.row15 > li.colspan5,
+.row15 > div:not(.clear).colspan5,
+.row15 > .cell.colspan5 {
+  width: 33.33333333%;
+}
+.row15 > li.colspan6,
+.row15 > div:not(.clear).colspan6,
+.row15 > .cell.colspan6 {
+  width: 40%;
+}
+.row15 > li.colspan7,
+.row15 > div:not(.clear).colspan7,
+.row15 > .cell.colspan7 {
+  width: 46.66666667%;
+}
+.row15 > li.colspan8,
+.row15 > div:not(.clear).colspan8,
+.row15 > .cell.colspan8 {
+  width: 53.33333333%;
+}
+.row15 > li.colspan9,
+.row15 > div:not(.clear).colspan9,
+.row15 > .cell.colspan9 {
+  width: 60%;
+}
+.row15 > li.colspan10,
+.row15 > div:not(.clear).colspan10,
+.row15 > .cell.colspan10 {
+  width: 66.66666667%;
+}
+.row15 > li.colspan11,
+.row15 > div:not(.clear).colspan11,
+.row15 > .cell.colspan11 {
+  width: 73.33333333%;
+}
+.row15 > li.colspan12,
+.row15 > div:not(.clear).colspan12,
+.row15 > .cell.colspan12 {
+  width: 80%;
+}
+.row15 > li.colspan13,
+.row15 > div:not(.clear).colspan13,
+.row15 > .cell.colspan13 {
+  width: 86.66666667%;
+}
+.row15 > li.colspan14,
+.row15 > div:not(.clear).colspan14,
+.row15 > .cell.colspan14 {
+  width: 93.33333333%;
+}
+.row15 > li.colspan15,
+.row15 > div:not(.clear).colspan15,
+.row15 > .cell.colspan15 {
+  width: 100%;
+}
+.row16 > li,
+.row16 > div:not(.clear),
+.row16 > .cell {
+  width: 6.25%;
+  min-height: 1px;
+}
+.row16 > li.inverse,
+.row16 > div:not(.clear).inverse,
+.row16 > .cell.inverse {
+  width: 93.75%;
+}
+.row16 > li.break:after,
+.row16 > div:not(.clear).break:after,
+.row16 > .cell.break:after {
+  content: "";
+  clear: both;
+  display: block;
+  height: 0;
+  float: none;
+}
+.row16 > li.colspan2,
+.row16 > div:not(.clear).colspan2,
+.row16 > .cell.colspan2 {
+  width: 12.5%;
+}
+.row16 > li.colspan3,
+.row16 > div:not(.clear).colspan3,
+.row16 > .cell.colspan3 {
+  width: 18.75%;
+}
+.row16 > li.colspan4,
+.row16 > div:not(.clear).colspan4,
+.row16 > .cell.colspan4 {
+  width: 25%;
+}
+.row16 > li.colspan5,
+.row16 > div:not(.clear).colspan5,
+.row16 > .cell.colspan5 {
+  width: 31.25%;
+}
+.row16 > li.colspan6,
+.row16 > div:not(.clear).colspan6,
+.row16 > .cell.colspan6 {
+  width: 37.5%;
+}
+.row16 > li.colspan7,
+.row16 > div:not(.clear).colspan7,
+.row16 > .cell.colspan7 {
+  width: 43.75%;
+}
+.row16 > li.colspan8,
+.row16 > div:not(.clear).colspan8,
+.row16 > .cell.colspan8 {
+  width: 50%;
+}
+.row16 > li.colspan9,
+.row16 > div:not(.clear).colspan9,
+.row16 > .cell.colspan9 {
+  width: 56.25%;
+}
+.row16 > li.colspan10,
+.row16 > div:not(.clear).colspan10,
+.row16 > .cell.colspan10 {
+  width: 62.5%;
+}
+.row16 > li.colspan11,
+.row16 > div:not(.clear).colspan11,
+.row16 > .cell.colspan11 {
+  width: 68.75%;
+}
+.row16 > li.colspan12,
+.row16 > div:not(.clear).colspan12,
+.row16 > .cell.colspan12 {
+  width: 75%;
+}
+.row16 > li.colspan13,
+.row16 > div:not(.clear).colspan13,
+.row16 > .cell.colspan13 {
+  width: 81.25%;
+}
+.row16 > li.colspan14,
+.row16 > div:not(.clear).colspan14,
+.row16 > .cell.colspan14 {
+  width: 87.5%;
+}
+.row16 > li.colspan15,
+.row16 > div:not(.clear).colspan15,
+.row16 > .cell.colspan15 {
+  width: 93.75%;
+}
+.row16 > li.colspan16,
+.row16 > div:not(.clear).colspan16,
+.row16 > .cell.colspan16 {
   width: 100%;
 }
 @media all and (max-width: 1100px) {

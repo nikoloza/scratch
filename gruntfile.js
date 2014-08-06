@@ -10,7 +10,7 @@ module.exports = function(grunt) {
 			},
 
 			build: ['Grunfile.js', 'scratch/js/**/*.js']
-	    },
+		},
 
 		uglify: {
 			options: {
