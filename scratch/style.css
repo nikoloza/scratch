@@ -5668,11 +5668,11 @@ address {
   color: #ffffff;
 }
 body {
-  background: #123;
+  background: #112233;
   padding: 10px 10px 10px 0;
 }
 .container {
-  background: url('../img/bg.png');
+  background: url('img/bg.png');
   padding-right: 20px;
   -webkit-border-top-left-radius: 0;
   -moz-border-radius-topleft: 0;
@@ -5783,7 +5783,7 @@ body {
   white-space: nowrap;
 }
 .content hr {
-  border-bottom: 1px solid #123;
+  border-bottom: 1px solid #112233;
   border-top: 0;
 }
 @media all and (max-width: 1920px) {
