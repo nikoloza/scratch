@@ -1,0 +1,38 @@
+// 1100px
+@media all and (min-width: @screen) {
+	.show-tablet {
+		display: none;
+	}
+	.hide-tablet {
+		display: inline-block;
+	}
+}
+@media all and (max-width: @screen) {
+
+	.show-tablet {
+		display: inline-block;
+	}
+	.hide-tablet {
+		display: none;
+	}
+	
+}
+
+
+// 840px
+@media all and (min-width: @normal) {
+	.show-tablet-small {
+		display: none;
+	}
+	.hide-tablet-small {
+		display: inline-block;
+	}
+}
+@media all and (max-width: @normal) {
+	.show-tablet-small {
+		display: inline-block;
+	}
+	.hide-tablet-small {
+		display: none;
+	}
+}

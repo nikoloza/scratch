@@ -1,44 +1,49 @@
+// document settings
+@body-background: transparent;
+@text-color: @gray1;
+
+// link properties
+@a-color: #000;
+@a-hover: @blue;
+@a-weight: 400;
+@a-decoration: none;
+@a-hover-decoration: none;
+
+// font settings
+@font-size: 1.4rem; // document font size is 10px
+@line-height: 1.3;
 @font-family: Arial, sans-serif;
 
+// responsive breakpoints
+@large: 1920px;
+@screen: 1100px;
+@normal: 840px;
+@small: 728px;
+@tiny: 480px;
+
+// header sizes
+@h1: 4.6rem;
+@h2: 3.2rem;
+@h3: 2.4rem;
+@h4: 2.0rem;
+@h5: 1.8rem;
+@h6: 1.6rem;
+
+// directories listings
 @fonts-path: 'fonts';
 @icons-path: 'icons';
 @img-path: 'img';
 
-@grid-padding: 10px;
+// grid settings
+@grid-padding: 1rem;
+@container-width: 98rem;
 
-@container-width: 980px;
-@import '_colors';
+// styling
+@radius: 3px;
 
-@body-background: transparent;
+// animation
+@animation-duration: 0.5s;
 
-@text-color: #333;
-@a-color: #333;
-@a-weight: 400;
-@a-decoration: underline;
-
-@line-height: 1.3;
-
+// loading elements
 @loading: '@{img-path}/loader.gif';
 @lightloading: '@{img-path}/loader-light.gif';
-
-
-@import '_func';
-@import '_fonts';
-@import '_icons';
-@import '_reset';
-@import '_sprite';
-
-@import '_classes';
-@import '_grid';
-@import '_form';
-
-
-.browsers() {
-	@import '_browsers';
-	@import '_print';
-}
-
-.responsive() {
-	@import '_tablet';
-	@import '_mobile';
-}

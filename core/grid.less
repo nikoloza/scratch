@@ -1,0 +1,199 @@
+[class^="row"] >,
+[class*=" row"] > {
+	display: block;
+	width: 100%;
+
+	&:after {
+		content: "";
+		clear: both;
+		display: block;
+		height: 1px;
+		float: none;
+	}
+
+	& > li,
+	& > div:not(.clear),
+	& > .cell {
+		float: left;
+		padding-right: @grid-padding / 2;
+		padding-left: @grid-padding / 2;
+		.sizing;
+
+		&.full {
+			width: 100&;
+		}
+	}
+
+	&.no-padding {
+		& > li,
+		& > div:not(.clear),
+		& > .cell {
+			padding: 0;
+		}
+	}
+
+	&.side-padding {
+		margin-left: -@grid-padding / 2;
+		width: 100%;
+		width: calc(~'100% + ' @grid-padding)
+	}
+
+	&.twice-padding {
+		& > li,
+		& > div:not(.clear),
+		& > .cell {
+			padding-right: @grid-padding * 2;
+			padding-left: @grid-padding * 2;
+		}
+
+		&.side-padding {
+			margin-left: -@grid-padding * 2;
+			width: 100%;
+			width: calc(~'100% + ' @grid-padding * 4)
+		}
+	}
+
+	&.no-float {
+		& > li,
+		& > div:not(.clear),
+		& > .cell {
+			float: none !important;
+			display: inline-block;
+			vertical-align: top;
+			margin-left: -4px;
+		}
+	}
+}
+
+.columns (@property: 1){
+	& > li,
+	& > div:not(.clear),
+	& > .cell {
+		width: 100% / @property;
+		min-height: 1px;
+
+		&.inverse {
+			width: 100% - (100% / @property);
+		}
+
+		&.break {
+			.clearfix;
+		}
+
+		.generate-colspan(@property);
+		.generate-colspan(@n, @i: 2) when (@i =< @n) {
+			&.colspan@{i} {
+				width: (100% / @property) * @i;
+			}
+			
+			.generate-colspan(@n, (@i + 1));
+		}
+	}
+}
+
+
+.generate-row(@n, @i: 1) when (@i =< @n) {
+	&.row@{i} {
+		.columns(@i)
+	}
+  .generate-row(@n, (@i + 1));
+}
+
+.generate-row(10);
+
+
+// normal screens
+@media all and (max-width: @screen) {
+	
+	[class^="row"], [class*=" row"] {
+		&[class^="normal"],
+		&[class*=" normal"] {
+			& > li,
+			& > div:not(.clear),
+			& > .cell {
+				float: left;
+			}
+		}
+
+		.generate-row(@n, @i: 1) when (@i =< @n) {
+			&.normal@{i} {
+				.columns(@i);
+			}
+			
+			.generate-row(@n, (@i + 1));
+		}
+
+		.generate-row(4);
+	}
+
+}
+
+// tablet portrait
+@media all and (max-width: @screen) {
+
+}
+
+// mobile landscape
+@media all and (max-width: @small) {
+	
+	[class^="row"], [class*=" row"] {
+		&.side-padding,
+		&.no-padding {
+			& > li,
+			& > div:not(.clear),
+			& > .cell {
+				padding-bottom: 20px;
+
+				&:last-child {
+					padding-bottom: 0;
+				}
+			}
+		}
+
+		&[class^="small"],
+		&[class*=" small"] {
+			& > li,
+			& > div:not(.clear),
+			& > .cell {
+				float: left;
+			}
+		}
+
+		.generate-row(@n, @i: 1) when (@i =< @n) {
+			&.small@{i} {
+				.columns(@i);
+			}
+			
+			.generate-row(@n, (@i + 1));
+		}
+
+		.generate-row(4);
+	}
+
+}
+
+// mobile portrait
+@media all and (max-width: @tiny) {
+	
+	[class^="row"], [class*=" row"] {
+		&[class^="tiny"],
+		&[class*=" tiny"] {
+			& > li,
+			& > div:not(.clear),
+			& > .cell {
+				float: left;
+			}
+		}
+
+		.generate-row(@n, @i: 1) when (@i =< @n) {
+			&.tiny@{i} {
+				.columns(@i);
+			}
+			
+			.generate-row(@n, (@i + 1));
+		}
+
+		.generate-row(4);
+	}
+
+}
