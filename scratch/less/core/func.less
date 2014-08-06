@@ -18,11 +18,11 @@
 	-webkit-border-top-right-radius: @topright;
 	    -moz-border-radius-topright: @topright;
 	        border-top-right-radius: @topright;
- 	
+
 	-webkit-border-bottom-right-radius: @bottomright;
 	    -moz-border-radius-bottomright: @bottomright;
 	        border-bottom-right-radius: @bottomright;
-	
+
 	-webkit-border-bottom-left-radius: @bottomleft;
 	    -moz-border-radius-bottomleft: @bottomleft;
 	        border-bottom-left-radius: @bottomleft;
@@ -63,6 +63,14 @@
             transform: @property;
 }
 
+.transform-origin (@property) {
+    -webkit-transform-origin: @property;
+       -moz-transform-origin: @property;
+        -ms-transform-origin: @property;
+         -o-transform-origin: @property;
+            transform-origin: @property;
+}
+
 .translate (@top: -50%, @left: -50%) {
     -webkit-transform: translate(@top, @left);
        -moz-transform: translate(@top, @left);
@@ -88,20 +96,20 @@
             text-shadow: @property;
 }
 
-.text-overflow(@property: ellipsis) {
+.text-overflow (@property: ellipsis) {
 	.ellipsis(@property);
     -ms-text-overflow: @property;
      -o-text-overflow: @property;
         text-overflow: @property;
 }
 
-.selectable(@property: none) {
+.selectable (@property: none) {
 	-webkit-user-select: @property;
        -moz-user-select: @property;
 	    -ms-user-select: @property;
 }
 
-.clip(@property: padding-box) {
+.clip (@property: padding-box) {
     -webkit-background-clip: padding-box;
        -moz-background-clip: padding-box;
             background-clip: padding-box;
@@ -144,50 +152,44 @@
 .overflow (@width: 10px) {
 	overflow-x: hidden;
 	overflow-y: auto;
-	
+
 	&::-webkit-scrollbar {
 		width: @width;
 	}
- 
 	&::-webkit-scrollbar-track {
-		.radius(2px);
+		.radius(5px);
 		background: rgba(255, 255, 255, 0.2);
 		width: 8px;
 	}
- 
 	&::-webkit-scrollbar-thumb {
-		.radius(2px);
-		background: #E01C1B;
+		.radius(5px);
+		background: #ccc;
 		width: 6px;
 	}
- 
 	&::-webkit-scrollbar-thumb:hover {
-		background: #E01C1B;
+		background: #bbb;
 	}
-
 	&::-webkit-scrollbar-thumb:window-inactive {
-		background: #E01C1B; 
+		background: #eee; 
 	}
 }
 
 .gradient (@top: #000, @bottom: #fff){
-	background: @top; /* Old browsers */
-	background: -moz-linear-gradient(top,  @top 0%, @bottom 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@top), color-stop(100%,@bottom)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  @top 0%,@bottom 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  @top 0%,@bottom 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  @top 0%,@bottom 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  @top 0%,@bottom 100%); /* W3C */
-	// filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@top', endColorstr='@bottom',GradientType=0 ); /* IE6-9 */
+	background: @top;
+	background: -moz-linear-gradient(top,  @top 0%, @bottom 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@top), color-stop(100%,@bottom));
+	background: -webkit-linear-gradient(top,  @top 0%,@bottom 100%);
+	background: -o-linear-gradient(top,  @top 0%,@bottom 100%);
+	background: -ms-linear-gradient(top,  @top 0%,@bottom 100%);
+	background: linear-gradient(to bottom,  @top 0%,@bottom 100%);
 }
 
 ._gradient (@left: #000, @right: #fff){
 	background: @left;
-	background: -webkit-gradient(linear, left top, right top, color-stop(0%,@left), color-stop(100%,@right)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(left,  @left 0%,@right 100%); /* Chrome10+,Safari5.1+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,@left), color-stop(100%,@right));
+	background: -webkit-linear-gradient(left,  @left 0%,@right 100%);
 	background: -moz-linear-gradient(left,  @left 0%, @right 100%);
-	background: -o-linear-gradient(left,  @left 0%,@right 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(left,  @left 0%,@right 100%); /* IE10+ */
-	background: linear-gradient(to right,  @left 0%,@right 100%); /* W3C */
-	// filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@left', endColorstr='@right',GradientType=1 ); /* IE6-9 */
+	background: -o-linear-gradient(left,  @left 0%,@right 100%);
+	background: -ms-linear-gradient(left,  @left 0%,@right 100%);
+	background: linear-gradient(to right,  @left 0%,@right 100%);
 }

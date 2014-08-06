@@ -1,0 +1,33 @@
+@import 'var';
+@import 'colors';
+
+// core
+@import 'core/func';
+@import 'core/reset';
+@import 'core/classes';
+@import 'core/grid';
+
+// helpers
+@import 'helpers/fonts';
+@import 'helpers/icons';
+@import 'helpers/sprite';
+@import 'helpers/form';
+
+// plugins
+@import 'plugins/modal';
+@import 'plugins/slider';
+@import 'plugins/animate';
+
+
+// browsers and print page
+.browsers() {
+	@import 'responsive/browsers';
+	@import 'responsive/print';
+}
+
+// responsive
+.responsive() {
+	@import 'responsive/screen';
+	@import 'responsive/tablet';
+	@import 'responsive/mobile';
+}

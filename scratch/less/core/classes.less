@@ -11,6 +11,8 @@
 	clear: both !important;
 	width: 100% !important;
 	float: none !important;
+	height: 1px !important;
+	overflow: hidden;
 }
 
 .clearfix {
@@ -24,12 +26,17 @@
 }
 
 .center {
-	max-width: 990px;
-	min-width: 320px;
-	padding: 0 20px;
-	.sizing;
+	max-width: @container-width;
+	min-width: 280px;
+	padding: 0 @grid-padding * 2;
 	margin: 0 auto;
 	position: relative;
+	.sizing;
+	.clearfix;
+
+	&.wider {
+		max-width: none;
+	}
 }
 
 .left {
@@ -42,6 +49,14 @@
 
 .normal {
 	font-weight: normal;
+}
+
+.transparent {
+	opacity: 0;
+}
+
+.hidden {
+	visibility: hidden;
 }
 
 .hide {
@@ -84,8 +99,26 @@
 	margin-left: 20px;
 }
 
+.bold {
+	font-weight: bold;
+}
+.italic {
+	font-style: italic;
+}
 
-@media all and (max-width: 728px) {
+.first-letter {
+	&:first-letter {
+		font-size: 3em;
+		float: left;
+		margin-right: 10px;
+		font-family: Georgia;
+		margin-top: 0;
+		line-height: 1;
+	}
+}
+
+// 728px
+@media all and (max-width: @small) {
 	
 	.left {
 		float: none !important;

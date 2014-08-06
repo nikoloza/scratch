@@ -1,0 +1,36 @@
+{
+  "name": "Scratch",
+  "version": "0.1.0",
+  "description": "Scratch is new easy way to start project from a scratch. It's powerful, usable and lightweight LESS and jQuery framework for developers who love simple and clean code.",
+  "main": "index.js",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nikoloza/Scratch....git"
+  },
+  "keywords": [
+    "Less",
+    "HTML",
+    "CSS",
+    "jQuery",
+    "Scratch",
+    "Lightweight"
+  ],
+  "author": "Nika Tomadze - @nnikoloza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nikoloza/Scratch.../issues"
+  },
+  "homepage": "http://nikoloza.github.io/scratch/",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-cssmin": "latest",
+    "grunt-contrib-jshint": "latest",
+    "grunt-contrib-less": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-watch": "latest",
+    "jshint-stylish": "latest"
+  }
+}
