@@ -1,20 +1,27 @@
-.inline {
-	.clearfix;
-
-	& > li,
-	& > div {
-		float: left;
-	}
+// opacity control
+.transparent 	{opacity: 0;}
+.opacity {
+	&.full 		{opacity: 1;}
+	&.high 		{opacity: .75;}
+	&.half 		{opacity: .5;}
+	&.low 		{opacity: .25;}
+	&.empty 	{opacity: 0;}
 }
 
+// visibility control
+.hidden 		{visibility: hidden;}
+.hide 			{display: none;}
+.vanish 		{display: none !important;}
+
+// clearfix
 .clear {
-	clear: both !important;
-	width: 100% !important;
-	float: none !important;
-	height: 1px !important;
-	overflow: hidden;
+	// overwriting even any grid element
+	clear: both 		!important;
+	width: 100% 		!important;
+	float: none 		!important;
+	height: 1px 		!important;
+	overflow: hidden 	!important;
 }
-
 .clearfix {
 	&:after {
 		content: "";
@@ -25,48 +32,74 @@
 	}
 }
 
-.center {
-	max-width: @container-width;
-	min-width: 280px;
-	padding: 0 @grid-padding * 2;
-	margin: 0 auto;
+// container
+.container {
 	position: relative;
 	.sizing;
 	.clearfix;
 
-	&.wider {
-		max-width: none;
+	&.fit {
+		max-width: @container-width;
+		min-width: 280px;
+	}
+
+	&.center {
+		margin: 0 auto;
 	}
 }
 
-.left {
-	float: left;
+// floating
+.float {
+	&.left {float: left;}
+	&.right {float: right;}
+	&.reset {float: none;}
 }
 
-.right {
-	float: right !important;
+// font settings
+.font {
+	&.slim 		{font-weight: 300;}
+	&.normal 	{font-weight: 400;}
+	&.bold 		{font-weight: 600;}
+
+	&.italic 	{font-style: italic;}
+
+	&.size {
+		&.h1 	{font-size: @h1;}
+		&.h2 	{font-size: @h2;}
+		&.h3 	{font-size: @h3;}
+		&.h4 	{font-size: @h4;}
+		&.h5 	{font-size: @h5;}
+		&.h6 	{font-size: @h6;}
+	}
+
+	&.align {
+		&.right {text-align: right;}
+		&.left 	{text-align: left;}
+		&.center{text-align: center;}
+	}
 }
 
-.normal {
-	font-weight: normal;
+
+// aditional tricks
+// element for indent
+.tab {
+	&:before {
+		content: "nbsp";
+		opacity: 0;
+	}
 }
 
-.transparent {
-	opacity: 0;
+// inline set children
+.inline {
+	.clearfix;
+
+	& > li,
+	& > div {
+		float: left;
+	}
 }
 
-.hidden {
-	visibility: hidden;
-}
-
-.hide {
-	display: none;
-}
-
-.none {
-	display: none !important;
-}
-
+// tableset with witout <table>
 .table {
 	display: table;
 	width: 100%;
@@ -81,31 +114,7 @@
 	}
 }
 
-.text-right {
-	text-align: right;
-}
-
-.text-left {
-	text-align: left;
-}
-
-.text-center {
-	text-align: center;
-}
-
-.list {
-	list-style: inherit;
-	line-height: 1.5;
-	margin-left: 20px;
-}
-
-.bold {
-	font-weight: bold;
-}
-.italic {
-	font-style: italic;
-}
-
+// grow the first letter
 .first-letter {
 	&:first-letter {
 		font-size: 3em;
@@ -116,41 +125,3 @@
 		line-height: 1;
 	}
 }
-
-// 728px
-@media all and (max-width: @small) {
-	
-	.left {
-		float: none !important;
-	}
-
-	.text-right-mobile {
-		text-align: right;
-	}
-
-	.text-left-mobile {
-		text-align: left;
-	}
-
-	.text-center-mobile {
-		text-align: center;
-	}
-
-	.inline {
-		& > li,
-		& > div {
-			float: none;
-		}
-	}
-
-}
-
-
-
-
-
-
-
-
-
-
