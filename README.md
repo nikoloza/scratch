@@ -1,4 +1,6 @@
 Scratch Framework
 =========
 
-Scratch is new easy way to start project from a scratch. It's powerful, usable and lightweight LESS and jQuery framework for developers who love simple and clean code.
+Scratch shows you best way how you can represent your content in HTML. It's boilerplate using LESS and jQuery.
+
+It has semantic code and file structure which helps you write beautiful code.
