@@ -41,7 +41,7 @@ Also, you can control what feature you need to import by setting `scratch/scratc
 
 -------------
 
-Class refference
+Class reference
 =============================
 On any element use following classes to make easy changes:
 
