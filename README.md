@@ -56,42 +56,42 @@ So we can set it by naming the class `.row` and number which sets children quant
 It works for children `<div>`, `<li>`, `<td>` elements and `.cell` classes. Like this:
 
     .row5
-        div
-        div
-        .cell
-        .cell
-        div
+        > div
+        > div
+        > .cell
+        > .cell
+        > div
         
     ul.row3
-        li
-        li
-        li
+        > li
+        > li
+        > li
 
 and, of course make them **nested**, like this:
 
     section.row4
-        div
-        div.row2
-            div
-            div
-        .cell
-        ul.cell.row3
-            li
-            li
-            li
+        > div
+        > div.row2
+            > div
+            > div
+        > .cell
+        > ul.cell.row3
+            > li
+            > li
+            > li
 
 **To increase child elements width** you need to use `.colspan` + number class on this element. For example `colspan3`. So, it works like this:
 
     .row5
-        div
-        div.colspan3 // this takes 3x more space then usual div
-        div
+        > div
+        > div.colspan3 // this takes 3x more space then usual div
+        > div
         
     table
-        tr.row4
-            td
-            td.colspan2
-            td
+        > tr.row4
+            > td
+            > td.colspan2
+            > td
         
 #### Spacing for the grid
 To prevent spacing by left and right sides or inside cells use following classes:
@@ -134,15 +134,15 @@ We only need to remember that names, so, using that colors is like that:
 	.rootcolor.red		- sets element's root color for children use
 		div
 		div
-			p 
+			> p 
 				Lorem inpum
-				span.rootcolor // makes this text color depend on what color comes after .rootcolor class on the parrent element
+				> span.rootcolor // makes this text color depend on what color comes after .rootcolor class on the parrent element
 					lorem // this is red
-				span.color.yellow // makes color yellow
+				> span.color.yellow // makes color yellow
 					ipsum // this is yellow
 				amet
 		div
-			div.rootbg // makes background in that color, what .rootcolor class gives us
+			> div.rootbg // makes background in that color, what .rootcolor class gives us
 				Lorem ipsom dolor sit amet..
 			
 One more example:
@@ -192,13 +192,13 @@ Makes children elements inline by `float: left` (use `.nofloat` class to make in
 For `<div>`s and `<li>`s only. Use `.cell` class for another children element.
 
 	.inline
-		div 
-		li 
-		.cell	// all elements are inline
+		> div 
+		> li 
+		> .cell	// all elements are inline
 	.inline.nofloat
-		div 
-		li 
-		.cell   // all elements are inline again, but they don't float anymore
+		> div 
+		> li 
+		> .cell   // all elements are inline again, but they don't float anymore
 
 -------------
 
