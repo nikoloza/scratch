@@ -8,12 +8,12 @@ It has semantic code and file structure which helps you write beautiful code.
 -------------
 
 ### Stylesheet file
-You only need to import scratch/style.css in your html file.
+You only need to import `scratch/style.css` in your html file.
 
 -------------
 
 ### Grunt for everything
-Used **Grunt** to compress, watch and minify CSS.
+Used **Grunt** to compile, watch and minify CSS.
 
 -------------
 
