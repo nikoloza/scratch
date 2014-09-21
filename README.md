@@ -1,4 +1,381 @@
 Scratch Framework
-=========
+=============
 
-Scratch is new easy way to start project from a scratch. It's powerful, usable and lightweight LESS and jQuery framework for developers who love simple and clean code.
+Scratch shows you best way how you can represent your content in HTML. It's boilerplate using LESS and jQuery.
+
+It has semantic code and file structure which helps you write beautiful code.
+
+-------------
+
+### Stylesheet file
+You only need to import scratch/style.css in your html file.
+
+-------------
+
+### Grunt for everything
+Used **Grunt** to compress, watch and minify CSS.
+
+-------------
+
+Getting Started
+-------------
+**1. Download Scratch**
+
+    git clone git@github.com:nikoloza/Scratch.git
+
+**2. Install Grunt**
+
+You need to install **Grunt** first from here: <http://gruntjs.com/>. Then install **Node** packages and run it.
+
+    install npm
+        > npm i
+    run grunt
+        > grunt watch // or just: > grunt
+
+-------------
+
+### Configuring less
+You can configure your project by opening `scratch/var.less` file. There you can change any preference for your project.
+
+Also, you can control what feature you need to import by setting `scratch/scratch.less` file.
+
+-------------
+
+Class refference
+=============================
+On any element use following classes to make easy changes:
+
+
+## Grid system:
+The best grid system to work with. You haven't seen grid system like this before. It's flexible and works for any type of layout.
+
+Starting with parent element as it plays main role here. We have to know how many children we want to be in the container.
+
+So we can set it by naming the class `.row` and number which sets children quantity. For example `.row5` is the container which has 5 elements, each divided **20%** wide. In `.row8`, we'll have children divs **12.5%** wider and so on.
+
+It works for children `<div>`, `<li>`, `<td>` elements and `.cell` classes. Like this:
+
+    .row5
+        div
+        div
+        .cell
+        .cell
+        div
+        
+    ul.row3
+        li
+        li
+        li
+
+and, of course make them **nested**, like this:
+
+    section.row4
+        div
+        div.row2
+            div
+            div
+        .cell
+        ul.cell.row3
+            li
+            li
+            li
+
+**To increase child elements width** you need to use `.colspan` + number class on this element. For example `colspan3`. So, it works like this:
+
+    .row5
+        div
+        div.colspan3 // this takes 3x more space then usual div
+        div
+        
+    table
+        tr.row4
+            td
+            td.colspan2
+            td
+        
+#### Spacing for the grid
+To prevent spacing by left and right sides or inside cells use following classes:
+
+    .no-padding         - sticks cells on eachother
+    .side-padding       - fits grid width by left and right side on the container
+    .twice-padding      - makes padding 2x wider than default
+    .float.nofloat      - this feature (you'll meet this below) works here as well.
+
+-------------
+        
+
+## Color scheming
+Make your site more colorful by configuring `scratch/colors.less` file. Take a look in this reference:
+
+By default we have following colors:
+> blue, 
+> yellow, 
+> red, 
+> lilac, 
+> green, 
+> pink, 
+> orange
+
+> black, 
+> blackgray, 
+> darkgrey, 
+> midgray, 
+> lightgray, 
+> whitegray, 
+> white
+
+> transparent,
+> default // reseting by default colors
+
+We only need to remember that names, so, using that colors is like that:
+
+	.color.red			- makes text color red
+	.bgred				- makes elements' background red
+	.rootcolor.red		- sets element's root color for children use
+		div
+		div
+			p 
+				Lorem inpum
+				span.rootcolor // makes this text color depend on what color comes after .rootcolor class on the parrent element
+					lorem // this is red
+				span.color.yellow // makes color yellow
+					ipsum // this is yellow
+				amet
+		div
+			div.rootbg // makes background in that color, what .rootcolor class gives us
+				Lorem ipsom dolor sit amet..
+			
+One more example:
+
+	<div class="rootcolor red">
+		Simple text // this is document default color
+		<p class="color yellow"> // paragraph text is yellow
+			Lorem ipsum dolor sit amet, 
+			<span class="rootcolor">consectetur</span> // but this <span>'s color is red
+		</p>
+	</div>
+
+-------------
+
+
+## Text options
+Text preferences for easy changing.
+
+	.font
+		.italic 		- makes text italic
+		.weight
+			.slim 		- makes text height 300
+			.normal 	- makes text height 400
+			.bold 		- makes text height 600
+		.size
+			.h1			- makes text size like default h1
+			.h2			- makes text size like default h2
+			.h3			- makes text size like default h3
+			.h4			- makes text size like default h4
+			.h5			- makes text size like default h5
+			.h6			- makes text size like default h6
+		.align
+			.left		- aligns text on left
+			.center		- aligns text on center
+			.right		- aligns text on right
+		.case
+			.upper 		- makes text UPPERCASE
+			.lower 		- makes text lowercase
+			.camel 		- makes text CamelCase
+			.nocase		- resets text as is
+
+-------------
+
+
+## Inline childset
+Makes children elements inline by `float: left` (use `.nofloat` class to make inline by display). 
+For `<div>`s and `<li>`s only. Use `.cell` class for another children element.
+
+	.inline
+		div 
+		li 
+		.cell	// all elements are inline
+	.inline.nofloat
+		div 
+		li 
+		.cell   // all elements are inline again, but they don't float anymore
+
+-------------
+
+
+## Floating
+For elements to be floated.
+
+    .float
+        .left           - makes left float
+        .right          - makes right float
+        .nofloat        - resets float to none
+
+-------------
+
+## Clearfixes
+They prevent floated elements to float.
+
+	.clear 				- element that prevents floating
+	.clearfix 			- class name that fixes floating after latest child in the element
+
+-------------
+
+
+## Hiding and transparency
+Classes to hide (vanish) or transparent elements.
+
+	.hidden				- makes element hide, but leaves its spase
+	.hide 				- hides element without its spase and focus
+	.none 				- hides element by !important (that means it overwriting other properties)
+	.opacity
+		.full 			- makes element fully shown
+		.hight 			- makes element 75% transparent
+		.half 			- makes element 50% transparent
+		.low 			- makes element 25% transparent
+		.zero 			- makes fully transparent
+	.transparent 		- makes element transparent (same as .opacity.zero)
+
+-------------
+
+
+## Tables
+You can use this set to make your elements act like `<table>` and its children elements work.
+
+	.table
+		> div 			- acts like a `<tr>` element
+			> div 		- acts like a `<td>` element
+			
+You can use `<li>` element or .cell class instead of div:
+
+	ul.table
+		> li
+			> .cell
+
+-------------
+
+
+## Powerful reset
+Reset can be pain sometimes. Here we have reset that doesn't overwrite your classes but it does for almost all property in the browser. Even, you can control many things from `scratch/var.less` file.
+
+-------------
+
+
+## Units
+`rem` and `em` of course! It's easy while root document size is `10px`, so sizing comes like `14px` equals `1.4rem`. Read this great article about why/how to use them: [Font Size Idea](http://css-tricks.com/rems-ems/).
+
+-------------
+
+
+## CSS as OOP
+If you haven't heard about OOCSS principles, you can read it in this following article: [An Introduction To Object Oriented CSS (OOCSS)](http://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/).
+
+Anyways, you can **skip** reading it and continue here. For the best practice, divide properties by classes and make them reusable.
+
+-------------
+
+
+Mixins while working in less
+=============================
+Here we have rich library which makes easy to work with LESS. Code is getting at least 20% less when using this mixins and of course, does not loses cross-browser compability. Take a look at this:
+
+For the easy read, I'll just write directly easy reference here.
+
+    Before:                                     	After:
+    
+    // border-radius
+    -webkit-border-radius: property;            	.radius(property), or .radiuses(topleft, topright, bottomright, bottomleft)
+       -moz-border-radius: property;
+            border-radius: property;
+
+    // box-shadow
+	-webkit-box-shadow: property1, property2;   	.shadow(property1, property2), or just .shadow(property)
+	   -moz-box-shadow: property1, property2;
+	        box-shadow: property1, property2;
+	
+	// transition
+	-webkit-transition: property;					.transition(property)
+	   -moz-transition: property;
+	     -o-transition: property;
+	        transition: property;
+	        
+	// filter 
+	-webkit-filter: property;						.filter(property)
+	   -moz-filter: property;
+	    -ms-filter: property;
+	     -o-filter: property;
+	        filter: property;
+	        
+	// transform
+    -webkit-transform: property;					.transform(property)
+       -moz-transform: property;
+        -ms-transform: property;
+         -o-transform: property;
+            transform: property;
+            
+	// transform-origin						
+    -webkit-transform-origin: property;				.transform-origin(property)
+       -moz-transform-origin: property;
+        -ms-transform-origin: property;
+         -o-transform-origin: property;
+            transform-origin: property;
+            
+    // box-sizing
+    -webkit-box-sizing: property;					.sizing(property), or just .sizing() which uses "border-box" by default
+       -moz-box-sizing: property;
+        -ms-box-sizing: property;
+            box-sizing: property;
+            
+	// text-shadow
+    -webkit-text-shadow: property;					.text-shadow(property)
+            text-shadow: property;
+            
+    // user-select
+	-webkit-user-select: property;					.selectable(property), or selectable() where "none" is default
+       -moz-user-select: property;
+	    -ms-user-select: property;
+	    
+	// background-clip
+    -webkit-background-clip: property;				.clip(property)
+       -moz-background-clip: property;
+            background-clip: property;
+            
+	// rotate
+	-webkit-transform: rotate(property);			.rotate(property)
+	    -ms-transform: rotate(property);
+	        transform: rotate(property);
+            
+	// appearance
+    -webkit-appearance: property;					.appearance(property), or just .appearance() "none" is default
+       -moz-appearance: property;
+            appearance: property;
+            
+	// background-size
+    -webkit-background-size: property;				.bgsize(property)
+       -moz-background-size: property;
+         -o-background-size: property;
+            background-size: property;
+            
+    // placeholder color in forms
+	::-webkit-input-placeholder {					.placeholder(property), for just .placeholder(), you can set default color in var.less
+		color: property;
+	}
+	:-moz-placeholder {
+		color: property;
+	}
+	:-ms-input-placeholder {
+		color: property;
+	}
+	[data-operaplaceholder] {
+		color: property;
+	}
+	        
+	// selection
+	::selection {									.selection(property1, property2)
+		background-color: property1;
+		color: property2;
+	}
+
+-------------
+
+More documentation will be soon.

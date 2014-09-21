@@ -15,160 +15,187 @@
 .color.blue {
   color: #68cdea;
 }
-.bg.blue {
+.bgblue {
   background: #68cdea;
 }
 .rootcolor.blue .rootcolor {
   color: #68cdea;
 }
+.rootcolor.blue .rootbg {
+  background: #68cdea;
+}
 .color.yellow {
   color: #f9c053;
 }
-.bg.yellow {
+.bgyellow {
   background: #f9c053;
 }
 .rootcolor.yellow .rootcolor {
   color: #f9c053;
 }
+.rootcolor.yellow .rootbg {
+  background: #f9c053;
+}
 .color.red {
   color: #d25368;
 }
-.bg.red {
+.bgred {
   background: #d25368;
 }
 .rootcolor.red .rootcolor {
   color: #d25368;
 }
-.color.dark {
-  color: #58595b;
-}
-.bg.dark {
-  background: #58595b;
-}
-.rootcolor.dark .rootcolor {
-  color: #58595b;
+.rootcolor.red .rootbg {
+  background: #d25368;
 }
 .color.lilac {
   color: #7e588b;
 }
-.bg.lilac {
+.bglilac {
   background: #7e588b;
 }
 .rootcolor.lilac .rootcolor {
   color: #7e588b;
 }
+.rootcolor.lilac .rootbg {
+  background: #7e588b;
+}
 .color.green {
   color: #567956;
 }
-.bg.green {
+.bggreen {
   background: #567956;
 }
 .rootcolor.green .rootcolor {
   color: #567956;
 }
+.rootcolor.green .rootbg {
+  background: #567956;
+}
 .color.pink {
   color: #d9b8c7;
 }
-.bg.pink {
+.bgpink {
   background: #d9b8c7;
 }
 .rootcolor.pink .rootcolor {
   color: #d9b8c7;
 }
+.rootcolor.pink .rootbg {
+  background: #d9b8c7;
+}
 .color.orange {
   color: #f39b7a;
 }
-.bg.orange {
+.bgorange {
   background: #f39b7a;
 }
 .rootcolor.orange .rootcolor {
   color: #f39b7a;
 }
-.color.darkblue {
-  color: #23606e;
-}
-.bg.darkblue {
-  background: #23606e;
-}
-.rootcolor.darkblue .rootcolor {
-  color: #23606e;
+.rootcolor.orange .rootcolor {
+  color: #f39b7a;
 }
 .color.black {
   color: #111111;
 }
-.bg.black {
+.bgblack {
   background: #111111;
 }
 .rootcolor.black .rootcolor {
   color: #111111;
 }
+.rootcolor.black .rootbg {
+  background: #111111;
+}
 .color.blackgray {
   color: #656564;
 }
-.bg.blackgray {
+.bgblackgray {
   background: #656564;
 }
 .rootcolor.blackgray .rootcolor {
   color: #656564;
 }
+.rootcolor.blackgray .rootbg {
+  background: #656564;
+}
 .color.darkgrey {
   color: #979797;
 }
-.bg.darkgrey {
+.bgdarkgrey {
   background: #979797;
 }
 .rootcolor.darkgrey .rootcolor {
   color: #979797;
 }
+.rootcolor.darkgrey .rootbg {
+  background: #979797;
+}
 .color.midgray {
   color: #c5c5c5;
 }
-.bg.midgray {
+.bgmidgray {
   background: #c5c5c5;
 }
 .rootcolor.midgray .rootcolor {
   color: #c5c5c5;
 }
+.rootcolor.midgray .rootbg {
+  background: #c5c5c5;
+}
 .color.lightgray {
   color: #dddddd;
 }
-.bg.lightgray {
+.bglightgray {
   background: #dddddd;
 }
 .rootcolor.lightgray .rootcolor {
   color: #dddddd;
 }
+.rootcolor.lightgray .rootbg {
+  background: #dddddd;
+}
 .color.whitegray {
   color: #f5f5f5;
 }
-.bg.whitegray {
+.bgwhitegray {
   background: #f5f5f5;
 }
 .rootcolor.whitegray .rootcolor {
   color: #f5f5f5;
 }
-.color.white {
-  color: #f9f9f9;
+.rootcolor.whitegray .rootbg {
+  background: #f5f5f5;
 }
-.bg.white {
-  background: #f9f9f9;
+.color.white {
+  color: #ffffff;
+}
+.bgwhite {
+  background: #ffffff;
 }
 .rootcolor.white .rootcolor {
-  color: #f9f9f9;
+  color: #ffffff;
+}
+.rootcolor.white .rootbg {
+  background: #ffffff;
 }
 .color.default {
   color: #656564;
 }
-.bg.default {
+.bgdefault {
   background: transparent;
 }
 .rootcolor.default .rootcolor {
   color: #656564;
 }
+.rootcolor.default .rootbg {
+  background: #656564;
+}
 .color.transparent {
   color: transparent;
 }
-.bg.transparent {
+.bgtransparent {
   background: transparent;
 }
 html {
@@ -270,7 +297,7 @@ html {
   -ms-text-size-adjust: 100%;
 }
 a {
-  color: #000000;
+  color: #111111;
   text-decoration: none;
   font-weight: 400;
   cursor: pointer;
@@ -359,6 +386,30 @@ textarea {
   margin: 0;
   outline: none;
 }
+button::-webkit-input-placeholder,
+input::-webkit-input-placeholder,
+select::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #656564;
+}
+button:-moz-placeholder,
+input:-moz-placeholder,
+select:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: #656564;
+}
+button:-ms-input-placeholder,
+input:-ms-input-placeholder,
+select:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: #656564;
+}
+button[data-operaplaceholder],
+input[data-operaplaceholder],
+select[data-operaplaceholder],
+textarea[data-operaplaceholder] {
+  color: #656564;
+}
 button,
 input {
   line-height: normal;
@@ -426,7 +477,7 @@ address {
 .opacity.low {
   opacity: .25;
 }
-.opacity.empty {
+.opacity.zero {
   opacity: 0;
 }
 .hidden {
@@ -435,7 +486,7 @@ address {
 .hide {
   display: none;
 }
-.vanish {
+.none {
   display: none !important;
 }
 .clear {
@@ -470,7 +521,7 @@ address {
   max-width: 98rem;
   min-width: 280px;
 }
-.container.center {
+.centered {
   margin: 0 auto;
 }
 .float.left {
@@ -479,16 +530,16 @@ address {
 .float.right {
   float: right;
 }
-.float.reset {
+.float.nofloat {
   float: none;
 }
-.font.slim {
+.font.weight.slim {
   font-weight: 300;
 }
-.font.normal {
+.font.weight.normal {
   font-weight: 400;
 }
-.font.bold {
+.font.weight.bold {
   font-weight: 600;
 }
 .font.italic {
@@ -520,6 +571,18 @@ address {
 }
 .font.align.center {
   text-align: center;
+}
+.font.case.upper {
+  text-transform: uppercase;
+}
+.font.case.lower {
+  text-transform: lowercase;
+}
+.font.case.camel {
+  text-transform: capitalize;
+}
+.font.case.nocase {
+  text-transform: none;
 }
 .tab:before {
   content: "nbsp";
@@ -6020,7 +6083,7 @@ body {
     display: none;
   }
 }
-@media all and (min-width: 840px) {
+@media all and (min-width: 400) {
   .show-tablet-small {
     display: none;
   }
@@ -6028,7 +6091,7 @@ body {
     display: inline-block;
   }
 }
-@media all and (max-width: 840px) {
+@media all and (max-width: 400) {
   .show-tablet-small {
     display: inline-block;
   }

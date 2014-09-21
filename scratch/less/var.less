@@ -3,14 +3,14 @@
 @text-color: @blackgray;
 
 // link properties
-@a-color: #000;
+@a-color: @black;
 @a-hover: @blue;
 @a-weight: 400;
 @a-decoration: none;
 @a-hover-decoration: none;
 
 // font settings
-@font-size: 1.4rem; // document font size is 10px
+@font-size: 1.4rem; // root document font size is 10px
 @line-height: 1.3;
 @font-family: Arial, sans-serif;
 
@@ -21,6 +21,11 @@
 @small: 728px;
 @tiny: 480px;
 
+// weights
+@slim: 300;
+@normal: 400;
+@bold: 600;
+
 // header sizes
 @h1: 4.6rem;
 @h2: 3.2rem;
@@ -28,7 +33,7 @@
 @h4: 2.0rem;
 @h5: 1.8rem;
 @h6: 1.6rem;
-@h-weight: 400;
+@h-weight: @normal; // default weight for headers
 
 // directories listings
 @fonts-path: 'fonts';
@@ -39,8 +44,11 @@
 @grid-padding: 1rem;
 @container-width: 98rem;
 
-// styling
+// branding
 @radius: 3px;
+
+// forms
+@placeholder: @blackgray;
 
 // animation
 @animation-duration: 0.5s;

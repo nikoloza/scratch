@@ -10,7 +10,7 @@
             border-radius: @radius;
 }
 
-.cradius (@topleft: 0, @topright: 0, @bottomright: 0, @bottomleft: 0) {
+.radiuses (@topleft: 0, @topright: 0, @bottomright: 0, @bottomleft: 0) {
 	-webkit-border-top-left-radius: @topleft;
 	    -moz-border-radius-topleft: @topleft;
 	        border-top-left-radius: @topleft;
@@ -134,7 +134,7 @@
             background-size: @property;
 }
 
-.placeholder(@color: #333) {
+.placeholder(@color: @placeholder) {
 	&::-webkit-input-placeholder {
 		color: @color;
 	}
