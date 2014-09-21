@@ -5,17 +5,17 @@
 	&.high 		{opacity: .75;}
 	&.half 		{opacity: .5;}
 	&.low 		{opacity: .25;}
-	&.empty 	{opacity: 0;}
+	&.zero	 	{opacity: 0;}
 }
 
 // visibility control
 .hidden 		{visibility: hidden;}
 .hide 			{display: none;}
-.vanish 		{display: none !important;}
+.none 			{display: none !important;}
 
 // clearfix
 .clear {
-	// overwriting even any grid element
+	// also overwrite any element in grid
 	clear: both 		!important;
 	width: 100% 		!important;
 	float: none 		!important;
@@ -42,24 +42,25 @@
 		max-width: @container-width;
 		min-width: 280px;
 	}
-
-	&.center {
-		margin: 0 auto;
-	}
 }
+
+// container at center
+.centered 		{margin: 0 auto;}
 
 // floating
 .float {
-	&.left {float: left;}
-	&.right {float: right;}
-	&.reset {float: none;}
+	&.left 		{float: left;}
+	&.right 	{float: right;}
+	&.nofloat 	{float: none;}
 }
 
 // font settings
 .font {
-	&.slim 		{font-weight: 300;}
-	&.normal 	{font-weight: 400;}
-	&.bold 		{font-weight: 600;}
+	&.weight {
+		&.slim 		{font-weight: @slim;}
+		&.normal 	{font-weight: @normal;}
+		&.bold 		{font-weight: @bold;}
+	}
 
 	&.italic 	{font-style: italic;}
 
@@ -76,6 +77,13 @@
 		&.right {text-align: right;}
 		&.left 	{text-align: left;}
 		&.center{text-align: center;}
+	}
+
+	&.case {
+		&.upper	{text-transform: uppercase;}
+		&.lower {text-transform: lowercase;}
+		&.camel	{text-transform: capitalize;}
+		&.nocase{text-transform: none}
 	}
 }
 
