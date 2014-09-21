@@ -6,6 +6,7 @@
 @import 'core/reset';
 @import 'core/classes';
 @import 'core/grid';
+@import 'core/flex';
 
 // helpers
 @import 'helpers/fonts';
@@ -14,16 +15,16 @@
 @import 'helpers/form';
 
 // plugins
+@import 'plugins/animate';
 @import 'plugins/modal';
 @import 'plugins/slider';
-@import 'plugins/animate';
 
 
 // browsers and print page
 .browsers() {
-	@import 'responsive/os';
-	@import 'responsive/browsers';
-	@import 'responsive/print';
+	@import 'browsers/os';
+	@import 'browsers/browsers';
+	@import 'browsers/print';
 }
 
 // responsive
