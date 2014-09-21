@@ -21,7 +21,7 @@ Getting Started
 -------------
 **1. Download Scratch**
 
-    git clone git@github.com:nikoloza/Scratch.git
+    > git clone git@github.com:nikoloza/Scratch.git
 
 **2. Install Grunt**
 
@@ -46,7 +46,7 @@ Class reference
 On any element use following classes to make easy changes:
 
 
-## Grid system:
+## Grid system
 The best grid system to work with. You haven't seen grid system like this before. It's flexible and works for any type of layout.
 
 Starting with parent element as it plays main role here. We have to know how many children we want to be in the container.
@@ -56,50 +56,54 @@ So we can set it by naming the class `.row` and number which sets children quant
 It works for children `<div>`, `<li>`, `<td>` elements and `.cell` classes. Like this:
 
     .row5
-        > div
-        > div
-        > .cell
-        > .cell
-        > div
+        & > div
+        & > div
+        & > .cell
+        & > .cell
+        & > div
         
     ul.row3
-        > li
-        > li
-        > li
+        & > li
+        & > li
+        & > li
 
 and, of course make them **nested**, like this:
 
     section.row4
-        > div
-        > div.row2
-            > div
-            > div
-        > .cell
-        > ul.cell.row3
-            > li
-            > li
-            > li
+        & > div
+        & > div.row2
+            & > div
+            & > div
+        & > .cell
+        & > ul.cell.row3
+            & > li
+            & > li
+            & > li
 
 **To increase child elements width** you need to use `.colspan` + number class on this element. For example `colspan3`. So, it works like this:
 
     .row5
-        > div
-        > div.colspan3 // this takes 3x more space then usual div
-        > div
+        & > div
+        & > div.colspan3 // this takes 3x more space then usual div
+        & > div
         
     table
-        > tr.row4
-            > td
-            > td.colspan2
-            > td
+        & > tr.row4
+            & > td
+            & > td.colspan2
+            & > td
         
 #### Spacing for the grid
 To prevent spacing by left and right sides or inside cells use following classes:
+	.row7
+	    &.no-padding         - sticks cells on eachother
+	    &.side-padding       - fits grid width by left and right side on the container
+	    &.twice-padding      - makes padding 2x wider than default
 
-    .no-padding         - sticks cells on eachother
-    .side-padding       - fits grid width by left and right side on the container
-    .twice-padding      - makes padding 2x wider than default
-    .float.nofloat      - this feature (you'll meet this below) works here as well.
+#### Other grid features
+You may use other features as well
+
+    row2.float.nofloat      - this feature (you'll meet this below) works here as well.
 
 -------------
         
@@ -133,24 +137,22 @@ We only need to remember that names, so, using that colors is like that:
 	.bgred				- makes elements' background red
 	.rootcolor.red		- sets element's root color for children use
 		div
-		div
-			> p 
-				Lorem inpum
-				> span.rootcolor // makes this text color depend on what color comes after .rootcolor class on the parrent element
-					lorem // this is red
-				> span.color.yellow // makes color yellow
-					ipsum // this is yellow
-				amet
-		div
-			> div.rootbg // makes background in that color, what .rootcolor class gives us
-				Lorem ipsom dolor sit amet..
+			Lorem ipsum // this is default document color
+			p.color.blue
+				| Lorem inpum // this is blue
+				span.rootcolor // makes this text color depend on what color comes after .rootcolor class on the parrent element
+					| lorem // this is red
+				span.color.yellow // makes color yellow
+					| ipsum // this is yellow
+		div.rootbg // makes background in that color, what .rootcolor class gives us
+			Lorem ipsom dolor sit amet..
 			
 One more example:
 
 	<div class="rootcolor red">
 		Simple text // this is document default color
-		<p class="color yellow"> // paragraph text is yellow
-			Lorem ipsum dolor sit amet, 
+		<p class="color yellow">
+			Lorem ipsum dolor sit amet, // paragraph text is yellow
 			<span class="rootcolor">consectetur</span> // but this <span>'s color is red
 		</p>
 	</div>
@@ -162,27 +164,27 @@ One more example:
 Text preferences for easy changing.
 
 	.font
-		.italic 		- makes text italic
-		.weight
-			.slim 		- makes text height 300
-			.normal 	- makes text height 400
-			.bold 		- makes text height 600
-		.size
-			.h1			- makes text size like default h1
-			.h2			- makes text size like default h2
-			.h3			- makes text size like default h3
-			.h4			- makes text size like default h4
-			.h5			- makes text size like default h5
-			.h6			- makes text size like default h6
-		.align
-			.left		- aligns text on left
-			.center		- aligns text on center
-			.right		- aligns text on right
-		.case
-			.upper 		- makes text UPPERCASE
-			.lower 		- makes text lowercase
-			.camel 		- makes text CamelCase
-			.nocase		- resets text as is
+		&.italic 		- makes text italic
+		&.weight
+			&.slim 		- makes text height 300
+			&.normal 	- makes text height 400
+			&.bold 		- makes text height 600
+		&.size
+			&.h1			- makes text size like default h1
+			&.h2			- makes text size like default h2
+			&.h3			- makes text size like default h3
+			&.h4			- makes text size like default h4
+			&.h5			- makes text size like default h5
+			&.h6			- makes text size like default h6
+		&.align
+			&.left		- aligns text on left
+			&.center		- aligns text on center
+			&.right		- aligns text on right
+		&.case
+			&.upper 		- makes text UPPERCASE
+			&.lower 		- makes text lowercase
+			&.camel 		- makes text CamelCase
+			&.nocase		- resets text as is
 
 -------------
 
@@ -192,13 +194,13 @@ Makes children elements inline by `float: left` (use `.nofloat` class to make in
 For `<div>`s and `<li>`s only. Use `.cell` class for another children element.
 
 	.inline
-		> div 
-		> li 
-		> .cell	// all elements are inline
+		& > div 
+		& > li 
+		& > .cell	// all elements are inline
 	.inline.nofloat
-		> div 
-		> li 
-		> .cell   // all elements are inline again, but they don't float anymore
+		& > div 
+		& > li 
+		& > .cell   // all elements are inline again, but they don't float anymore
 
 -------------
 
@@ -207,9 +209,9 @@ For `<div>`s and `<li>`s only. Use `.cell` class for another children element.
 For elements to be floated.
 
     .float
-        .left           - makes left float
-        .right          - makes right float
-        .nofloat        - resets float to none
+        &.left           - makes left float
+        &.right          - makes right float
+        &.nofloat        - resets float to none
 
 -------------
 
@@ -229,11 +231,11 @@ Classes to hide (vanish) or transparent elements.
 	.hide 				- hides element without its spase and focus
 	.none 				- hides element by !important (that means it overwriting other properties)
 	.opacity
-		.full 			- makes element fully shown
-		.hight 			- makes element 75% transparent
-		.half 			- makes element 50% transparent
-		.low 			- makes element 25% transparent
-		.zero 			- makes fully transparent
+		&.full 			- makes element fully shown
+		&.hight 			- makes element 75% transparent
+		&.half 			- makes element 50% transparent
+		&.low 			- makes element 25% transparent
+		&.zero 			- makes fully transparent
 	.transparent 		- makes element transparent (same as .opacity.zero)
 
 -------------
@@ -243,14 +245,14 @@ Classes to hide (vanish) or transparent elements.
 You can use this set to make your elements act like `<table>` and its children elements work.
 
 	.table
-		> div 			- acts like a `<tr>` element
-			> div 		- acts like a `<td>` element
+		& > div 			- acts like a `<tr>` element
+			& > div 		- acts like a `<td>` element
 			
 You can use `<li>` element or .cell class instead of div:
 
 	ul.table
-		> li
-			> .cell
+		& > li
+			& > .cell
 
 -------------
 

@@ -2,24 +2,8 @@
 @body-background: transparent;
 @text-color: @blackgray;
 
-// link properties
-@a-color: @black;
-@a-hover: @blue;
-@a-weight: 400;
-@a-decoration: none;
-@a-hover-decoration: none;
-
-// font settings
-@font-size: 1.4rem; // root document font size is 10px
-@line-height: 1.3;
-@font-family: Arial, sans-serif;
-
-// responsive breakpoints
-@large: 1920px;
-@screen: 1100px;
-@normal: 840px;
-@small: 728px;
-@tiny: 480px;
+// container setting
+@container-width: 98rem;
 
 // weights
 @slim: 300;
@@ -35,20 +19,39 @@
 @h6: 1.6rem;
 @h-weight: @normal; // default weight for headers
 
+// link properties
+@a-color: @black;
+@a-hover: @blue;
+@a-weight: @normal;
+@a-decoration: none;
+@a-hover-decoration: none;
+
+// font settings
+@font-size: 1.4rem; // root document font size is 10px
+@line-height: 1.3;
+@font-family: Arial, sans-serif;
+
+// responsive breakpoints
+@large: 1920px;
+@screen: 1100px;
+@normal: 840px;
+@small: 728px;
+@tiny: 480px;
+
 // directories listings
 @fonts-path: 'fonts';
 @icons-path: 'icons';
 @img-path: 'img';
 
 // grid settings
-@grid-padding: 1rem;
-@container-width: 98rem;
+@grid-children: 16; // how many children you'll need in grid by maximum
+@grid-padding: 1rem; // spacing inside cells
 
 // branding
 @radius: 3px;
 
 // forms
-@placeholder: @blackgray;
+@placeholder: @blackgray; // placeholder for forms
 
 // animation
 @animation-duration: 0.5s;
