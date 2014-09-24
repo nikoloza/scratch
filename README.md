@@ -3,7 +3,7 @@ Scratch Framework
 
 Scratch shows you best way how you can represent your content in HTML. It's boilerplate using LESS and jQuery.
 
-It has semantic code and file structure which helps you write beautiful code.
+It has semantic code and file structure which helps you write beautiful code. So, I called it Scratch paradigm.
 
 -------------
 
@@ -96,14 +96,14 @@ and, of course make them **nested**, like this:
 #### Spacing for the grid
 To prevent spacing by left and right sides or inside cells use following classes:
 	.row7
-	    &.no-padding         - sticks cells on eachother
-	    &.side-padding       - fits grid width by left and right side on the container
-	    &.twice-padding      - makes padding 2x wider than default
+	    &.no-padding         		- sticks cells on eachother
+	    &.side-padding       		- fits grid width by left and right side on the container
+	    &.twice-padding      		- makes padding 2x wider than default
 
 #### Other grid features
 You may use other features as well
 
-    row2.float.nofloat      - this feature (you'll meet this below) works here as well.
+    row2.float.nofloat      			- this feature (you'll meet this below) works here as well.
 
 -------------
         
@@ -133,9 +133,9 @@ By default we have following colors:
 
 We only need to remember that names, so, using that colors is like that:
 
-	.color.red			- makes text color red
-	.bgred				- makes elements' background red
-	.rootcolor.red		- sets element's root color for children use
+	.color.red				- makes text color red
+	.bgred					- makes elements' background red
+	.rootcolor.red				- sets element's root color for children use
 		div
 			Lorem ipsum // this is default document color
 			p.color.blue
@@ -164,11 +164,11 @@ One more example:
 Text preferences for easy changing.
 
 	.font
-		&.italic 		- makes text italic
+		&.italic 			- makes text italic
 		&.weight
-			&.slim 		- makes text height 300
-			&.normal 	- makes text height 400
-			&.bold 		- makes text height 600
+			&.slim 			- makes text height 300
+			&.normal 		- makes text height 400
+			&.bold 			- makes text height 600
 		&.size
 			&.h1			- makes text size like default h1
 			&.h2			- makes text size like default h2
@@ -177,9 +177,9 @@ Text preferences for easy changing.
 			&.h5			- makes text size like default h5
 			&.h6			- makes text size like default h6
 		&.align
-			&.left		- aligns text on left
+			&.left			- aligns text on left
 			&.center		- aligns text on center
-			&.right		- aligns text on right
+			&.right			- aligns text on right
 		&.case
 			&.upper 		- makes text UPPERCASE
 			&.lower 		- makes text lowercase
@@ -200,7 +200,7 @@ For `<div>`s and `<li>`s only. Use `.cell` class for another children element.
 	.inline.nofloat
 		& > div 
 		& > li 
-		& > .cell   // all elements are inline again, but they don't float anymore
+		& > .cell   	// all elements are inline again, but they don't float anymore
 
 -------------
 
@@ -227,16 +227,16 @@ They prevent floated elements to float.
 ## Hiding and transparency
 Classes to hide (vanish) or transparent elements.
 
-	.hidden				- makes element hide, but leaves its spase
-	.hide 				- hides element without its spase and focus
-	.none 				- hides element by !important (that means it overwriting other properties)
+	.hidden					- makes element hide, but leaves its spase
+	.hide 					- hides element without its spase and focus
+	.none 					- hides element by !important (that means it overwriting other properties)
 	.opacity
-		&.full 			- makes element fully shown
+		&.full 				- makes element fully shown
 		&.hight 			- makes element 75% transparent
-		&.half 			- makes element 50% transparent
-		&.low 			- makes element 25% transparent
-		&.zero 			- makes fully transparent
-	.transparent 		- makes element transparent (same as .opacity.zero)
+		&.half 				- makes element 50% transparent
+		&.low 				- makes element 25% transparent
+		&.zero 				- makes fully transparent
+	.transparent 				- makes element transparent (same as .opacity.zero)
 
 -------------
 
@@ -296,70 +296,70 @@ For the easy read, I'll just write directly easy reference here.
 	        box-shadow: property1, property2;
 	
 	// transition
-	-webkit-transition: property;					.transition(property)
+	-webkit-transition: property;			.transition(property)
 	   -moz-transition: property;
 	     -o-transition: property;
 	        transition: property;
 	        
 	// filter 
-	-webkit-filter: property;						.filter(property)
+	-webkit-filter: property;			.filter(property)
 	   -moz-filter: property;
 	    -ms-filter: property;
 	     -o-filter: property;
 	        filter: property;
 	        
 	// transform
-    -webkit-transform: property;					.transform(property)
+    -webkit-transform: property;			.transform(property)
        -moz-transform: property;
         -ms-transform: property;
          -o-transform: property;
             transform: property;
             
 	// transform-origin						
-    -webkit-transform-origin: property;				.transform-origin(property)
+    -webkit-transform-origin: property;			.transform-origin(property)
        -moz-transform-origin: property;
         -ms-transform-origin: property;
          -o-transform-origin: property;
             transform-origin: property;
             
     // box-sizing
-    -webkit-box-sizing: property;					.sizing(property), or just .sizing() which uses "border-box" by default
+    -webkit-box-sizing: property;			.sizing(property), or just .sizing() which uses "border-box" by default
        -moz-box-sizing: property;
         -ms-box-sizing: property;
             box-sizing: property;
             
 	// text-shadow
-    -webkit-text-shadow: property;					.text-shadow(property)
+    -webkit-text-shadow: property;			.text-shadow(property)
             text-shadow: property;
             
     // user-select
-	-webkit-user-select: property;					.selectable(property), or selectable() where "none" is default
+	-webkit-user-select: property;			.selectable(property), or selectable() where "none" is default
        -moz-user-select: property;
 	    -ms-user-select: property;
 	    
 	// background-clip
-    -webkit-background-clip: property;				.clip(property)
+    -webkit-background-clip: property;			.clip(property)
        -moz-background-clip: property;
             background-clip: property;
             
 	// rotate
-	-webkit-transform: rotate(property);			.rotate(property)
+	-webkit-transform: rotate(property);		.rotate(property)
 	    -ms-transform: rotate(property);
 	        transform: rotate(property);
             
 	// appearance
-    -webkit-appearance: property;					.appearance(property), or just .appearance() "none" is default
+    -webkit-appearance: property;			.appearance(property), or just .appearance() "none" is default
        -moz-appearance: property;
             appearance: property;
             
 	// background-size
-    -webkit-background-size: property;				.bgsize(property)
+    -webkit-background-size: property;			.bgsize(property)
        -moz-background-size: property;
          -o-background-size: property;
             background-size: property;
             
     // placeholder color in forms
-	::-webkit-input-placeholder {					.placeholder(property), for just .placeholder(), you can set default color in var.less
+	::-webkit-input-placeholder {			.placeholder(property), for just .placeholder(), you can set default color in var.less
 		color: property;
 	}
 	:-moz-placeholder {
@@ -373,7 +373,7 @@ For the easy read, I'll just write directly easy reference here.
 	}
 	        
 	// selection
-	::selection {									.selection(property1, property2)
+	::selection {					.selection(property1, property2)
 		background-color: property1;
 		color: property2;
 	}
