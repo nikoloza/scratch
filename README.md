@@ -1,7 +1,15 @@
+	 _____                _       _
+	/  ___|              | |     | |
+	\ `--.  ___ _ __ __ _| |_ ___| |__
+	 `--. \/ __| '__/ _` | __/ __| '_ \
+	/\__/ / (__| | | (_| | || (__| | | |
+	\____/ \___|_|  \__,_|\__\___|_| |_|
+
+
 Scratch Framework
 =============
 
-Scratch shows you best way how you can represent your content in HTML. It's boilerplate using LESS and jQuery.
+Scratch helps you to make high level front end architecture using `Less` and `JavaScript`.
 
 It has semantic code and file structure which helps you write beautiful code.
 
@@ -23,9 +31,37 @@ Then you need to install required packages:
 
 	$ npm install
 
-And run the Grunt:
+With our grunt config we have 5 states to use grunt:
+
+Simply one time compile files:
 
 	$ grunt
+
+Watch and compile files:
+
+	$ grunt run
+
+Run express based simple http server, watch and compile files:
+
+	$ grunt server
+
+Make files ready for production:
+
+	$ grunt production
+
+Clean all grunt generated files:
+
+	$ grunt clean
+
+-------------
+
+### Bower
+We use **Bower** for additional packages. We have included 3 package at this state:
+
+* [jQuery](https://github.com/jquery/jquery)
+* [Modernizr](https://github.com/Modernizr/Modernizr)
+* [html5shiv](https://github.com/aFarkas/html5shiv)
+* [fastclick](https://github.com/ftlabs/fastclick)
 
 
 -------------
@@ -79,17 +115,17 @@ and, of course make them **nested**, like this:
 			& > li
 			& > li
 
-**To increase child elements width** you need to use `.colspan` + number class on this element. For example `colspan3`. So, it works like this:
+**To increase child elements width** you need to use `.cell` + number class on this element. For example `cell3`. So, it works like this:
 
 	.row5
 		& > div
-		& > div.colspan3				- this takes 3x more space then usual div
+		& > div.cell3				- this takes 3x more space then usual div
 		& > div
 
 	table
 		& > tr.row4
 			& > td
-			& > td.colspan2
+			& > td.cell2
 			& > td
 
 #### Spacing for the grid
@@ -150,7 +186,7 @@ LESS file: `scratch/core/classes.less`.
 
 Text preferences for easy changing.
 
-	// weight
+	weight
 	.font
 		&.slim							- makes text weight 200
 		&.light							- makes text weight 300
@@ -159,10 +195,10 @@ Text preferences for easy changing.
 		&.bold							- makes text weight 700
 		&.extrabold						- makes text weight 800
 
-		// styles
+		styles
 		&.italic						- makes text italic
 
-	// sizes
+	sizes
 	.size
 		&.h1							- makes text size like default h1 - 30px
 		&.h2							- makes text size like default h2 - 28px
@@ -173,13 +209,13 @@ Text preferences for easy changing.
 		&.h7							- makes text size additional size h7 - 14px
 		&.h8							- makes text size additional size h8 - 12px
 
-	// align
+	align
 	.align
 		&.left							- aligns text on left
 		&.center						- aligns text on center
 		&.right							- aligns text on right
 
-	// case
+	case
 	.uppercase							- makes text UPPERCASE
 	.lowercase							- makes text lowercase
 	.camelcase							- makes text CamelCase
@@ -274,81 +310,81 @@ For the easy read, I'll just write directly easy reference here.
 
 	Before:											After:
 
-	// border-radius
+	border-radius
 	-webkit-border-radius: property;				.radius(property), or .radiuses(topleft, topright, bottomright, bottomleft)
 	   -moz-border-radius: property;
 			border-radius: property;
 
-	// box-shadow
+	box-shadow
 	-webkit-box-shadow: property1, property2;		.shadow(property1, property2), or just .shadow(property)
 	   -moz-box-shadow: property1, property2;
 			box-shadow: property1, property2;
 
-	// transition
+	transition
 	-webkit-transition: property;					.transition(property)
 	   -moz-transition: property;
 		 -o-transition: property;
 			transition: property;
 
-	// filter
+	filter
 	-webkit-filter: property;						.filter(property)
 	   -moz-filter: property;
 		-ms-filter: property;
 		 -o-filter: property;
 			filter: property;
 
-	// transform
+	transform
 	-webkit-transform: property;					.transform(property)
 	   -moz-transform: property;
 		-ms-transform: property;
 		 -o-transform: property;
 			transform: property;
 
-	// transform-origin
+	transform-origin
 	-webkit-transform-origin: property;				.transform-origin(property)
 	   -moz-transform-origin: property;
 		-ms-transform-origin: property;
 		 -o-transform-origin: property;
 			transform-origin: property;
 
-	// box-sizing
+	box-sizing
 	-webkit-box-sizing: property;					.sizing(property), or just .sizing() which uses "border-box" by default
 	   -moz-box-sizing: property;
 		-ms-box-sizing: property;
 			box-sizing: property;
 
-	// text-shadow
+	text-shadow
 	-webkit-text-shadow: property;					.text-shadow(property)
 			text-shadow: property;
 
-	// user-select
+	user-select
 	-webkit-user-select: property;					.selectable(property), or selectable() where "none" is default
 	   -moz-user-select: property;
 		-ms-user-select: property;
 
-	// background-clip
+	background-clip
 	-webkit-background-clip: property;				.clip(property)
 	   -moz-background-clip: property;
 			background-clip: property;
 
-	// rotate
+	rotate
 	-webkit-transform: rotate(property);			.rotate(property)
 		-ms-transform: rotate(property);
 			transform: rotate(property);
 
-	// appearance
+	appearance
 	-webkit-appearance: property;					.appearance(property), or just .appearance() "none" is default
 	   -moz-appearance: property;
 			appearance: property;
 
-	// background-size
+	background-size
 	-webkit-background-size: property;				.bgsize(property)
 	   -moz-background-size: property;
 		 -o-background-size: property;
 			background-size: property;
 
 
-	// placeholder color in forms
+	placeholder color in forms
 	::-webkit-input-placeholder {					.placeholder(property), for just .placeholder(), you can set default color in var.less
 		color: property;
 	}
@@ -363,7 +399,7 @@ For the easy read, I'll just write directly easy reference here.
 	}
 
 
-	// selection
+	selection
 	::selection {									.selection(property1, property2)
 		background-color: property1;
 		color: property2;

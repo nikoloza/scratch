@@ -8,11 +8,11 @@
 //
 // ----------------------------------------------------------------------------------------
 //  gruntfile.js
-//  > grunt             // watch files and compile
+//  > grunt             // simply compile files
 //  > grunt run         // watch and compile files
-//  > grunt server		// run express based server, watch and compile files
+//  > grunt server		// run express based simple http server, watch and compile files
 //  > grunt production	// make files ready for production
-//  > grunt clean		// clean solution
+//  > grunt clean		// clean all grunt generated files
 // ----------------------------------------------------------------------------------------
 
 
@@ -28,18 +28,21 @@ module.exports = function(grunt) {
 		// conf and files
 		options: {
 			serverFile: 'server.js',
-			jspath:     'scratch/js',
-			lesspath:   'scratch/less',
 			libraries: [
 				'lib/jquery/dist/jquery.min.js',
-				'lib/fastclick/lib/fastclick.js'
+				'lib/modernizr/modernizr.js',
+				'lib/fastclick/lib/fastclick.js',
+				'lib/jquery.scratch.js'
 			]
 		},
 
 		// JS TASKS ================================================================
 		// check js files for errors
 		jshint: {
-			all: ['']
+			options: {
+				reporter: require('jshint-stylish')
+			},
+			target: ['scratch/app.js']
 		},
 
 		// concat all js files
@@ -51,7 +54,7 @@ module.exports = function(grunt) {
 					sourceMapName: 'scratch/app.map'
 				},
 				files: {
-					'scratch/app.js': 'scratch/js/**/*.js'
+					'scratch/app.js': 'app/**/*.js'
 				}
 			}
 		},
@@ -128,7 +131,7 @@ module.exports = function(grunt) {
 			},
 			js: {
 				files: 'app/**/*.js',
-				tasks: ['concat', 'uglify']
+				tasks: ['jslint', 'concat', 'uglify']
 			},
 			sprite: {
 				files: [
@@ -174,7 +177,7 @@ module.exports = function(grunt) {
 		// watch our node server for changes
 		nodemon: {
 			dev: {
-				script: '<%= config.serverFile %>'
+				script: '<%= options.serverFile %>'
 			}
 		},
 
@@ -236,7 +239,9 @@ module.exports = function(grunt) {
 			'cssmin',
 
 			'concat',
-			'uglify:lib'
+			'uglify:lib',
+
+			'jshint'
 		];
 
 		if (!grunt.file.exists('scratch/js/html5shiv.js')) {

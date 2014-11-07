@@ -42,6 +42,13 @@
 
 
 
+/* Layout */
+/* ---------------------------------------------- */
+
+    @sticky-footer: true;
+    @footer-height: 5rem; // if sticky footer is true
+
+
 /* Responsive */
 /* ---------------------------------------------- */
 
@@ -61,14 +68,19 @@
 /* Grid */
 /* ---------------------------------------------- */
 
-    // grid settings
     @grid-children: 16; // how many children you'll need in grid by maximum
 
-    @grid-children-tablet: 4; // grind childrens amount for tablet
-    @grid-children-small-tablet: 4; // grind childrens amount for tablet
+    // grid clindren amount for specific responsive states
+    @grid-children-big-screen: 0;
+    @grid-children-screen: 0;
+    @grid-children-small-screen: 0;
 
-    @grid-children-mobile: 4; // grind childrens amount for tablet
-    @grid-children-small-mobile: 4; // grind childrens amount for tablet
+    @grid-children-tablet: 0;
+    @grid-children-small-tablet: 0;
+
+    @grid-children-mobile: 4;
+    @grid-children-small-mobile: 2;
+
     @grid-padding:  1rem; // gap inside cells
 
     // animation
