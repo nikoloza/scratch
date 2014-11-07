@@ -1,61 +1,102 @@
-// document settings
-@body-background: transparent;
-@text-color: @blackgray;
+/* Document Styleset */
+/* ---------------------------------------------- */
 
-// container setting
-@container-width: 98rem;
+    // document settings
+    @body-background: transparent;
+    @text-color: @blackgray;
 
-// weights
-@slim: 300;
-@normal: 400;
-@bold: 600;
+    // container setting
+    @container-min-width: 32rem;
+    @container-max-width: 160rem;
 
-// header sizes
-@h1: 4.6rem;
-@h2: 3.2rem;
-@h3: 2.4rem;
-@h4: 2.0rem;
-@h5: 1.8rem;
-@h6: 1.6rem;
-@h-weight: @normal; // default weight for headers
+    // directories listings
+    @fonts-path: 'fonts';
+    @icons-path: 'icons';
+    @img-path:   'img';
 
-// link properties
-@a-color: @black;
-@a-hover: @blue;
-@a-weight: @normal;
-@a-decoration: none;
-@a-hover-decoration: none;
 
-// font settings
-@font-size: 1.4rem; // root document font size is 10px
-@line-height: 1.3;
-@font-family: Arial, sans-serif;
 
-// responsive breakpoints
-@large: 1920px;
-@screen: 1100px;
-@normal: 840px;
-@small: 728px;
-@tiny: 480px;
+/* Fonts */
+/* ---------------------------------------------- */
 
-// directories listings
-@fonts-path: 'fonts';
-@icons-path: 'icons';
-@img-path: 'img';
+    // weights
+    @slim:      200;
+    @light:     300;
+    @normal:    400;
+    @semibold:  600;
+    @bold:      700;
+    @extrabold: 800;
 
-// grid settings
-@grid-children: 16; // how many children you'll need in grid by maximum
-@grid-padding: 1rem; // spacing inside cells
+    // header sizes
+    @h1: 4.6rem;
+    @h2: 3.2rem;
+    @h3: 2.4rem;
+    @h4: 2.0rem;
+    @h5: 1.8rem;
+    @h6: 1.6rem;
+    @h7: 1.4rem;
+    @h8: 1.2rem;
 
-// branding
-@radius: 3px;
+    // default weight for headers
+    @h-weight: @normal;
 
-// forms
-@placeholder: @blackgray; // placeholder for forms
 
-// animation
-@animation-duration: 0.5s;
 
-// loading elements
-@loading: '@{img-path}/loader.gif';
-@lightloading: '@{img-path}/loader-light.gif';
+/* Responsive */
+/* ---------------------------------------------- */
+
+    // breakpoints
+    @big-screen: 1920px; // big screens
+    @screen: 1680px; // normal screens
+    @small-screen: 1336px; // small screens
+
+    @tablet: 1024px; // tablet landscape
+    @small-tablet: 840px; // tablet portrait
+
+    @mobile: 728px; // mobile landscape
+    @small-mobile: 480px; // mobile portrait
+
+
+
+/* Grid */
+/* ---------------------------------------------- */
+
+    // grid settings
+    @grid-children: 16; // how many children you'll need in grid by maximum
+
+    @grid-children-tablet: 4; // grind childrens amount for tablet
+    @grid-children-small-tablet: 4; // grind childrens amount for tablet
+
+    @grid-children-mobile: 4; // grind childrens amount for tablet
+    @grid-children-small-mobile: 4; // grind childrens amount for tablet
+    @grid-padding:  1rem; // gap inside cells
+
+    // animation
+    @animation-duration: 0.5s;
+
+    // loading elements
+    @loading: '@{img-path}/loader.gif';
+    @light-loading: '@{img-path}/loader-light.gif';
+
+
+
+/* Brainding */
+/* ---------------------------------------------- */
+
+    // styling
+    @radius: 3px;
+
+    // link properties
+    @a-color: @black;
+    @a-hover: @blue;
+    @a-weight: @normal;
+    @a-decoration: none;
+    @a-hover-decoration: none;
+
+    // font settings
+    @font-size: 1.4rem; // root document font size is 10px
+    @line-height: 1.3;
+    @font-family: Arial, sans-serif;
+
+    // forms
+    @placeholder: @blackgray; // placeholder color for forms

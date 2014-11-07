@@ -1,0 +1,45 @@
+.flex {
+	.flex();
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	border: 1px solid silver;
+
+	&.fd-row			{flex-direction: row;}
+	&.fd-row-reverse	{flex-direction: row-reverse;}
+	&.fd-col			{flex-direction: column;}
+	&.fd-col-reverse 	{flex-direction: column-reverse;}
+
+	&.jc-start 			{justify-content: flex-start;}
+	&.jc-end 			{justify-content: flex-end;}
+	&.jc-center 		{justify-content: center;}
+	&.jc-between 		{justify-content: space-between;}
+	&.jc-arount 		{justify-content: space-around;}
+
+	&.ai-start 			{align-items: flex-start;}
+	&.ai-end 			{align-items: flex-end;}
+	&.ai-center 		{align-items: center;}
+	&.ai-baseline 		{align-items: baseline;}
+	&.ai-stretch 		{align-items: stretch;}
+
+	&.ac-start 			{align-items: flex-start;}
+	&.ac-end 			{align-items: flex-end;}
+	&.ac-center 		{align-items: center;}
+	&.ac-baseline 		{align-items: baseline;}
+	&.ac-stretch 		{align-items: stretch;}
+
+	&.wrap 				{flex-wrap: wrap;}
+	&.nowrap 			{flex-wrap: nowrap;}
+	&.wrap-reverse 		{flex-wrap: wrap-reverse;}
+
+	> div,
+	> li,
+	> .cell {
+		&.as-auto 		{align-self: auto}
+		&.as-start		{align-self: flex-start;}
+		&.as-end		{align-self: flex-end;}
+		&.as-center		{align-self: center;}
+		&.as-baseline	{align-self: baseline;}
+		&.as-stretch	{align-self: stretch;}
+	}
+}

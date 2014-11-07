@@ -1,7 +1,6 @@
 [class^="row"] >,
 [class*=" row"] > {
 	display: block;
-	width: 100%;
 
 	&:after {
 		content: "";
@@ -20,7 +19,7 @@
 		.sizing;
 
 		&.full {
-			width: 100&;
+			width: 100%;
 		}
 	}
 
@@ -34,8 +33,7 @@
 
 	&.side-padding {
 		margin-left: -@grid-padding / 2;
-		width: 100%;
-		width: calc(~'100% + ' @grid-padding)
+		margin-right: -@grid-padding / 2;
 	}
 
 	&.twice-padding {
@@ -54,13 +52,15 @@
 	}
 
 	&.no-float {
+		font-size: 0;
+
 		& > li,
 		& > div:not(.clear),
 		& > .cell {
 			float: none !important;
 			display: inline-block;
 			vertical-align: top;
-			margin-left: -4px;
+			font-size: @font-size;
 		}
 	}
 }
@@ -85,7 +85,7 @@
 			&.colspan@{i} {
 				width: (100% / @property) * @i;
 			}
-			
+
 			.generate-colspan(@n, (@i + 1));
 		}
 	}
@@ -102,12 +102,12 @@
 .generate-row(@grid-children);
 
 
-// normal screens
-@media all and (max-width: @screen) {
-	
+// 1024px
+@media all and (max-width: @tablet) {
+
 	[class^="row"], [class*=" row"] {
-		&[class^="normal"],
-		&[class*=" normal"] {
+		&[class^="tablet"],
+		&[class*=" tablet"] {
 			& > li,
 			& > div:not(.clear),
 			& > .cell {
@@ -116,42 +116,24 @@
 		}
 
 		.generate-row(@n, @i: 1) when (@i =< @n) {
-			&.normal@{i} {
+			&.tablet@{i} {
 				.columns(@i);
 			}
-			
+
 			.generate-row(@n, (@i + 1));
 		}
 
-		.generate-row(4);
+		.generate-row(@grid-children-tablet);
 	}
 
 }
 
-// tablet portrait
-@media all and (max-width: @screen) {
+// 840px
+@media all and (max-width: @small-tablet) {
 
-}
-
-// mobile landscape
-@media all and (max-width: @small) {
-	
 	[class^="row"], [class*=" row"] {
-		&.side-padding,
-		&.no-padding {
-			& > li,
-			& > div:not(.clear),
-			& > .cell {
-				padding-bottom: 20px;
-
-				&:last-child {
-					padding-bottom: 0;
-				}
-			}
-		}
-
-		&[class^="small"],
-		&[class*=" small"] {
+		&[class^="small-tablet"],
+		&[class*=" small-tablet"] {
 			& > li,
 			& > div:not(.clear),
 			& > .cell {
@@ -160,24 +142,24 @@
 		}
 
 		.generate-row(@n, @i: 1) when (@i =< @n) {
-			&.small@{i} {
+			&.small-tablet@{i} {
 				.columns(@i);
 			}
-			
+
 			.generate-row(@n, (@i + 1));
 		}
 
-		.generate-row(4);
+		.generate-row(@grid-children-small-tablet);
 	}
 
 }
 
-// mobile portrait
-@media all and (max-width: @tiny) {
-	
+// 728px
+@media all and (max-width: @mobile) {
+
 	[class^="row"], [class*=" row"] {
-		&[class^="tiny"],
-		&[class*=" tiny"] {
+		&[class^="mobile"],
+		&[class*=" mobile"] {
 			& > li,
 			& > div:not(.clear),
 			& > .cell {
@@ -186,14 +168,40 @@
 		}
 
 		.generate-row(@n, @i: 1) when (@i =< @n) {
-			&.tiny@{i} {
+			&.mobile@{i} {
 				.columns(@i);
 			}
-			
+
 			.generate-row(@n, (@i + 1));
 		}
 
-		.generate-row(4);
+		.generate-row(@grid-children-mobile);
+	}
+
+}
+
+// 480px
+@media all and (max-width: @small-mobile) {
+
+	[class^="row"], [class*=" row"] {
+		&[class^="small-mobile"],
+		&[class*=" small-mobile"] {
+			& > li,
+			& > div:not(.clear),
+			& > .cell {
+				float: left;
+			}
+		}
+
+		.generate-row(@n, @i: 1) when (@i =< @n) {
+			&.small-mobile@{i} {
+				.columns(@i);
+			}
+
+			.generate-row(@n, (@i + 1));
+		}
+
+		.generate-row(@grid-children-small-mobile);
 	}
 
 }

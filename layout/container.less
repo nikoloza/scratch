@@ -1,11 +1,7 @@
-// container
-.container() {
+section.container {
 	position: relative;
+	max-width: @container-max-width;
+	max-width: @container-min-width;
 	.sizing;
 	.clearfix;
-
-	&.fit {
-		max-width: @container-width;
-		min-width: 280px;
-	}
 }
