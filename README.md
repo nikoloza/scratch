@@ -119,7 +119,7 @@ and, of course make them **nested**, like this:
 
 	.row5
 		& > div
-		& > div.cell3				- this takes 3x more space then usual div
+		& > div.cell3					- this takes 3x more space then usual div
 		& > div
 
 	table
@@ -311,7 +311,7 @@ For the easy read, I'll just write directly easy reference here.
 	Before:											After:
 
 	border-radius
-	-webkit-border-radius: property;				.radius(property), or .radiuses(topleft, topright, bottomright, bottomleft)
+	-webkit-border-radius: property;				.radius(property), or .radius(topleft topright bottomright bottomleft)
 	   -moz-border-radius: property;
 			border-radius: property;
 
