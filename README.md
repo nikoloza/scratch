@@ -186,7 +186,8 @@ LESS file: `scratch/core/classes.less`.
 
 Text preferences for easy changing.
 
-	weight
+**Weights:**
+
 	.font
 		&.slim							- makes text weight 200
 		&.light							- makes text weight 300
@@ -198,7 +199,8 @@ Text preferences for easy changing.
 		styles
 		&.italic						- makes text italic
 
-	sizes
+**Sizes:**
+
 	.size
 		&.h1							- makes text size like default h1 - 30px
 		&.h2							- makes text size like default h2 - 28px
@@ -209,13 +211,15 @@ Text preferences for easy changing.
 		&.h7							- makes text size additional size h7 - 14px
 		&.h8							- makes text size additional size h8 - 12px
 
-	align
+**Aligns:**
+
 	.align
 		&.left							- aligns text on left
 		&.center						- aligns text on center
 		&.right							- aligns text on right
 
-	case
+**Letter cases:**
+
 	.uppercase							- makes text UPPERCASE
 	.lowercase							- makes text lowercase
 	.camelcase							- makes text CamelCase
@@ -310,81 +314,95 @@ For the easy read, I'll just write directly easy reference here.
 
 	Before:											After:
 
-	border-radius
+**Border radius:**
+
 	-webkit-border-radius: property;				.radius(property), or .radius(topleft topright bottomright bottomleft)
 	   -moz-border-radius: property;
 			border-radius: property;
 
-	box-shadow
+**Box shadow:**
+
 	-webkit-box-shadow: property1, property2;		.shadow(property1, property2), or just .shadow(property)
 	   -moz-box-shadow: property1, property2;
 			box-shadow: property1, property2;
 
-	transition
+**Transition:**
+
 	-webkit-transition: property;					.transition(property)
 	   -moz-transition: property;
 		 -o-transition: property;
 			transition: property;
 
-	filter
+**Filter:**
+
 	-webkit-filter: property;						.filter(property)
 	   -moz-filter: property;
 		-ms-filter: property;
 		 -o-filter: property;
 			filter: property;
 
-	transform
+**Transform:**
+
 	-webkit-transform: property;					.transform(property)
 	   -moz-transform: property;
 		-ms-transform: property;
 		 -o-transform: property;
 			transform: property;
 
-	transform-origin
+**Transform origin:**
+
 	-webkit-transform-origin: property;				.transform-origin(property)
 	   -moz-transform-origin: property;
 		-ms-transform-origin: property;
 		 -o-transform-origin: property;
 			transform-origin: property;
 
-	box-sizing
+**Box sizing:**
+
 	-webkit-box-sizing: property;					.sizing(property), or just .sizing() which uses "border-box" by default
 	   -moz-box-sizing: property;
 		-ms-box-sizing: property;
 			box-sizing: property;
 
-	text-shadow
+**Text shadow:**
+
 	-webkit-text-shadow: property;					.text-shadow(property)
 			text-shadow: property;
 
-	user-select
+**User select:**
+
 	-webkit-user-select: property;					.selectable(property), or selectable() where "none" is default
 	   -moz-user-select: property;
 		-ms-user-select: property;
 
-	background-clip
+**Background clipping:**
+
 	-webkit-background-clip: property;				.clip(property)
 	   -moz-background-clip: property;
 			background-clip: property;
 
-	rotate
+**Rotate:**
+
 	-webkit-transform: rotate(property);			.rotate(property)
 		-ms-transform: rotate(property);
 			transform: rotate(property);
 
-	appearance
+**Appearance:**
+
 	-webkit-appearance: property;					.appearance(property), or just .appearance() "none" is default
 	   -moz-appearance: property;
 			appearance: property;
 
-	background-size
+**Background size:**
+
 	-webkit-background-size: property;				.bgsize(property)
 	   -moz-background-size: property;
 		 -o-background-size: property;
 			background-size: property;
 
 
-	placeholder color in forms
+**Placeholder color in forms:**
+
 	::-webkit-input-placeholder {					.placeholder(property), for just .placeholder(), you can set default color in var.less
 		color: property;
 	}
@@ -399,7 +417,8 @@ For the easy read, I'll just write directly easy reference here.
 	}
 
 
-	selection
+**Selection:**
+
 	::selection {									.selection(property1, property2)
 		background-color: property1;
 		color: property2;
