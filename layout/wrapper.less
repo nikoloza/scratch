@@ -1,6 +1,9 @@
 section.wrapper {
     position: relative;
-    min-height: 100%;
-    padding-bottom: 5rem;
-    margin-bottom: -5rem;
+
+    & when (@sticky-footer = true) {
+	    min-height: 100%;
+	    padding-bottom: @footer-height;
+	    margin-bottom: -@footer-height;
+	}
 }

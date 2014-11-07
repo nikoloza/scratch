@@ -11,7 +11,7 @@
 	}
 
 	& > li,
-	& > div:not(.clear),
+	& > div,
 	& > .cell {
 		float: left;
 		padding-right: @grid-padding / 2;
@@ -25,7 +25,7 @@
 
 	&.no-padding {
 		& > li,
-		& > div:not(.clear),
+		& > div,
 		& > .cell {
 			padding: 0;
 		}
@@ -38,7 +38,7 @@
 
 	&.twice-padding {
 		& > li,
-		& > div:not(.clear),
+		& > div,
 		& > .cell {
 			padding-right: @grid-padding * 2;
 			padding-left: @grid-padding * 2;
@@ -55,9 +55,9 @@
 		font-size: 0;
 
 		& > li,
-		& > div:not(.clear),
+		& > div,
 		& > .cell {
-			float: none !important;
+			float: none;
 			display: inline-block;
 			vertical-align: top;
 			font-size: @font-size;
@@ -67,7 +67,7 @@
 
 .columns (@property: 1){
 	& > li,
-	& > div:not(.clear),
+	& > div,
 	& > .cell {
 		width: 100% / @property;
 		min-height: 1px;
@@ -82,7 +82,7 @@
 
 		.generate-colspan(@property);
 		.generate-colspan(@n, @i: 2) when (@i =< @n) {
-			&.colspan@{i} {
+			&.cell@{i} {
 				width: (100% / @property) * @i;
 			}
 
@@ -90,7 +90,6 @@
 		}
 	}
 }
-
 
 .generate-row(@n, @i: 1) when (@i =< @n) {
 	&.row@{i} {
@@ -102,106 +101,227 @@
 .generate-row(@grid-children);
 
 
-// 1024px
-@media all and (max-width: @tablet) {
+// responsive gridding
+// 1920px
+html when (@grid-children-big-screen > 0) {
+	@media all and (max-width: @big-screen) {
 
-	[class^="row"], [class*=" row"] {
-		&[class^="tablet"],
-		&[class*=" tablet"] {
-			& > li,
-			& > div:not(.clear),
-			& > .cell {
-				float: left;
-			}
-		}
-
-		.generate-row(@n, @i: 1) when (@i =< @n) {
-			&.tablet@{i} {
-				.columns(@i);
+		[class^="row"], [class*=" row"] {
+			&[class^="big-screen"],
+			&[class*=" big-screen"] {
+				& > li,
+				& > div,
+				& > .cell {
+					float: left;
+				}
 			}
 
-			.generate-row(@n, (@i + 1));
+			.generate-row(@n, @i: 1) when (@i =< @n) {
+				&.big-screen@{i} {
+					.columns(@i);
+				}
+
+				.generate-row(@n, (@i + 1));
+			}
+
+			.generate-row(@grid-children-big-screen);
 		}
 
-		.generate-row(@grid-children-tablet);
 	}
+}
 
+// 1680px
+html when (@grid-children-big-screen > 0) {
+	@media all and (max-width: @big-screen) {
+
+		[class^="row"], [class*=" row"] {
+			&[class^="big-screen"],
+			&[class*=" big-screen"] {
+				& > li,
+				& > div,
+				& > .cell {
+					float: left;
+				}
+			}
+
+			.generate-row(@n, @i: 1) when (@i =< @n) {
+				&.big-screen@{i} {
+					.columns(@i);
+				}
+
+				.generate-row(@n, (@i + 1));
+			}
+
+			.generate-row(@grid-children-big-screen);
+		}
+
+	}
+}
+
+// 1680px
+html when (@grid-children-screen > 0) {
+	@media all and (max-width: @screen) {
+
+		[class^="row"], [class*=" row"] {
+			&[class^="screen"],
+			&[class*=" screen"] {
+				& > li,
+				& > div,
+				& > .cell {
+					float: left;
+				}
+			}
+
+			.generate-row(@n, @i: 1) when (@i =< @n) {
+				&.screen@{i} {
+					.columns(@i);
+				}
+
+				.generate-row(@n, (@i + 1));
+			}
+
+			.generate-row(@grid-children-screen);
+		}
+
+	}
+}
+
+// 1336px
+html when (@grid-children-small-screen > 0) {
+	@media all and (max-width: @small-screen) {
+
+		[class^="row"], [class*=" row"] {
+			&[class^="small-screen"],
+			&[class*=" small-screen"] {
+				& > li,
+				& > div,
+				& > .cell {
+					float: left;
+				}
+			}
+
+			.generate-row(@n, @i: 1) when (@i =< @n) {
+				&.small-screen@{i} {
+					.columns(@i);
+				}
+
+				.generate-row(@n, (@i + 1));
+			}
+
+			.generate-row(@grid-children-small-screen);
+		}
+
+	}
+}
+
+// 1024px
+html when (@grid-children-tablet > 0) {
+	@media all and (max-width: @tablet) {
+
+		[class^="row"], [class*=" row"] {
+			&[class^="tablet"],
+			&[class*=" tablet"] {
+				& > li,
+				& > div,
+				& > .cell {
+					float: left;
+				}
+			}
+
+			.generate-row(@n, @i: 1) when (@i =< @n) {
+				&.tablet@{i} {
+					.columns(@i);
+				}
+
+				.generate-row(@n, (@i + 1));
+			}
+
+			.generate-row(@grid-children-tablet);
+		}
+
+	}
 }
 
 // 840px
-@media all and (max-width: @small-tablet) {
+html when (@grid-children-small-tablet > 0) {
+	@media all and (max-width: @small-tablet) {
 
-	[class^="row"], [class*=" row"] {
-		&[class^="small-tablet"],
-		&[class*=" small-tablet"] {
-			& > li,
-			& > div:not(.clear),
-			& > .cell {
-				float: left;
-			}
-		}
-
-		.generate-row(@n, @i: 1) when (@i =< @n) {
-			&.small-tablet@{i} {
-				.columns(@i);
+		[class^="row"], [class*=" row"] {
+			&[class^="small-tablet"],
+			&[class*=" small-tablet"] {
+				& > li,
+				& > div,
+				& > .cell {
+					float: left;
+				}
 			}
 
-			.generate-row(@n, (@i + 1));
+			.generate-row(@n, @i: 1) when (@i =< @n) {
+				&.small-tablet@{i} {
+					.columns(@i);
+				}
+
+				.generate-row(@n, (@i + 1));
+			}
+
+			.generate-row(@grid-children-small-tablet);
 		}
 
-		.generate-row(@grid-children-small-tablet);
 	}
-
 }
 
 // 728px
-@media all and (max-width: @mobile) {
+html when (@grid-children-mobile > 0) {
+	@media all and (max-width: @mobile) {
 
-	[class^="row"], [class*=" row"] {
-		&[class^="mobile"],
-		&[class*=" mobile"] {
-			& > li,
-			& > div:not(.clear),
-			& > .cell {
-				float: left;
-			}
-		}
-
-		.generate-row(@n, @i: 1) when (@i =< @n) {
-			&.mobile@{i} {
-				.columns(@i);
+		[class^="row"], [class*=" row"] {
+			&[class^="mobile"],
+			&[class*=" mobile"] {
+				& > li,
+				& > div,
+				& > .cell {
+					float: left;
+				}
 			}
 
-			.generate-row(@n, (@i + 1));
+			.generate-row(@n, @i: 1) when (@i =< @n) {
+				&.mobile@{i} {
+					.columns(@i);
+				}
+
+				.generate-row(@n, (@i + 1));
+			}
+
+			.generate-row(@grid-children-mobile);
 		}
 
-		.generate-row(@grid-children-mobile);
 	}
-
 }
 
 // 480px
-@media all and (max-width: @small-mobile) {
+html when (@grid-children-small-mobile > 0) {
+	@media all and (max-width: @small-mobile) {
 
-	[class^="row"], [class*=" row"] {
-		&[class^="small-mobile"],
-		&[class*=" small-mobile"] {
-			& > li,
-			& > div:not(.clear),
-			& > .cell {
-				float: left;
-			}
-		}
-
-		.generate-row(@n, @i: 1) when (@i =< @n) {
-			&.small-mobile@{i} {
-				.columns(@i);
+		[class^="row"], [class*=" row"] {
+			&[class^="small-mobile"],
+			&[class*=" small-mobile"] {
+				& > li,
+				& > div,
+				& > .cell {
+					float: left;
+				}
 			}
 
-			.generate-row(@n, (@i + 1));
+			.generate-row(@n, @i: 1) when (@i =< @n) {
+				&.small-mobile@{i} {
+					.columns(@i);
+				}
+
+				.generate-row(@n, (@i + 1));
+			}
+
+			.generate-row(@grid-children-small-mobile);
 		}
 
-		.generate-row(@grid-children-small-mobile);
 	}
-
 }

@@ -1,3 +1,7 @@
 footer.footer {
-	height: 5rem;
+    & when (@sticky-footer = true) {
+    	height: @footer-height;
+    }
+
+    .copyright {}
 }
