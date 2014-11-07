@@ -26,11 +26,18 @@
   "homepage": "http://nikoloza.github.io/scratch/",
   "devDependencies": {
     "grunt": "^0.4.5",
+    "grunt-concurrent": "^1.0.0",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-concat": "^0.5.0",
     "grunt-contrib-cssmin": "latest",
     "grunt-contrib-jshint": "latest",
     "grunt-contrib-less": "latest",
     "grunt-contrib-uglify": "latest",
     "grunt-contrib-watch": "latest",
+    "grunt-nodemon": "^0.3.0",
+    "grunt-notify": "^0.4.1",
+    "grunt-open": "^0.2.3",
+    "grunt-spritesmith": "^2.20.0",
     "jshint-stylish": "latest"
   }
 }

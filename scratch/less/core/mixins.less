@@ -1,0 +1,187 @@
+.shadow (@shadow, @second: inset 0 0 0) {
+	-webkit-box-shadow: @shadow, @second;
+	   -moz-box-shadow: @shadow, @second;
+	        box-shadow: @shadow, @second;
+}
+
+.radius (@radius) {
+    -webkit-border-radius: @radius;
+       -moz-border-radius: @radius;
+            border-radius: @radius;
+}
+
+.word-wrap (@property: break-word) {
+    -ms-word-wrap: @property;
+        word-wrap: @property;
+}
+
+.selection(@background: #000, @color: #ccc){
+	&::selection {
+		background-color: @background;
+		color: @color;
+	}
+}
+
+.transition (@property) {
+	-webkit-transition: @property;
+	   -moz-transition: @property;
+	     -o-transition: @property;
+	        transition: @property;
+}
+
+.filter (@property) {
+	-webkit-filter: @property;
+	   -moz-filter: @property;
+	    -ms-filter: @property;
+	     -o-filter: @property;
+	        filter: @property;
+}
+
+.transform (@property) {
+    -webkit-transform: @property;
+       -moz-transform: @property;
+        -ms-transform: @property;
+         -o-transform: @property;
+            transform: @property;
+}
+
+.transform-origin (@property) {
+    -webkit-transform-origin: @property;
+       -moz-transform-origin: @property;
+        -ms-transform-origin: @property;
+         -o-transform-origin: @property;
+            transform-origin: @property;
+}
+
+.translate (@top: -50%, @left: -50%) {
+    -webkit-transform: translate(@top, @left);
+       -moz-transform: translate(@top, @left);
+        -ms-transform: translate(@top, @left);
+         -o-transform: translate(@top, @left);
+            transform: translate(@top, @left);
+}
+
+.sizing (@property: border-box) {
+    -webkit-box-sizing: @property;
+       -moz-box-sizing: @property;
+        -ms-box-sizing: @property;
+            box-sizing: @property;
+}
+
+.ellipsis (@property) when (@property = ellipsis) {
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.text-shadow (@property) {
+    -webkit-text-shadow: @property;
+            text-shadow: @property;
+}
+
+.text-overflow (@property: ellipsis) {
+	.ellipsis(@property);
+    -ms-text-overflow: @property;
+     -o-text-overflow: @property;
+        text-overflow: @property;
+}
+
+.selectable (@property: none) {
+	-webkit-user-select: @property;
+       -moz-user-select: @property;
+	    -ms-user-select: @property;
+}
+
+.clip (@property: padding-box) {
+    -webkit-background-clip: padding-box;
+       -moz-background-clip: padding-box;
+            background-clip: padding-box;
+}
+
+.rotate (@property: 0deg) {
+	-webkit-transform: rotate(@property);
+	    -ms-transform: rotate(@property);
+	        transform: rotate(@property);
+}
+
+.appearance (@property: none) {
+    -webkit-appearance: @property;
+       -moz-appearance: @property;
+            appearance: @property;
+}
+
+.bgsize (@property) {
+    -webkit-background-size: @property;
+       -moz-background-size: @property;
+         -o-background-size: @property;
+            background-size: @property;
+}
+
+.placeholder(@color: @placeholder) {
+	&::-webkit-input-placeholder {
+		color: @color;
+	}
+	&:-moz-placeholder {
+		color: @color;
+	}
+	&:-ms-input-placeholder {
+		color: @color;
+	}
+	&[data-operaplaceholder] {
+		color: @color;
+	}
+}
+
+.overflow (@width: 10px) {
+	overflow-x: hidden;
+	overflow-y: auto;
+
+	&::-webkit-scrollbar {
+		width: @width;
+	}
+	&::-webkit-scrollbar-track {
+		.radius(5px);
+		background: rgba(255, 255, 255, 0.2);
+		width: 8px;
+	}
+	&::-webkit-scrollbar-thumb {
+		.radius(5px);
+		background: #ccc;
+		width: 6px;
+	}
+	&::-webkit-scrollbar-thumb:hover {
+		background: #bbb;
+	}
+	&::-webkit-scrollbar-thumb:window-inactive {
+		background: #eee;
+	}
+}
+
+.flex () {
+	-ms-box-orient: horizontal;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: flex;
+}
+
+.gradient (@top: #000, @bottom: #fff){
+	background: @top;
+	background: -moz-linear-gradient(top,  @top 0%, @bottom 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@top), color-stop(100%,@bottom));
+	background: -webkit-linear-gradient(top,  @top 0%,@bottom 100%);
+	background: -o-linear-gradient(top,  @top 0%,@bottom 100%);
+	background: -ms-linear-gradient(top,  @top 0%,@bottom 100%);
+	background: linear-gradient(to bottom,  @top 0%,@bottom 100%);
+}
+
+._gradient (@left: #000, @right: #fff){
+	background: @left;
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,@left), color-stop(100%,@right));
+	background: -webkit-linear-gradient(left,  @left 0%,@right 100%);
+	background: -moz-linear-gradient(left,  @left 0%, @right 100%);
+	background: -o-linear-gradient(left,  @left 0%,@right 100%);
+	background: -ms-linear-gradient(left,  @left 0%,@right 100%);
+	background: linear-gradient(to right,  @left 0%,@right 100%);
+}

@@ -1,4 +1,4 @@
-/* 
+/*
 	Scratch Framework (https://github.com/nikoloza/Scratch)
 	Nika Tomadze (@nnikoloza)
 	nika.tomadze@gmail.com
@@ -12,22 +12,29 @@
 	You need to install npm: grunt-contrib-cssmin
 */
 
+// import helper frameworks
+	@import 'lib';
 
 // include scratch framework
-@import 'var';
-@import 'colors';
-@import 'scratch';
+	@import 'scratch';
+
+// layouting website
+	@import 'layout';
+
+// layouting website
+	@import 'pages';
 
 
 // hacking goes on
 .selection(#000, #fff);
 
-body {
-	background: @blue;
-	padding: 10px 10px 10px 0;
+html {
+	.transform(translateZ(0)); // for full hardware acceleration: http://cl.ly/image/2F3K0J1O1B2Y
 }
 
-@import 'layout/layout';
+body {
+	background: @white;
+}
 
 
 // include responsive files
