@@ -16,17 +16,6 @@ It has semantic code and file structure which helps you write beautiful code.
 
 -------------
 
-### Made with Scratch
-
-* [Ozorix.com](http://ozorix.com)
-* [Auxilio](http://auxiliolab.com/)
-* [White Ribbon Mobile](http://m.whiteribbon.org.au/)
-* [ACR World](http://www.acrworld.com/)
-* [Pay Beeline](http://paybeeline.vtb.ge/#en)
-* [VTB Online Credit](http://onlinecredit.vtb.ge/#en)
-
--------------
-
 Getting Started
 -------------
 
