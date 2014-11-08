@@ -16,6 +16,20 @@ It has semantic code and file structure which helps you write beautiful code.
 
 -------------
 
+### Made with Scratch
+
+* [Ozorix.com](http://ozorix.com)
+* [Auxilio](http://auxiliolab.com/)
+* [White Ribbon Mobile](http://m.whiteribbon.org.au/)
+* [ACR World](http://www.acrworld.com/)
+* [Pay Beeline](http://paybeeline.vtb.ge/#en)
+* [VTB Online Credit](http://onlinecredit.vtb.ge/#en)
+
+-------------
+
+Getting Started
+-------------
+
 ### Stylesheet file
 You only need to import `scratch/style.css` in your html file.
 
@@ -65,9 +79,6 @@ We use **Bower** for additional packages. We have included 3 package at this sta
 * [fastclick](https://github.com/ftlabs/fastclick)
 
 
--------------
-
-Getting Started
 -------------
 
 ### Configuring less
