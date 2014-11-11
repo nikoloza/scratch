@@ -189,30 +189,29 @@ LESS file: `scratch/core/classes.less`.
 
 Text preferences for easy changing.
 
-**Weights:**
+**Text Styles:**
 
-	.font
-		&.slim							- makes text weight 200
-		&.light							- makes text weight 300
-		&.normal						- makes text weight 400
-		&.semibold						- makes text weight 600
-		&.bold							- makes text weight 700
-		&.extrabold						- makes text weight 800
+	.slim								- makes text weight 200
+	.light								- makes text weight 300
+	.normal								- makes text weight 400
+	.semibold							- makes text weight 600
+	.bold								- makes text weight 700
+	.extrabold							- makes text weight 800
 
-		styles
-		&.italic						- makes text italic
+	.italic								- makes text italic
 
 **Sizes:**
 
-	.size
-		&.h1							- makes text size like default h1 - 30px
-		&.h2							- makes text size like default h2 - 28px
-		&.h3							- makes text size like default h3 - 24px
-		&.h4							- makes text size like default h4 - 20px
-		&.h5							- makes text size like default h5 - 18px
-		&.h6							- makes text size like default h6 - 16px
-		&.h7							- makes text size additional size h7 - 14px
-		&.h8							- makes text size additional size h8 - 12px
+	.h1									- makes text size like default h1 - 30px
+	.h2									- makes text size like default h2 - 28px
+	.h3									- makes text size like default h3 - 24px
+	.h4									- makes text size like default h4 - 20px
+	.h5									- makes text size like default h5 - 18px
+	.h6									- makes text size like default h6 - 16px
+	.h7									- makes text size additional size h7 - 14px
+	.h8									- makes text size additional size h8 - 12px
+	.h9									- makes text size additional size h8 - 11px
+	.h10								- makes text size additional size h8 - 10px
 
 **Aligns:**
 
@@ -226,6 +225,7 @@ Text preferences for easy changing.
 	.uppercase							- makes text UPPERCASE
 	.lowercase							- makes text lowercase
 	.camelcase							- makes text CamelCase
+	.nocase								- resets font case as is
 
 Please note, that settings can be changed from the file: `scratch/var.less`.
 
@@ -433,7 +433,7 @@ How to reference
 =============================
 You can anytime reference other library for UI components. It's very simple.
 
-You only need to paste library's less files into `lib/libraryname` directory. Then add main file to `scratch/lib.less` file. **Bootstrap**'s' example is provided. Then you can decide which component you need to disable from scratch (with `scratch/scratch.less` file) or from included framework provided by them. It's all for avoid conflicts.
+You only need to paste library's less files into `lib/libraryname` directory. Then add main file to `scratch/lib.less` file. **Bootstrap**'s example is provided there. Then you can decide which component you need to disable from scratch (with `scratch/scratch.less` file) or from included framework provided by them. It's all for avoid conflicts.
 
 -------------
 
