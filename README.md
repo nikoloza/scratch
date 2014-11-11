@@ -433,7 +433,7 @@ How to reference
 =============================
 You can anytime reference other library for UI components. It's very simple.
 
-You only need to paste library's less files into `lib/*lubraryname*` directory. Then add main file to `scratch/lib.less` file. **Bootstrap** example is provided. Then you can decide which component you need to disable from scratch (with `scratch/scratch.less` file) or from included framework provided by them. It's all for avoid conflicts.
+You only need to paste library's less files into `lib/libraryname` directory. Then add main file to `scratch/lib.less` file. **Bootstrap**'s' example is provided. Then you can decide which component you need to disable from scratch (with `scratch/scratch.less` file) or from included framework provided by them. It's all for avoid conflicts.
 
 -------------
 
