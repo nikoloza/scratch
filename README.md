@@ -174,15 +174,18 @@ It can be used as variables in less like `@blue`, `@orange`... Also it can be us
 Root color defines container color, which makes easier to add color to children elements. Like this:
 
 	<section class='root-orange'>
+		<!-- rootcolor text sample: -->
 		<span class="rootcolor">Orange text</span>
 
+		<!-- usual text without color (no need color reseting): -->
 		Lorem ipsum dolor sit amet, consectetur adipisicing, delectus magni.
 
+		<!-- rootcolor as a background -->
 		<div class="rootbg">
 			This container has orange background
 		</div>
 
-		<!-- another color usage is as usual: -->
+		<!-- another color usage is simple as usual: -->
 		<a href="" class="color-red">Red text</a>
 	</section>
 
