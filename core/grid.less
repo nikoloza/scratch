@@ -31,7 +31,7 @@
 		}
 	}
 
-	&.side-padding {
+	&.no-side-padding {
 		margin-left: -@grid-padding / 2;
 		margin-right: -@grid-padding / 2;
 	}
@@ -44,10 +44,9 @@
 			padding-left: @grid-padding * 2;
 		}
 
-		&.side-padding {
+		&.no-side-padding {
 			margin-left: -@grid-padding * 2;
-			width: 100%;
-			width: calc(~'100% + ' @grid-padding * 4)
+			margin-right: -@grid-padding * 2;
 		}
 	}
 
@@ -95,7 +94,7 @@
 	&.row@{i} {
 		.columns(@i)
 	}
-  .generate-row(@n, (@i + 1));
+	.generate-row(@n, (@i + 1));
 }
 
 .generate-row(@grid-children);
