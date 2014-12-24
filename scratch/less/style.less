@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+// import helper frameworks
+    @import 'lib';
+
+// include scratch framework
+    @import 'scratch';
+
+// layouting website
+    @import 'layout';
+
+// layouting website
+    @import 'pages';
+
+
+// hacking goes on
+.selection(#000, #fff);
+
+html {
+    .transform(translateZ(0)); // for full hardware acceleration: http://cl.ly/image/2F3K0J1O1B2Y
+}
+
+body {
+    background: @white;
+}
+
+
+// include responsive files
+.responsive();
+
+// include different browsers and os, also print mode
+.browsers();

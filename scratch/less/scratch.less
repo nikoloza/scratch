@@ -1,0 +1,57 @@
+/*!
+
+    Scratch Framework (https://github.com/nikoloza/Scratch)
+    Nika Tomadze (@nnikoloza)
+    nika.tomadze@gmail.com
+
+    -----
+    Use grunt to compile less file.
+    You need to install npm: grunt-contrib-less
+
+    -----
+    Use grunt to minify css file.
+    You need to install npm: grunt-contrib-cssmin
+
+*/
+
+@import 'var';
+@import 'colors';
+
+// core
+@import 'core/mixins';
+@import 'core/reset';
+@import 'core/classes';
+@import 'core/grid';
+@import 'core/flex';
+
+// helpers
+@import 'helpers/fonts';
+@import 'helpers/icons';
+@import 'helpers/sprite';
+
+// plugins
+@import 'plugins/animate';
+@import 'plugins/alert';
+@import 'plugins/loading';
+@import 'plugins/modal';
+@import 'plugins/slider';
+@import 'plugins/validation';
+
+// forms
+@import 'forms/form';
+@import 'forms/buttons';
+
+
+// browsers and print page
+.browsers() {
+	@import 'browsers/os';
+	@import 'browsers/browsers';
+	@import 'browsers/print';
+}
+
+// responsive
+.responsive() {
+	@import 'responsive/screen';
+	@import 'responsive/tablet';
+	@import 'responsive/mobile';
+}

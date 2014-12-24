@@ -1,0 +1,15 @@
+// sprites embedding goes here
+.sprite {
+	background: url('@{img-path}/transparent.png') no-repeat 0 0;
+	background-size: 100%;
+}
+
+@import 'sprite-generated';
+
+// sprites embedding for retina displays
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+	.sprite {
+		background: url('@{img-path}/transparent@2x.png') no-repeat 0 0;
+		background-size: 100%;
+	}
+}

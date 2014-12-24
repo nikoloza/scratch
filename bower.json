@@ -1,0 +1,22 @@
+{
+  "name": "scratch",
+  "version": "0.0.1",
+  "homepage": "https://github.com/nikoloza/Scratch",
+  "authors": [
+    "Nika Tomadze <nika.tomadze@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "lib",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "fastclick": "~1.0.3",
+    "html5shiv": "~3.7.2",
+    "modernizr": "~2.8.3"
+  }
+}
