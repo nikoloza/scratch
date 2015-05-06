@@ -29,10 +29,10 @@ module.exports = function(grunt) {
 		options: {
 			serverFile: 'server.js',
 			libraries: [
-				'lib/jquery/dist/jquery.min.js',
-				'lib/modernizr/modernizr.js',
-				'lib/fastclick/lib/fastclick.js',
-				'lib/jquery.scratch.js'
+				'bower_components/jquery/dist/jquery.min.js',
+				'bower_components/modernizr/modernizr.js',
+				'bower_components/fastclick/lib/fastclick.js',
+				'bower_components/jquery.scratch.js'
 			]
 		},
 
