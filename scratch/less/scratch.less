@@ -1,52 +1,35 @@
 /*!
-
-    Scratch Framework (https://github.com/nikoloza/Scratch)
-    Nika Tomadze (@nnikoloza)
-    nika.tomadze@gmail.com
-
-    -----
-    Use grunt to compile less file.
-    You need to install npm: grunt-contrib-less
-
-    -----
-    Use grunt to minify css file.
-    You need to install npm: grunt-contrib-cssmin
-
+  Scratch Framework (https://github.com/nikoloza/Scratch)
+  Nika Tomadze (@nnikoloza)
+  nika.tomadze@gmail.com
 */
 
-@import 'var';
-@import 'colors';
 
-// core
-@import 'core/mixins';
-@import 'core/reset';
-@import 'core/classes';
-@import 'core/grid';
-@import 'core/flex';
+// color variables
+@import url('colors');
 
-// helpers
-@import 'helpers/fonts';
-@import 'helpers/icons';
-@import 'helpers/sprite';
+// variables
+@import url('var');
 
-// plugins
-@import 'plugins/animate';
-@import 'plugins/alert';
-@import 'plugins/loading';
-@import 'plugins/modal';
-@import 'plugins/slider';
-@import 'plugins/validation';
+// mixins
+@import url('mixins/index');
+
+// reset
+@import url('reset');
 
 // forms
-@import 'forms/form';
-@import 'forms/buttons';
+@import url('forms/buttons');
+@import url('forms/form');
+
+// animations
+@import url('animations/index');
 
 
 // browsers and print page
 .browsers() {
-	@import 'browsers/os';
-	@import 'browsers/browsers';
-	@import 'browsers/print';
+  @import 'browsers/os';
+  @import 'browsers/browsers';
+  @import 'browsers/print';
 }
 
 // responsive

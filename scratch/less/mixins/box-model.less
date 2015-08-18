@@ -1,0 +1,42 @@
+/* Box model mixins
+---------------------------------------------- */
+
+/**
+ * `box-sizing` mixin
+ * @param {string} [property=border-box]
+ * @example
+ * .sizing(content-box)
+ */
+.sizing (@property: border-box) {
+  -webkit-box-sizing: @property;
+     -moz-box-sizing: @property;
+      -ms-box-sizing: @property;
+          box-sizing: @property;
+}
+
+/**
+ * Set size of box
+ * @param {string} width
+ * @param {string} height
+ * @param {string} [display=inline-block]
+ * @example
+ * .size(200px, 100px, block)
+ */
+.size(@width, @height: @width, @display: inline-block) {
+  width: @width;
+  height: @height;
+  display: @display;
+}
+
+/**
+ * Distance of box, sets `padding` and `margin`
+ * @param {string} [padding=@grid-padding]
+ * @param {string} [margin=@grid-padding]
+ * @example
+ * .distance(10px 40px, 10px)
+ */
+.distance(@padding: @grid-padding, @margin: @grid-padding) {
+  .sizing;
+  padding: @padding;
+  margin: @margin;
+}
