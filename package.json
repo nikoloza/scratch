@@ -13,10 +13,10 @@
     "CSS",
     "Scratch"
   ],
-  "author": "Nika Tomadze - @nnikoloza",
+  "author": "Nika Tomadze (nikoloza)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nikoloza/Scratch./issues"
+    "url": "https://github.com/nikoloza/Scratch/issues"
   },
   "homepage": "http://nikoloza.github.io/scratch/",
   "devDependencies": {
