@@ -6,9 +6,5 @@
     "Nika Tomadze <nika.tomadze@gmail.com>"
   ],
   "ignore": [],
-  "devDependencies": {
-    "fastclick": "~1.0.3",
-    "html5shiv": "~3.7.2",
-    "modernizr": "~2.8.3"
-  }
+  "devDependencies": {}
 }
