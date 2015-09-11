@@ -8,6 +8,8 @@
 
 Scratch Framework
 =============
+**LESS boilerplate and styleguide for front end projects.**
+
 [![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/nikoloza/Scratch?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 Scratch helps you to make high level front end architecture using `Less` and `HTML5`.
