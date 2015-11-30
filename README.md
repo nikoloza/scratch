@@ -1,4 +1,4 @@
-**Currently under the process of refactoring.**
+**Currently under the heavy process of refactoring.**
 
 	 _____                _       _
 	/  ___|              | |     | |
