@@ -1,0 +1,35 @@
+/* Form mixins
+---------------------------------------------- */
+
+/**
+ * `appearance` resets browser styling defaults
+ * for form elements
+ * @example
+ * .appearance(none)
+ */
+.appearance (@property: none) {
+  -webkit-appearance: @property;
+     -moz-appearance: @property;
+          appearance: @property;
+}
+
+/**
+ * `placeholder` mixin sets default color
+ * for placeholder text in form elements
+ * @example
+ * .placeholder(black)
+ */
+.placeholder(@color: @placeholder) {
+  &::-webkit-input-placeholder {
+    color: @color;
+  }
+  &:-moz-placeholder {
+    color: @color;
+  }
+  &:-ms-input-placeholder {
+    color: @color;
+  }
+  &[data-operaplaceholder] {
+    color: @color;
+  }
+}

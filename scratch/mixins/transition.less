@@ -1,0 +1,23 @@
+ /**
+ * `transition` mixin which joins all transition properties
+ * @param {string} property
+ * @example
+ * .transition(.1s linear background)
+ */
+.transition(@property) {
+  -webkit-transition: @property;
+     -moz-transition: @property;
+       -o-transition: @property;
+          transition: @property;
+}
+
+/**
+ * `transition-timing-function` mixin
+ * @param {string} property
+ * @example
+ * .transition-timing(linear)
+ */
+.transition-timing(@property) {
+  -webkit-transition-timing-function: @property;
+          transition-timing-function: @property;
+}

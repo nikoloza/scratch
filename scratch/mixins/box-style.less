@@ -1,0 +1,95 @@
+/* Box styling mixins
+---------------------------------------------- */
+
+/**
+ * `border-radius` mixin
+ * @param {string} property
+ * @example
+ * .radius(3px) // all
+ * .radius(top right bottom left)
+ */
+.radius(@radius) {
+  -webkit-border-radius: @radius;
+     -moz-border-radius: @radius;
+          border-radius: @radius;
+}
+
+/**
+ * `background-clip` mixin
+ * @param {string} [property=padding-box]
+ * @example
+ * .clip(content-box)
+ */
+.clip (@property: padding-box) {
+  -webkit-background-clip: @property;
+     -moz-background-clip: @property;
+          background-clip: @property;
+}
+
+/**
+ * Background image mixin - makes backround set easier.
+ * @param {string} property
+ * @param {string} property2
+ * @example
+ * .bgimg('../assets/test.jpg', center center no-repeat)
+ */
+.bgimg (@property, @property2) {
+  background: url(@property) @property2;
+}
+
+/**
+ * background-size
+ * @param {string} [property=cover]
+ * @example
+ * .bgsize(cover)
+ */
+.bgsize (@property: cover) {
+    -webkit-background-size: @property;
+       -moz-background-size: @property;
+         -o-background-size: @property;
+            background-size: @property;
+}
+
+/**
+ * box-shadow
+ * @param {string} property
+ * @param {string} [property2=inset 0 0 0]
+ * @example
+ * .shadow(1px 1px 3px 1px #ccc)
+ */
+.shadow (@property, @property2: inset 0 0 0) {
+  -webkit-box-shadow: @property, @property2;
+     -moz-box-shadow: @property, @property2;
+          box-shadow: @property, @property2;
+}
+
+/**
+ * Overflow scrollbar styling
+ * @todo needs to be more flexible
+ * @example
+ * .overflow(10px, yellow, #eee, #ccc)
+ */
+.overflow (@width: 10px) {
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: @width;
+  }
+  &::-webkit-scrollbar-track {
+    .radius(5px);
+    background: rgba(255, 255, 255, 0.2);
+    width: 8px;
+  }
+  &::-webkit-scrollbar-thumb {
+    .radius(5px);
+    background: #ccc;
+    width: 6px;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: #bbb;
+  }
+  &::-webkit-scrollbar-thumb:window-inactive {
+    background: #eee;
+  }
+}

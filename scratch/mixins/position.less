@@ -1,0 +1,20 @@
+/* Position mixins
+---------------------------------------------- */
+
+/**
+ * Makes element's position absolute and gets params. It starts from `left`.
+ * @param left {number}
+ * @param top {number}
+ * @param right {number}
+ * @param bottom {number}
+ * @example
+ * .absolute(10px, 20px)
+ * .absolute(auto, auto, 100px, 200px)
+ */
+.absolute(@left: auto, @top: auto, @right: auto, @bottom: auto) {
+  position: absolute;
+  left: @left;
+  top: @top;
+  right: @right;
+  bottom: @bottom;
+}
