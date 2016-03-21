@@ -17,19 +17,21 @@
  * `placeholder` mixin sets default color
  * for placeholder text in form elements
  * @example
- * .placeholder(black)
+ * .placeholder({
+ *   color: black
+ * })
  */
-.placeholder(@color: @placeholder) {
+.placeholder(@rules) {
   &::-webkit-input-placeholder {
-    color: @color;
+    @rules();
   }
   &:-moz-placeholder {
-    color: @color;
+    @rules();
   }
   &:-ms-input-placeholder {
-    color: @color;
+    @rules();
   }
   &[data-operaplaceholder] {
-    color: @color;
+    @rules();
   }
 }

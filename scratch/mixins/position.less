@@ -11,8 +11,26 @@
  * .absolute(10px, 20px)
  * .absolute(auto, auto, 100px, 200px)
  */
-.absolute(@left: auto, @top: auto, @right: auto, @bottom: auto) {
+.absolute(@left: 0, @top: 0, @right: auto, @bottom: auto) {
   position: absolute;
+  top: @top;
+  right: @right;
+  bottom: @bottom;
+  left: @left;
+}
+
+/**
+ * Makes element's position fixed and gets params. It starts from `left`. Works the same way as {@link .position}
+ * @param left {number}
+ * @param top {number}
+ * @param right {number}
+ * @param bottom {number}
+ * @example
+ * .fixed(10px, 20px)
+ * .fixed(auto, auto, 100px, 200px)
+ */
+.fixed(@left: auto, @top: auto, @right: auto, @bottom: auto) {
+  position: fixed;
   left: @left;
   top: @top;
   right: @right;

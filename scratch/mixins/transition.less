@@ -13,11 +13,33 @@
 
 /**
  * `transition-timing-function` mixin
- * @param {string} property
+ * @param {string} [property=linear]
  * @example
- * .transition-timing(linear)
+ * .transition-timing(ease-in)
  */
-.transition-timing(@property) {
+.transition-timing(@property: linear) {
   -webkit-transition-timing-function: @property;
           transition-timing-function: @property;
+}
+
+/**
+ * `transition-duration` mixin
+ * @param {string} [property=@transition-duration]
+ * @example
+ * .transition-duration(.5s)
+ */
+.transition-duration(@property: @transition-duration) {
+  -webkit-transition-duration: @property;
+          transition-duration: @property;
+}
+
+/**
+ * `transition-delay` mixin
+ * @param {string} [property=@transition-delay]
+ * @example
+ * .transition-delay(.5s)
+ */
+.transition-delay(@property: @transition-delay) {
+  -webkit-transition-delay: @property;
+          transition-delay: @property;
 }
