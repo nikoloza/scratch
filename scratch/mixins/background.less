@@ -1,0 +1,28 @@
+/**
+ * Background image mixin - makes backround set easier.
+ * @param {string} url
+ * @param {string} position
+ * @param {string} repeat
+ * @param {string} size
+ * @example
+ * .bgimg('../assets/test.jpg', center center, no-repeat, cover)
+ */
+.bgimg (@url, @position: top left, @repeat: no-repeat, @size: auto) {
+  background-image: url(@url);
+  background-position: @position;
+  background-repeat: @repeat;
+  .bgsize(@size);
+}
+
+/**
+ * background-size
+ * @param {string} [property=cover]
+ * @example
+ * .bgsize(cover)
+ */
+.bgsize (@property: cover) {
+    -webkit-background-size: @property;
+       -moz-background-size: @property;
+         -o-background-size: @property;
+            background-size: @property;
+}

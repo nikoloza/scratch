@@ -1,0 +1,14 @@
+/**
+ * Flexbox grid system mixins
+ * @example
+ * .flex-grid-item(3)
+ */
+.flex-grid (@size) {
+  .flex-basis((100% / @size));
+  max-width: (100% / @size);
+  min-width: (100% / @size);
+}
+
+.flex-grid-gap (@size: @gutter) {
+  padding: @size;
+}

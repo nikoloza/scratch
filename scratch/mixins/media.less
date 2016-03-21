@@ -1,0 +1,14 @@
+ /**
+ * Generate media range string.
+ * It's for safari to be able to avoid 'and' twice.
+ * @param {string} from
+ * @param {string} to
+ * @example
+ * .media(@screen-tablet, @screen-large)
+ * @media @return {
+ *   // ruleset
+ * }
+ */
+.media-range (@from: 0, @to: none) {
+  @return: ~"all and (min-width: @{from}) and (max-width: "(@to - 1px)~")";
+}

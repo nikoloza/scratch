@@ -1,0 +1,24 @@
+ /**
+ * `icon` mixin for generating icon in any element
+ * @param {string} char - character
+ * @example
+ * div {
+ *   .icon('\e60b');
+ * }
+ */
+.icon(@char) {
+  content: @char;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+  font-family: @icon-family;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

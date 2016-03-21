@@ -1,0 +1,14 @@
+.fullscreen (@rules) {
+  &:-moz-full-screen {
+    @rules();
+  }
+  &:-webkit-full-screen {
+    @rules();
+  }
+  &:-ms-fullscreen {
+    @rules();
+  }
+  &:fullscreen {
+    @rules();
+  }
+}

@@ -1,0 +1,122 @@
+/* Animation mixins
+----------------------------------------------  */
+
+
+/**
+ * `@keyframes` mixin
+ * @param {string} name
+ * @param {object} rules
+ * @example
+ * .keyframes(fadeIn, {
+ *   0% {},
+ *   100% {}
+ * })
+ */
+.keyframes(@name, @rules) {
+  @-webkit-keyframes @name {
+    @rules();
+  }
+  @keyframes @name {
+    @rules();
+  }
+}
+
+/**
+ * `perspective` mixin
+ * @param {number} property
+ * @example
+ * .perspective(800)
+ */
+.perspective(@property: 800) {
+  -webkit-perspective: @property;
+          perspective: @property;
+}
+
+/**
+ * `animation` mixin
+ * @param {string} property
+ * @example
+ * .animation(fadeIn .2s easeOut .8s)
+ */
+.animation(@property) {
+  -webkit-animation: @property;
+          animation: @property;
+}
+
+/**
+ * `animation-name` mixin
+ * @param {string} property
+ * @example
+ * .animation-name(fadeIn)
+ */
+.animation-name(@property) {
+  -webkit-animation-name: @property;
+          animation-name: @property;
+}
+
+/**
+ * `animation-timing` mixin
+ * @param {string} property
+ * @example
+ * .animation-timing(fadeIn)
+ */
+.animation-timing(@property) {
+  -webkit-animation-timing-function: @property;
+          animation-timing-function: @property;
+}
+
+/**
+ * `animation-duration` mixin
+ * @param {string} property
+ * @example
+ * .animation-duration(.5s)
+ */
+.animation-duration(@property) {
+  -webkit-animation-duration: @property;
+          animation-duration: @property;
+}
+
+/**
+ * `animation-delay` mixin
+ * @param {string} property
+ * @example
+ * .animation-delay(.5s)
+ */
+.animation-delay(@property) {
+  -webkit-animation-delay: @property;
+          animation-delay: @property;
+}
+
+/**
+ * `animation-iteration` mixin
+ * @param {string} [property=infinite]
+ * @example
+ * .animation-iteration(5)
+ */
+.animation-iteration(@property: infinite) {
+  -webkit-animation-iteration-count: @property;
+          animation-iteration-count: @property;
+}
+
+/**
+ * `animation-fill-mode` mixin
+ * @param {string} [property=towards]
+ * @example
+ * .animation-fill-mode(backwards)
+ */
+.animation-fill-mode(@property: towards) {
+  -webkit-animation-fill-mode: @property;
+          animation-fill-mode: @property;
+}
+
+/**
+ * `backface-visibility` mixin
+ * @param {string} [property=visible]
+ * @example
+ * .backface-visibility(backwards)
+ */
+.backface-visibility(@property: visible) {
+  -webkit-backface-visibility: @property;
+      -ms-backface-visibility: @property;
+          backface-visibility: @property;
+}

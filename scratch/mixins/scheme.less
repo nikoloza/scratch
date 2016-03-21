@@ -1,0 +1,138 @@
+/**
+ * Color scheming mixin. It receives color scheme array
+ * and gennerates style
+ * @param {string} [scheme=@primary-scheme]
+ * @example
+ * .scheme(@primary-scheme, both)
+ */
+.scheme (@scheme: @primary-scheme) {
+  color: extract(@scheme, 1);
+  background-color: extract(@scheme, 4);
+}
+
+/**
+ * Interactive color scheming usage for hovering and focusing elements
+ * @param {string} [scheme=@primary-scheme]
+ * @param {string} [hover=false] it can be set as a `color`,
+ * `background` or `both`
+ * @param {string} [focus=false] it can be set as a `color`,
+ * `background` or `both`
+ * @example
+ * .scheme(@primary-scheme, both)
+ */
+.scheme-interactive (
+  @scheme: @primary-scheme,
+  @hover: false,
+  @focus: false
+) {
+  .scheme (@scheme);
+
+  @media all @above-tiny {
+    // setting for hover
+    // on hover change color
+    & when (@hover = color) {
+      &:hover {
+        color: extract(@scheme, 2);
+      }
+    }
+
+    // on hover change background
+    & when (@hover = background) {
+      &:hover {
+        background-color: extract(@scheme, 5);
+      }
+    }
+
+    // on hover change both
+    & when (@hover = both) {
+      &:hover {
+        color: extract(@scheme, 2);
+        background-color: extract(@scheme, 5);
+      }
+    }
+  }
+
+  // setting for focus
+  // on focus change color
+  & when (@focus = color) {
+    // &:focus,
+    &:active {
+      color: extract(@scheme, 3);
+    }
+  }
+
+  // on focus change background
+  & when (@focus = background) {
+    // &:focus,
+    &:active {
+      background-color: extract(@scheme, 6);
+    }
+  }
+
+  // on focus change both
+  & when (@focus = both) {
+    // &:focus,
+    &:active {
+      color: extract(@scheme, 3);
+      background-color: extract(@scheme, 6);
+    }
+  }
+}
+
+/**
+ * additional scheming usage such as border and helper color
+ * @param {string} [scheme=@primary-scheme]
+ * @param {string} [border=false] applying border color
+ * @param {string} [additional=false] if you want to use helper
+ * color instead of brand one.
+ * @example
+ * .scheme(@primary-scheme, both)
+ */
+.scheme-additions (
+  @scheme: @primary-scheme,
+  @border: true,
+  @additional: false
+) {
+  // border
+  & when (@border = true) {
+    border-color: fade(extract(@scheme, 1), 10%);
+  }
+
+  // setting for additional
+  // additionalal colors affects to border
+  & when (@additional = border) {
+    border-color: extract(@scheme, 8);
+  }
+
+  // additionalal colors affects to color
+  & when (@additional = color) {
+    color: extract(@scheme, 8);
+  }
+
+  // additionalal colors affects to background
+  & when (@additional = background) {
+    background-color: extract(@scheme, 8);
+  }
+
+  // setting for additional if it is applied to child
+  // additionalal colors affects to border
+  & when (@additional = children-border) {
+    .ui-additional {
+      border-color: extract(@scheme, 8);
+    }
+  }
+
+  // additionalal colors affects to color
+  & when (@additional = children-color) {
+    .ui-additional {
+      color: extract(@scheme, 8);
+    }
+  }
+
+  // additionalal colors affects to background
+  & when (@additional = children-background) {
+    .ui-additional {
+      background-color: extract(@scheme, 8);
+    }
+  }
+}

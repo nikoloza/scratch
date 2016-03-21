@@ -1,0 +1,14 @@
+ /**
+ * Returns vendorized propertyes
+ * @param {string} property
+ * @param {string} property value
+ * @example
+ * .vendorize(transform, .1s linear background)
+ */
+.vendorize(@property, @value) {
+  -webkit-@{property}: @value;
+     -moz-@{property}: @value;
+      -ms-@{property}: @value;
+       -o-@{property}: @value;
+          @{property}: @value;
+}

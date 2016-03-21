@@ -1,0 +1,16 @@
+/**
+ * Convert any unit to another
+ * @example
+ * .convertUnit(@h4, vh, font-size, 1.5)
+ */
+
+.convertUnit (
+  @size,
+  @newUnit: vh,
+  @property: font-size,
+  @scale: 1.4
+) {
+  @var: (@size * @scale);
+  @converted: `parseFloat('@{var}')`;
+  @{property}: ~"@{converted}@{newUnit}";
+}

@@ -1,0 +1,149 @@
+
+@import url('./position.less');
+
+/* Box model mixins
+---------------------------------------------- */
+
+/**
+ * `box-sizing` mixin
+ * @param {string} [property=border-box]
+ * @example
+ * .sizing(content-box)
+ */
+.sizing(@property: border-box) {
+  -webkit-box-sizing: @property;
+     -moz-box-sizing: @property;
+      -ms-box-sizing: @property;
+          box-sizing: @property;
+}
+
+/**
+ * Set size of box
+ * @param {string} width
+ * @param {string} height
+ * @param {string} [display=inline-block]
+ * @example
+ * .size(200px, 100px, block)
+ */
+.size(@width, @height: @width) {
+  width: @width;
+  height: @height;
+}
+
+/**
+ * Width range
+ * @param {string} min-width
+ * @param {string} max-width
+ * @example
+ * .width-range(200px, 500px)
+ */
+.width-range(@min-width, @max-width: @min-width) {
+  min-width: @min-width;
+  max-width: @max-width;
+}
+
+/**
+ * Height range
+ * @param {string} min-height
+ * @param {string} max-height
+ * @example
+ * .height-range(200px, 500px)
+ */
+.height-range(@min-height, @max-height: @min-height) {
+  min-height: @min-height;
+  max-height: @max-height;
+}
+
+/**
+ * Make box full size
+ * @example
+ * .fullsize;
+ */
+.fullsize() {
+  width: 100%;
+  height: 100%;
+}
+
+/**
+ * Shortcut for `display: none`
+ * @example
+ * .none;
+ */
+.none() {
+  display: none;
+}
+
+/**
+ * Vertical padding
+ * @param {string} top
+ * @param {string} [bottom=top]
+ * @example
+ * .padding-v(10px)
+ */
+.padding-v(@top, @bottom: @top) {
+  padding-top: @top;
+  padding-bottom: @bottom;
+}
+
+/**
+ * Horizontal padding
+ * @param {string} left
+ * @param {string} [right=left]
+ * @example
+ * .padding-h(10px)
+ */
+.padding-h(@left, @right: @left) {
+  padding-left: @left;
+  padding-right: @right;
+}
+
+/**
+ * Vertical margin
+ * @param {string} top
+ * @param {string} [bottom=top]
+ * @example
+ * .margin-v(10px)
+ */
+.margin-v(@top, @bottom: @top) {
+  margin-top: @top;
+  margin-bottom: @bottom;
+}
+
+/**
+ * Horizontal margin
+ * @param {string} left
+ * @param {string} [right=left]
+ * @example
+ * .margin-h(10px)
+ */
+.margin-h(@left, @right: @left) {
+  margin-left: @left;
+  margin-right: @right;
+}
+
+
+/**
+ * Set size of box
+ * @param {string} width
+ * @param {string} height
+ * @param {string} [display=inline-block]
+ * @example
+ * .size(200px, 100px, block)
+ */
+.fullsize() {
+  .absolute(0, 0);
+  .size(100%, 100%);
+}
+
+/**
+ * Distance of box, sets `padding` and `margin`
+ * @param {string} [padding=@grid-padding]
+ * @param {string} [margin=@grid-padding]
+ * @example
+ * .distance(10px 40px, 10px)
+ */
+.distance(@padding: @grid-padding, @margin: @grid-padding) {
+  .sizing;
+  padding: @padding;
+  margin: @margin;
+}
