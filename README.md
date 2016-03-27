@@ -1,17 +1,15 @@
-**Currently under the heavy process of refactoring.**
+**Currently under the heavy process of refactoring.** Check [Master](https://github.com/nikoloza/scratch/tree/master) branch for more stable version.
 
-     _____                _       _
-    /  ___|              | |     | |
-    \ `--.  ___ _ __ __ _| |_ ___| |__
-     `--. \/ __| '__/ _` | __/ __| '_ \
-    /\__/ / (__| | | (_| | || (__| | | |
-    \____/ \___|_|  \__,_|\__\___|_| |_|
+	 _____                _       _
+	/  ___|              | |     | |
+	\ `--.  ___ _ __ __ _| |_ ___| |__
+	 `--. \/ __| '__/ _` | __/ __| '_ \
+	/\__/ / (__| | | (_| | || (__| | | |
+	\____/ \___|_|  \__,_|\__\___|_| |_|
 
 
 Scratch Framework
 =============
-**LESS boilerplate and styleguide for front end projects.**
-
 [![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/nikoloza/Scratch?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 Scratch helps you to make high level front end architecture using `Less` and `HTML5`.
@@ -39,29 +37,29 @@ If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out th
 
 Then you need to install required packages:
 
-  $ npm install
+	$ npm install
 
 With our grunt config we have 5 states to use grunt:
 
 Simply one time compile files:
 
-  $ grunt
+	$ grunt
 
 Watch and compile files:
 
-  $ grunt run
+	$ grunt run
 
 Run express based simple http server, watch and compile files:
 
-  $ grunt server
+	$ grunt server
 
 Make files ready for production:
 
-  $ grunt production
+	$ grunt production
 
 Clean all grunt generated files:
 
-  $ grunt clean
+	$ grunt clean
 
 -------------
 
@@ -97,55 +95,55 @@ So we can set it by naming the class `.row` and number which sets children quant
 
 It works for children `<div>`, `<li>`, `<td>` elements and `.cell` classes. Like this:
 
-  .row5
-    & > div
-    & > div
-    & > .cell
-    & > .cell
-    & > div
+	.row5
+		& > div
+		& > div
+		& > .cell
+		& > .cell
+		& > div
 
-  ul.row3
-    & > li
-    & > li
-    & > li
+	ul.row3
+		& > li
+		& > li
+		& > li
 
 and, of course make them **nested**, like this:
 
-  section.row4
-    & > div
-    & > div.row2
-      & > div
-      & > div
-    & > .cell
-    & > ul.cell.row3
-      & > li
-      & > li
-      & > li
+	section.row4
+		& > div
+		& > div.row2
+			& > div
+			& > div
+		& > .cell
+		& > ul.cell.row3
+			& > li
+			& > li
+			& > li
 
 **To increase child elements width** you need to use `.cell` + number class on this element. For example `cell3`. So, it works like this:
 
-  .row5
-    & > div
-    & > div.cell3          - this takes 3x more space then usual div
-    & > div
+	.row5
+		& > div
+		& > div.cell3					- this takes 3x more space then usual div
+		& > div
 
-  table
-    & > tr.row4
-      & > td
-      & > td.cell2
-      & > td
+	table
+		& > tr.row4
+			& > td
+			& > td.cell2
+			& > td
 
 #### Spacing for the grid
 To prevent spacing by left and right sides or inside cells use following classes:
-  .row7
-    &.no-padding           - sticks cells on eachother
-    &.side-padding          - fits grid width by left and right side on the container
-    &.twice-padding          - makes padding 2x wider than default
+	.row7
+		&.no-padding		 			- sticks cells on eachother
+		&.side-padding					- fits grid width by left and right side on the container
+		&.twice-padding					- makes padding 2x wider than default
 
 #### Other grid features
 You may use other features as well
 
-  row2.float.nofloat            - this feature (you'll meet this below) works here as well.
+	row2.float.nofloat	  				- this feature (you'll meet this below) works here as well.
 
 -------------
 
@@ -153,45 +151,45 @@ You may use other features as well
 Make your site more colorful by configuring `scratch/colors.less` file. Take a look in this reference:
 
 By default we have following colors:
-  .blue
-  .yellow
-  .red
-  .lilac
-  .green
-  .pink
-  .orange
+	.blue
+	.yellow
+	.red
+	.lilac
+	.green
+	.pink
+	.orange
 
-  .black
-  .blackgray
-  .darkgrey
-  .midgray
-  .lightgray
-  .whitegray
-  .white
+	.black
+	.blackgray
+	.darkgrey
+	.midgray
+	.lightgray
+	.whitegray
+	.white
 
-  .transparent
-  .default               - resets on default colors
+	.transparent
+	.default 							- resets on default colors
 
 It can be used as variables in less like `@blue`, `@orange`... Also it can be used in HTML as class. For text color like this `class="color-darkgray"`, for background color like this: `class="bg-lilac"`.
 
 
 Root color defines container color, which makes easier to add color to children elements. Like this:
 
-  <section class='root-orange'>
-    <!-- rootcolor text sample: -->
-    <span class="rootcolor">Orange text</span>
+	<section class='root-orange'>
+		<!-- rootcolor text sample: -->
+		<span class="rootcolor">Orange text</span>
 
-    <!-- usual text without color (no need color reseting): -->
-    Lorem ipsum dolor sit amet, consectetur adipisicing, delectus magni.
+		<!-- usual text without color (no need color reseting): -->
+		Lorem ipsum dolor sit amet, consectetur adipisicing, delectus magni.
 
-    <!-- rootcolor as a background -->
-    <div class="rootbg">
-      This container has orange background
-    </div>
+		<!-- rootcolor as a background -->
+		<div class="rootbg">
+			This container has orange background
+		</div>
 
-    <!-- another color usage is simple as usual: -->
-    <a href="" class="color-red">Red text</a>
-  </section>
+		<!-- another color usage is simple as usual: -->
+		<a href="" class="color-red">Red text</a>
+	</section>
 
 
 -------------
@@ -203,41 +201,41 @@ Text preferences for easy changing.
 
 **Text Styles:**
 
-  .slim                - makes text weight 200
-  .light                - makes text weight 300
-  .normal                - makes text weight 400
-  .semibold              - makes text weight 600
-  .bold                - makes text weight 700
-  .extrabold              - makes text weight 800
+	.slim								- makes text weight 200
+	.light								- makes text weight 300
+	.normal								- makes text weight 400
+	.semibold							- makes text weight 600
+	.bold								- makes text weight 700
+	.extrabold							- makes text weight 800
 
-  .italic                - makes text italic
+	.italic								- makes text italic
 
 **Sizes:**
 
-  .h1                  - makes text size like default h1 - 30px
-  .h2                  - makes text size like default h2 - 28px
-  .h3                  - makes text size like default h3 - 24px
-  .h4                  - makes text size like default h4 - 20px
-  .h5                  - makes text size like default h5 - 18px
-  .h6                  - makes text size like default h6 - 16px
-  .h7                  - makes text size additional size h7 - 14px
-  .h8                  - makes text size additional size h8 - 12px
-  .h9                  - makes text size additional size h8 - 11px
-  .h10                - makes text size additional size h8 - 10px
+	.h1									- makes text size like default h1 - 30px
+	.h2									- makes text size like default h2 - 28px
+	.h3									- makes text size like default h3 - 24px
+	.h4									- makes text size like default h4 - 20px
+	.h5									- makes text size like default h5 - 18px
+	.h6									- makes text size like default h6 - 16px
+	.h7									- makes text size additional size h7 - 14px
+	.h8									- makes text size additional size h8 - 12px
+	.h9									- makes text size additional size h8 - 11px
+	.h10								- makes text size additional size h8 - 10px
 
 **Aligns:**
 
-  .align
-    &.left              - aligns text on left
-    &.center            - aligns text on center
-    &.right              - aligns text on right
+	.align
+		&.left							- aligns text on left
+		&.center						- aligns text on center
+		&.right							- aligns text on right
 
 **Letter cases:**
 
-  .uppercase              - makes text UPPERCASE
-  .lowercase              - makes text lowercase
-  .camelcase              - makes text CamelCase
-  .nocase                - resets font case as is
+	.uppercase							- makes text UPPERCASE
+	.lowercase							- makes text lowercase
+	.camelcase							- makes text CamelCase
+	.nocase								- resets font case as is
 
 Please note, that settings can be changed from the file: `scratch/var.less`.
 
@@ -247,15 +245,15 @@ Please note, that settings can be changed from the file: `scratch/var.less`.
 Makes children elements inline by `float: left` (use `.nofloat` class to make inline by display).
 For `<div>`s and `<li>`s only. Use `.cell` class for another children element.
 
-  .inline
-    & > div
-    & > li
-    & > .cell            - all elements are inline
+	.inline
+		& > div
+		& > li
+		& > .cell						- all elements are inline
 
-  .inline.nofloat
-    & > div
-    & > li
-    & > .cell             - all elements are inline again, but they don't float anymore
+	.inline.nofloat
+		& > div
+		& > li
+		& > .cell   					- all elements are inline again, but they don't float anymore
 
 -------------
 
@@ -264,10 +262,10 @@ LESS file: `scratch/core/classes.less`.
 
 For elements to be floated.
 
-  .float
-    &.left              - makes left float
-    &.right              - makes right float
-    &.nofloat            - resets float to none
+	.float
+		&.left							- makes left float
+		&.right							- makes right float
+		&.nofloat						- resets float to none
 
 -------------
 
@@ -276,8 +274,8 @@ LESS file: `scratch/core/classes.less`.
 
 They prevent floated elements to float.
 
-  .clear                - element that prevents floating
-  .clearfix              - class name that fixes floating after latest child in the element
+	.clear								- element that prevents floating
+	.clearfix							- class name that fixes floating after latest child in the element
 
 -------------
 
@@ -286,16 +284,16 @@ LESS file: `scratch/core/classes.less`.
 
 Classes to hide (vanish) or transparent elements.
 
-  .hidden                - makes element hide, but leaves its spase
-  .hide                - hides element without its spase and focus
-  .none                - hides element by !important (that means it overwriting other properties)
-  .opacity
-    &.full              - makes element fully shown
-    &.hight              - makes element 75% transparent
-    &.half              - makes element 50% transparent
-    &.low              - makes element 25% transparent
-    &.zero              - makes fully transparent
-  .transparent            - makes element transparent (same as .opacity.zero)
+	.hidden								- makes element hide, but leaves its spase
+	.hide								- hides element without its spase and focus
+	.none								- hides element by !important (that means it overwriting other properties)
+	.opacity
+		&.full							- makes element fully shown
+		&.hight							- makes element 75% transparent
+		&.half							- makes element 50% transparent
+		&.low							- makes element 25% transparent
+		&.zero							- makes fully transparent
+	.transparent						- makes element transparent (same as .opacity.zero)
 
 -------------
 
@@ -327,117 +325,117 @@ Here we have rich library which makes easy to work with LESS. Code is getting at
 
 For the easy read, I'll just write directly easy reference here.
 
-  Before:                      After:
+	Before:											After:
 
 **Border radius:**
 
-  -webkit-border-radius: property;        .radius(property), or .radius(topleft topright bottomright bottomleft)
-     -moz-border-radius: property;
-      border-radius: property;
+	-webkit-border-radius: property;				.radius(property), or .radius(topleft topright bottomright bottomleft)
+	   -moz-border-radius: property;
+			border-radius: property;
 
 **Box shadow:**
 
-  -webkit-box-shadow: property1, property2;    .shadow(property1, property2), or just .shadow(property)
-     -moz-box-shadow: property1, property2;
-      box-shadow: property1, property2;
+	-webkit-box-shadow: property1, property2;		.shadow(property1, property2), or just .shadow(property)
+	   -moz-box-shadow: property1, property2;
+			box-shadow: property1, property2;
 
 **Transition:**
 
-  -webkit-transition: property;          .transition(property)
-     -moz-transition: property;
-     -o-transition: property;
-      transition: property;
+	-webkit-transition: property;					.transition(property)
+	   -moz-transition: property;
+		 -o-transition: property;
+			transition: property;
 
 **Filter:**
 
-  -webkit-filter: property;            .filter(property)
-     -moz-filter: property;
-    -ms-filter: property;
-     -o-filter: property;
-      filter: property;
+	-webkit-filter: property;						.filter(property)
+	   -moz-filter: property;
+		-ms-filter: property;
+		 -o-filter: property;
+			filter: property;
 
 **Transform:**
 
-  -webkit-transform: property;          .transform(property)
-     -moz-transform: property;
-    -ms-transform: property;
-     -o-transform: property;
-      transform: property;
+	-webkit-transform: property;					.transform(property)
+	   -moz-transform: property;
+		-ms-transform: property;
+		 -o-transform: property;
+			transform: property;
 
 **Transform origin:**
 
-  -webkit-transform-origin: property;        .transform-origin(property)
-     -moz-transform-origin: property;
-    -ms-transform-origin: property;
-     -o-transform-origin: property;
-      transform-origin: property;
+	-webkit-transform-origin: property;				.transform-origin(property)
+	   -moz-transform-origin: property;
+		-ms-transform-origin: property;
+		 -o-transform-origin: property;
+			transform-origin: property;
 
 **Box sizing:**
 
-  -webkit-box-sizing: property;          .sizing(property), or just .sizing() which uses "border-box" by default
-     -moz-box-sizing: property;
-    -ms-box-sizing: property;
-      box-sizing: property;
+	-webkit-box-sizing: property;					.sizing(property), or just .sizing() which uses "border-box" by default
+	   -moz-box-sizing: property;
+		-ms-box-sizing: property;
+			box-sizing: property;
 
 **Text shadow:**
 
-  -webkit-text-shadow: property;          .text-shadow(property)
-      text-shadow: property;
+	-webkit-text-shadow: property;					.text-shadow(property)
+			text-shadow: property;
 
 **User select:**
 
-  -webkit-user-select: property;          .selectable(property), or selectable() where "none" is default
-     -moz-user-select: property;
-    -ms-user-select: property;
+	-webkit-user-select: property;					.selectable(property), or selectable() where "none" is default
+	   -moz-user-select: property;
+		-ms-user-select: property;
 
 **Background clipping:**
 
-  -webkit-background-clip: property;        .clip(property)
-     -moz-background-clip: property;
-      background-clip: property;
+	-webkit-background-clip: property;				.clip(property)
+	   -moz-background-clip: property;
+			background-clip: property;
 
 **Rotate:**
 
-  -webkit-transform: rotate(property);      .rotate(property)
-    -ms-transform: rotate(property);
-      transform: rotate(property);
+	-webkit-transform: rotate(property);			.rotate(property)
+		-ms-transform: rotate(property);
+			transform: rotate(property);
 
 **Appearance:**
 
-  -webkit-appearance: property;          .appearance(property), or just .appearance() "none" is default
-     -moz-appearance: property;
-      appearance: property;
+	-webkit-appearance: property;					.appearance(property), or just .appearance() "none" is default
+	   -moz-appearance: property;
+			appearance: property;
 
 **Background size:**
 
-  -webkit-background-size: property;        .bgsize(property)
-     -moz-background-size: property;
-     -o-background-size: property;
-      background-size: property;
+	-webkit-background-size: property;				.bgsize(property)
+	   -moz-background-size: property;
+		 -o-background-size: property;
+			background-size: property;
 
 
 **Placeholder color in forms:**
 
-  ::-webkit-input-placeholder {          .placeholder(property), for just .placeholder(), you can set default color in var.less
-    color: property;
-  }
-  :-moz-placeholder {
-    color: property;
-  }
-  :-ms-input-placeholder {
-    color: property;
-  }
-  [data-operaplaceholder] {
-    color: property;
-  }
+	::-webkit-input-placeholder {					.placeholder(property), for just .placeholder(), you can set default color in var.less
+		color: property;
+	}
+	:-moz-placeholder {
+		color: property;
+	}
+	:-ms-input-placeholder {
+		color: property;
+	}
+	[data-operaplaceholder] {
+		color: property;
+	}
 
 
 **Selection:**
 
-  ::selection {                  .selection(property1, property2)
-    background-color: property1;
-    color: property2;
-  }
+	::selection {									.selection(property1, property2)
+		background-color: property1;
+		color: property2;
+	}
 
 -------------
 
