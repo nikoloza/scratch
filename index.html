@@ -1,48 +1,331 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<link rel="shortcut icon" href="img/favicon.png?v=1.1">
+  <meta charset="utf-8">
 
-	<title>Scratch - New HTML5 and Less boilerplate</title>
+  <title>Scratch - New HTML5 and Less boilerplate</title>
 
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-	<meta name="format-detection" content="telephone=no">
-	<meta name="viewport" content="width = device-width, initial-scale = 1, maximum-scale = 1, user-scalable = no">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="width = device-width, initial-scale = 1, maximum-scale = 1, user-scalable = no">
 
-  	<!-- we use single css file for better performance -->
-	<link rel="stylesheet" type="text/css" href="scratch/style.css">
-
-	<!--[if lt IE 10]>
-		<script type="text/javascript" src="scratch/js/html5shiv.js"></script>
-	<![endif]-->
-
+    <!-- we use single css file for better performance -->
+  <link rel="stylesheet" type="text/css" href="scratch/style.min.css">
 </head>
 <body>
 
-	<!-- HTML Layout here -->
-	<section class="wrapper">
-		<header class="header">
-			<a class="logo"></a>
-			<nav class="nav"></nav>
-		</header>
+<section class="container row no-padding">
+  <section class="col-15">
+    <h4>Getting started</h4>
+    <div class="content getting-started">
+      <h5>What is scratch?</h5>
+      <p>Scratch helps you to make high level front end architecture using <code>Less</code> and <code>HTML5</code>.</p>
+      <p>It has semantic code and file structure which helps you write beautiful code.</p>
+      <p>Scratch is not UI framework, it's for architecture only. If you wish, you just can reference other UI framework and continue working. See how to reference section below.</p>
 
-		<section class="container">
-			<aside class="aside"></aside>
-			<section class="content"></section>
-		</header>
-	</section>
+      <h6>Stylesheet file</h6>
+      <p>You only need to import <code>scratch/style.css</code> in your html file.</p>
+      <p>For better performance, please use <code>scratch/style.min.css</code> for production.</p>
 
-	<footer class="footer">
-		<nav></nav>
-		<p class="copyright"></p>
-	</footer>
+      <h6>Configuring less</h6>
+      <p>You can configure your project by opening <code>scratch/var.less</code> file. There you can change any preference for your project.</p>
+      <p>Also, you can control what feature you need to import by setting <code>scratch/scratch.less</code> file.</p>
+    </div>
 
-	<!-- Javascripts -->
-	<script type="text/javascript" src="scratch/lib.min.js"></script>
-	<script type="text/javascript" src="scratch/app.js"></script>
+    <h4>Grid System</h4>
+    <div class="content grid">
+      <h5>Childset</h5>
+      <p>It depends on you how much grid children will you have. <code>@grid-children</code> will declate this in <code>scratch/var.less</code> file. The default is <strong>16</strong>.</p>
+
+      <!-- column 1 -->
+      <div class="row">
+        <div class="col-1">col-1</div>
+      </div>
+
+      <!-- column 2 -->
+      <div class="row">
+        <div class="col-2">col-2</div>
+      </div>
+
+      <!-- column 3 -->
+      <div class="row">
+        <div class="col-3">col-3</div>
+      </div>
+
+      <!-- column 4 -->
+      <div class="row">
+        <div class="col-4">col-4</div>
+      </div>
+
+      <!-- column 5 -->
+      <div class="row">
+        <div class="col-5">col-5</div>
+      </div>
+
+      <!-- column 6 -->
+      <div class="row">
+        <div class="col-6">col-6</div>
+      </div>
+
+      <!-- column 7 -->
+      <div class="row">
+        <div class="col-7">col-7</div>
+      </div>
+
+      <!-- column 8 -->
+      <div class="row">
+        <div class="col-8">col-8</div>
+      </div>
+
+      <!-- column 9 -->
+      <div class="row">
+        <div class="col-9">col-9</div>
+      </div>
+
+      <!-- column 10 -->
+      <div class="row">
+        <div class="col-10">col-10</div>
+      </div>
+
+      <!-- column 11 -->
+      <div class="row">
+        <div class="col-11">col-11</div>
+      </div>
+
+      <!-- column 12 -->
+      <div class="row">
+        <div class="col-12">col-12</div>
+      </div>
+
+      <!-- column 13 -->
+      <div class="row">
+        <div class="col-13">col-13</div>
+      </div>
+
+      <!-- column 14 -->
+      <div class="row">
+        <div class="col-14">col-14</div>
+      </div>
+
+      <!-- column 15 -->
+      <div class="row">
+        <div class="col-15">col-15</div>
+      </div>
+
+      <!-- column 16 -->
+      <div class="row">
+        <div class="col-16">col-16</div>
+      </div>
+
+<!-- code snippet -->
+<pre>
+<code class="language-markup">&lt;!-- column 1 --&gt;
+&lt;div class="row"&gt;
+  &lt;div class="col-1"&gt;col-1&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- column 2 --&gt;
+&lt;div class="row"&gt;
+  &lt;div class="col-2"&gt;col-2&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- column 3 --&gt;
+&lt;div class="row"&gt;
+  &lt;div class="col-3"&gt;col-3&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- column 4 --&gt;
+&lt;div class="row"&gt;
+  &lt;div class="col-4"&gt;col-4&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- column 5 --&gt;
+&lt;div class="row"&gt;
+  &lt;div class="col-5"&gt;col-5&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- column 6 --&gt;
+&lt;div class="row"&gt;
+  &lt;div class="col-6"&gt;col-6&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- column 7 --&gt;
+&lt;div class="row"&gt;
+  &lt;div class="col-7"&gt;col-7&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- column 8 --&gt;
+&lt;div class="row"&gt;
+  &lt;div class="col-8"&gt;col-8&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- column 9 --&gt;
+&lt;div class="row"&gt;
+  &lt;div class="col-9"&gt;col-9&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- column 10 --&gt;
+&lt;div class="row"&gt;
+  &lt;div class="col-10"&gt;col-10&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- column 11 --&gt;
+&lt;div class="row"&gt;
+  &lt;div class="col-11"&gt;col-11&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- column 12 --&gt;
+&lt;div class="row"&gt;
+  &lt;div class="col-12"&gt;col-12&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- column 13 --&gt;
+&lt;div class="row"&gt;
+  &lt;div class="col-13"&gt;col-13&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- column 14 --&gt;
+&lt;div class="row"&gt;
+  &lt;div class="col-14"&gt;col-14&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- column 15 --&gt;
+&lt;div class="row"&gt;
+  &lt;div class="col-15"&gt;col-15&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- column 16 --&gt;
+&lt;div class="row"&gt;
+  &lt;div class="col-16"&gt;col-16&lt;/div&gt;
+&lt;/div&gt;</code>
+</pre>
+<!-- end -->
+
+      <h5>Layout</h5>
+      <p>Every children's width is it's numeric value times on <code>100% / @grid-children</code>. e.g. <code>col-5</code> is <code>col-1</code> times <strong>5</strong>.</p>
+      <p>For an inline set their numeric values' sum must be no more then <code>@grid-children</code>'s value.</p>
+
+      <p>Simple layout could be look like this:</p>
+
+      <!-- header -->
+      <div class="row h7">
+        <div class="col-16"><span class="h10">col-16</span> header</div>
+      </div>
+
+      <!-- container -->
+      <div class="row h7">
+        <div class="col-4"><span class="h10">col-4</span> sidebar</div>
+        <div class="col-12"><span class="h10">col-12</span> content</div>
+      </div>
+
+      <!-- footer -->
+      <div class="row h7">
+        <div class="col-16"><span class="h10">col-16</span> footer</div>
+      </div>
+
+<!-- code snippet -->
+<pre>
+<code class="language-markup">&lt;!-- header --&gt;
+&lt;div class="row"&gt;
+  &lt;div class="col-16"&gt;・header&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- container --&gt;
+&lt;div class="row"&gt;
+  &lt;div class="col-4"&gt;・sidebar&lt;/div&gt;
+  &lt;div class="col-12"&gt;・content&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- footer --&gt;
+&lt;div class="row"&gt;
+  &lt;div class="col-16"&gt;・footer&lt;/div&gt;
+&lt;/div&gt;</code>
+</pre>
+<!-- end -->
+
+    </div>
+
+    <h4>Breakpoints</h4>
+    <div class="content breakpoints">
+      <div class="row">
+        <div class="col-3">
+          <i class="flaticon apple"></i>
+          <strong>Mobile Portrait</strong>
+          <span>480px</span>
+          <code>@small-mobile</code>
+        </div>
+
+        <div class="col-3">
+          <i class="flaticon apple rotated"></i>
+          <strong>Mobile Landscape</strong>
+          <span>728px</span>
+          <code>@mobile</code>
+        </div>
+
+        <div class="col-3">
+          <i class="flaticon tablet"></i>
+          <strong>Tablet Portrait</strong>
+          <span>840px</span>
+          <code>@small-tablet</code>
+        </div>
+
+        <div class="col-3">
+          <i class="flaticon tablet rotated"></i>
+          <strong>Tablet Landscape</strong>
+          <span>1024px</span>
+          <code>@tablet</code>
+        </div>
+
+        <div class="col-3">
+          <i class="flaticon flatscreen"></i>
+          <strong>Small Screens</strong>
+          <span>1336px</span>
+          <code>@small-screen</code>
+        </div>
+
+        <div class="col-3">
+          <i class="flaticon wide6"></i>
+          <strong>Normal Screens</strong>
+          <span>1680px</span>
+          <code>@normal-screen</code>
+        </div>
+
+        <div class="col-3">
+          <i class="flaticon screen54"></i>
+          <strong>Big Screens</strong>
+          <span>1920px</span>
+          <code>@big-screen</code>
+        </div>
+
+        <div class="col-3">
+          <i class="flaticon tv4"></i>
+          <strong>Large Screens</strong>
+          <span>1920px +</span>
+          <code>@big-screen</code>
+        </div>
+      </div>
+    </div>
+
+    <h4>How to reference</h4>
+    <div class="content how-to-reference">
+      <p>Scratch is not UI framework, it's for architecture only. If you wish, you just can reference other UI framework and continue working. See how to reference section below.</p>
+    </div>
+
+    <div class="content">
+      Nika Tomadze © 2014
+
+      <nav class="float right">
+        <a href="https://github.com/nikoloza">Github</a>
+        ・
+        <a href="https://twitter.com/nnikoloza">Twitter</a>
+      </nav>
+    </div>
+
+  </section>
+
+  <script type="text/javascript" src="lib/prism/prism.js"></script>
 
 </body>
 </html>
