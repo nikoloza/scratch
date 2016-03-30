@@ -30,50 +30,6 @@ You only need to import `scratch/style.css` in your html file.
 
 -------------
 
-### Grunt for everything
-Used **Grunt** to compile, watch and minify CSS.
-
-If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide.
-
-Then you need to install required packages:
-
-	$ npm install
-
-With our grunt config we have 5 states to use grunt:
-
-Simply one time compile files:
-
-	$ grunt
-
-Watch and compile files:
-
-	$ grunt run
-
-Run express based simple http server, watch and compile files:
-
-	$ grunt server
-
-Make files ready for production:
-
-	$ grunt production
-
-Clean all grunt generated files:
-
-	$ grunt clean
-
--------------
-
-### Bower
-We use **Bower** for additional packages. We have included 3 package at this state:
-
-* [jQuery](https://github.com/jquery/jquery)
-* [Modernizr](https://github.com/Modernizr/Modernizr)
-* [html5shiv](https://github.com/aFarkas/html5shiv)
-* [fastclick](https://github.com/ftlabs/fastclick)
-
-
--------------
-
 ### Configuring less
 You can configure your project by opening `scratch/var.less` file. There you can change any preference for your project.
 
