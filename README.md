@@ -1,6 +1,4 @@
-**Currently under the heavy process of refactoring.** Check [Master](https://github.com/nikoloza/scratch/tree/master) branch for more stable version.
-
-There's also newer version available at this fork https://github.com/vigour-io/scratch
+This version of scratch is outdated and depricated. Please refer to the new [scratch](https://github.com/scratch-css/scratch)
 
 	 _____                _       _
 	/  ___|              | |     | |
