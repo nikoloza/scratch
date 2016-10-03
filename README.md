@@ -1,4 +1,7 @@
+## Important notice
 This version of scratch is outdated and depricated. Please refer to the new [scratch](https://github.com/scratch-css/scratch)
+
+=============
 
 	 _____                _       _
 	/  ___|              | |     | |
